@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>pedigree&#x2F;layout.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/AbstractHoverbox.html">AbstractHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNode.html">AbstractNode</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNodeVisuals.html">AbstractNodeVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPerson.html">AbstractPerson</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPersonVisuals.html">AbstractPersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/ActionStack.html">ActionStack</a></li>
+            
+                <li><a href="..&#x2F;classes/ClassName.html">ClassName</a></li>
+            
+                <li><a href="..&#x2F;classes/Graph.html">Graph</a></li>
+            
+                <li><a href="..&#x2F;classes/GroupHoverbox.html">GroupHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/Legend.html">Legend</a></li>
+            
+                <li><a href="..&#x2F;classes/NodeMenu.html">NodeMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/NodetypeSelectionBubble.html">NodetypeSelectionBubble</a></li>
+            
+                <li><a href="..&#x2F;classes/Partnership.html">Partnership</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipHoverbox.html">PartnershipHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipVisuals.html">PartnershipVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PedigreeEditor.html">PedigreeEditor</a></li>
+            
+                <li><a href="..&#x2F;classes/Person.html">Person</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroup.html">PersonGroup</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroupVisuals.html">PersonGroupVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonHoverbox.html">PersonHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonVisuals.html">PersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolder.html">PlaceHolder</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolderVisuals.html">PlaceHolderVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/Pregnancy.html">Pregnancy</a></li>
+            
+                <li><a href="..&#x2F;classes/PregnancyVisuals.html">PregnancyVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadEngine.html">SaveLoadEngine</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadIndicator.html">SaveLoadIndicator</a></li>
+            
+                <li><a href="..&#x2F;classes/Workspace.html">Workspace</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: pedigree&#x2F;layout.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * Class responsible for the graph layout.
+ *&#x2F;
+var Layout = Class.create( {
+
+    initialize: function() {
+        $(&#x27;action-layout&#x27;).observe(&#x27;click&#x27;, this.doLayout.bind(this));
+    },
+
+    &#x2F;**
+     * Generate the perfect layout for this graph
+     *&#x2F;
+    doLayout : function() {
+        var abstractGraph = this._buildAbstractGraph();
+        this._hierarchicalLayout(abstractGraph);
+        this._fixTangledPartnerships(abstractGraph)
+        this._updateLayout(abstractGraph);
+    },
+
+    &#x2F;**
+     * Build the skeleton for the layout - the specification for the hierarchy of nodes
+     * @return
+     * @private
+     *&#x2F;
+    _buildAbstractGraph : function() {
+        var graph = editor.getGraph().serialize();
+        var abstractGraph = {};
+        graph.persons.concat(graph.personGroups).concat(graph.placeHolders).each(function(p) {
+            abstractGraph[&quot;Pers&quot; + p.id] = {x: p.x, y: p.y, down: [], up: []};
+        });
+        graph.partnerships.each(function(p) {
+            abstractGraph[&quot;Part&quot; + p.id + &quot;u&quot;] = {down: [&quot;Part&quot; + p.id + &quot;m&quot;, &quot;Pers&quot; + p.partner1ID, &quot;Pers&quot; + p.partner2ID], up: []};
+            abstractGraph[&quot;Part&quot; + p.id + &quot;m&quot;] = {down: [&quot;Part&quot; + p.id + &quot;d&quot;], up: [&quot;Part&quot; + p.id + &quot;u&quot;]};
+            abstractGraph[&quot;Part&quot; + p.id + &quot;d&quot;] = {down: [], up: [&quot;Part&quot; + p.id + &quot;m&quot;, &quot;Pers&quot; + p.partner1ID, &quot;Pers&quot; + p.partner2ID]};
+            abstractGraph[&quot;Pers&quot; + p.partner1ID].down.push(&quot;Part&quot; + p.id + &quot;d&quot;);
+            abstractGraph[&quot;Pers&quot; + p.partner1ID].up.push(&quot;Part&quot; + p.id + &quot;u&quot;);
+            abstractGraph[&quot;Pers&quot; + p.partner2ID].down.push(&quot;Part&quot; + p.id + &quot;d&quot;);
+            abstractGraph[&quot;Pers&quot; + p.partner2ID].up.push(&quot;Part&quot; + p.id + &quot;u&quot;);
+        });
+        graph.pregnancies.each(function(p) {
+            abstractGraph[&quot;Preg&quot; + p.id + &quot;u&quot;] = {down: [&quot;Preg&quot; + p.id + &quot;d&quot;], up: [&quot;Part&quot; + p.partnershipID + &quot;d&quot;]};
+            abstractGraph[&quot;Part&quot; + p.partnershipID + &quot;d&quot;].down.push(&quot;Preg&quot; + p.id + &quot;u&quot;);
+            abstractGraph[&quot;Preg&quot; + p.id + &quot;d&quot;] = {down: [], up: [&quot;Preg&quot; + p.id + &quot;u&quot;]};
+            p.childrenIDs.each(function(child) {
+                abstractGraph[&quot;Preg&quot; + p.id + &quot;d&quot;].down.push(&quot;Pers&quot; + child);
+                abstractGraph[&quot;Pers&quot; + child].up.push(&quot;Preg&quot; + p.id + &quot;d&quot;);
+            });
+        });
+        return abstractGraph;
+    },
+
+    &#x2F;**
+     * Repositions the nodes in a hierarchical layout
+     * @param abstractGraph The specification for the hierarchy of nodes.
+     * @private
+     *&#x2F;
+    _hierarchicalLayout : function(abstractGraph) {
+    },
+
+    &#x2F;**
+     * Modifies the layout to fix overlapping edges in the graph
+     * @param abstractGraph The specification for the hierarchy of nodes.
+     * @private
+     *&#x2F;
+    _fixTangledPartnerships : function(abstractGraph) {
+    },
+
+    _updateLayout : function(abstractGraph) {
+    }
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

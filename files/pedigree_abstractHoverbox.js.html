@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>pedigree&#x2F;abstractHoverbox.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/AbstractHoverbox.html">AbstractHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNode.html">AbstractNode</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNodeVisuals.html">AbstractNodeVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPerson.html">AbstractPerson</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPersonVisuals.html">AbstractPersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/ActionStack.html">ActionStack</a></li>
+            
+                <li><a href="..&#x2F;classes/ClassName.html">ClassName</a></li>
+            
+                <li><a href="..&#x2F;classes/Graph.html">Graph</a></li>
+            
+                <li><a href="..&#x2F;classes/GroupHoverbox.html">GroupHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/Legend.html">Legend</a></li>
+            
+                <li><a href="..&#x2F;classes/NodeMenu.html">NodeMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/NodetypeSelectionBubble.html">NodetypeSelectionBubble</a></li>
+            
+                <li><a href="..&#x2F;classes/Partnership.html">Partnership</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipHoverbox.html">PartnershipHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipVisuals.html">PartnershipVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PedigreeEditor.html">PedigreeEditor</a></li>
+            
+                <li><a href="..&#x2F;classes/Person.html">Person</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroup.html">PersonGroup</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroupVisuals.html">PersonGroupVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonHoverbox.html">PersonHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonVisuals.html">PersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolder.html">PlaceHolder</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolderVisuals.html">PlaceHolderVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/Pregnancy.html">Pregnancy</a></li>
+            
+                <li><a href="..&#x2F;classes/PregnancyVisuals.html">PregnancyVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadEngine.html">SaveLoadEngine</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadIndicator.html">SaveLoadIndicator</a></li>
+            
+                <li><a href="..&#x2F;classes/Workspace.html">Workspace</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: pedigree&#x2F;abstractHoverbox.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * AbstractHoverbox is an abstract class for all the UI elements and graphics surrounding a node on the canvas (a Person
+ * or a partnership). This includes the box that appears around the node when it&#x27;s hovered by a mouse, as
+ * well as the handles used for creating connections and creating new nodes.
+ *
+ * @class AbstractHoverbox
+ * @constructor
+ * @param {AbstractNode} node The node Person or Partnership for which the hoverbox is drawn
+ * @param {Number} x The x coordinate for the hoverbox
+ * @param {Number} y The y coordinate for the hoverbox
+ * @param {Number} width The width in pixels
+ * @param {Number} height The height in pixels
+ * @param {Number} nodeX The x coordinate of the node for which the hoverbox is drawn
+ * @param {Number} nodeY The y coordinate of the node for which the hoverbox is drawn
+ * @param {Raphael.st} nodeShapes Raphaël set containing the graphical elements that make up the node
+ *&#x2F;
+
+var AbstractHoverbox = Class.create({
+
+    initialize: function(node, x, y, width, height, nodeX, nodeY, nodeShapes) {
+        var me = this;
+        this._node = node;
+        this._relativeX = x;
+        this._relativeY = y;
+        this._nodeX = nodeX;
+        this._nodeY = nodeY;
+        this._width = width;
+        this._height = height;
+        this._isHovered = false;
+        this._activeHandles = 0;
+        this._orbs = editor.getPaper().set();
+        this._connections = editor.getPaper().set();
+        this._handles = this.generateHandles();
+        this._currentHandles = this._handles;
+        this._buttons = this.generateButtons();
+        this._boxOnHover = editor.getPaper().rect(x, y, this._width, this._height, 5).attr(PedigreeEditor.attributes.boxOnHover);
+        this._backElements = editor.getPaper().set(this._boxOnHover, this._connections);
+        this._backElements.insertBefore(nodeShapes.flatten());
+        var mask = this._boxOnHover.clone().attr({fill: &#x27;green&#x27;, opacity: 0});
+        this._frontElements = editor.getPaper().set().push(mask, this._buttons, this._orbs);
+        this._frontElements.insertAfter(nodeShapes.flatten());
+        this._frontElements.hover(function() {me.setHovered(true)}, function() {me.setHovered(false)});
+        this.animateDrawHoverZone = this.animateDrawHoverZone.bind(this);
+        this.animateHideHoverZone =  this.animateHideHoverZone.bind(this);
+        this.hide();
+        this.enable();
+    },
+
+    &#x2F;**
+     * Returns the x coordinate of the hoverbox
+     *
+     * @method getX
+     * @return {Number} The x coordinate in pixels
+     *&#x2F;
+    getX: function() {
+        return this._relativeX;
+    },
+
+    &#x2F;**
+     * Returns the y coordinate of the hoverbox
+     *
+     * @method getY
+     * @return {Number} The y coordinate in pixels
+     *&#x2F;
+    getY: function() {
+        return this._relativeY;
+    },
+
+    &#x2F;**
+     * Returns the x coordinate of the attached node
+     *
+     * @method getNodeX
+     * @return {Number} The x coordinate in pixels
+     *&#x2F;
+    getNodeX: function() {
+        return this._nodeX;
+    },
+
+    &#x2F;**
+     * Returns the y coordinate of the attached node
+     *
+     * @method getNodeY
+     * @return {Number} The y coordinate in pixels
+     *&#x2F;
+    getNodeY: function() {
+        return this._nodeY;
+    },
+
+    &#x2F;**
+     * Returns the width of the hoverbox
+     *
+     * @method getWidth
+     * @return {Number} The width in pixels
+     *&#x2F;
+    getWidth: function() {
+        return this._width;
+    },
+
+    &#x2F;**
+     * Returns the height of the hoverbox
+     *
+     * @method getHeight
+     * @return {Number} The height in pixels
+     *&#x2F;
+    getHeight: function() {
+        return this._height;
+    },
+
+    &#x2F;**
+     * Returns the node for which the hoverbox is drawn
+     *
+     * @method getNode
+     * @return {AbstractNode} Can be either a Partnership or a Person
+     *&#x2F;
+    getNode: function() {
+        return this._node;
+    },
+
+    &#x2F;**
+     * Creates the buttons used in this hoverbox
+     *
+     * @method generateButtons
+     * @return {Raphael.st} A set of buttons
+     *&#x2F;
+    generateButtons: function() {
+        return editor.getPaper().set();
+    },
+
+    &#x2F;**
+     * Returns Raphael set of the buttons in this hoverbox
+     *
+     * @method getButtons
+     * @return {Raphael.st} A set of buttons
+     *&#x2F;
+    getButtons: function() {
+        return this._buttons;
+    },
+
+    &#x2F;**
+     * Creates the handles used in this hoverbox
+     *
+     * @method generateHandles
+     * @return {Raphael.st} A set of handles
+     *&#x2F;
+    generateHandles: function() {
+        return editor.getPaper().set();
+    },
+
+    &#x2F;**
+     * Returns a Raphael set of the currently visible handles
+     *
+     * @method getCurrentHandles
+     * @return {Raphael.st} A set of handles
+     *&#x2F;
+    getCurrentHandles: function() {
+        return this._currentHandles;
+    },
+
+    &#x2F;**
+     * Returns the a Raphael set containing the four draggable handles
+     *
+     * @method getHandles
+     * @return {Raphael.st} A set of handles
+     *&#x2F;
+    getHandles: function() {
+        return this._handles;
+    },
+
+    &#x2F;**
+     * Generates a button and places it on the hoverbox
+     *
+     * @method createButton
+     * @param {Number} x The x coordinate of the button
+     * @param {Number} y The y coordinate of the button
+     * @param {String|Array} svgPath The svg path for the button
+     * @param attributes The svg attributes
+     * @param {Function} onClick Callback for the button
+     * @param {String} className The class attribute for the button
+     *
+     * @return {Raphael.st} The generated button
+     *&#x2F;
+    createButton: function(x, y, svgPath, attributes, onClick, className) {
+        var iconScale = PedigreeEditor.attributes.radius * 0.014,
+            icon = editor.getPaper().path(svgPath).attr(attributes);
+
+        icon.transform([&quot;t&quot; , x , y, &quot;s&quot;, iconScale, iconScale, 0, 0]);
+        var mask = editor.getPaper().rect(icon.getBBox().x, icon.getBBox().y,
+            icon.getBBox().width, icon.getBBox().height, 1);
+        mask.attr({fill: &#x27;gray&#x27;, opacity: 0, &quot;stroke-width&quot; : 0}).transform(&quot;s1.5&quot;);
+        var button = editor.getPaper().set(mask, icon);
+        var clickFunct = function() {
+            onClick &amp;&amp; onClick();
+            button.isClicked = !button.isClicked;
+            if(button.isClicked)
+                mask.attr(PedigreeEditor.attributes.btnMaskClick);
+            else
+                mask.attr(PedigreeEditor.attributes.btnMaskHoverOn);
+        };
+        button.click(clickFunct);
+        button.mousedown(function(){mask.attr(PedigreeEditor.attributes.btnMaskClick)});
+        button.hover(function() {
+                mask.attr(PedigreeEditor.attributes.btnMaskHoverOn)
+            },
+            function() {
+                mask.attr(PedigreeEditor.attributes.btnMaskHoverOff)
+            });
+        className &amp;&amp; button.forEach(function(element) {
+            element.node.setAttribute(&#x27;class&#x27;, className);
+        });
+        button.icon = icon;
+        return button;
+    },
+
+    &#x2F;**
+     * Creates a show-menu button
+     *
+     * @method generateMenuBtn
+     * @return {Raphael.st} The generated button
+     *&#x2F;
+    generateMenuBtn: function() {
+        var me = this;
+        var action = function() {
+            me.toggleMenu(!me.isMenuToggled());
+        };
+        var path = &quot;M2.021,9.748L2.021,9.748V9.746V9.748zM2.022,9.746l5.771,5.773l-5.772,5.771l2.122,2.123l7.894-7.895L4.143,7.623L2.022,9.746zM12.248,23.269h14.419V20.27H12.248V23.269zM16.583,17.019h10.084V14.02H16.583V17.019zM12.248,7.769v3.001h14.419V7.769H12.248z&quot;;
+        var attributes = PedigreeEditor.attributes.menuBtnIcon;
+        var x = this.getX() + this.getWidth() - 18 - this.getWidth()&#x2F;40;
+        var y = this.getY() + this.getHeight()&#x2F;40;
+        return this.createButton(x, y, path, attributes, action, &quot;menu-trigger&quot;);
+    },
+    &#x2F;**
+     * Creates and returns a delete button (big red X).
+     *
+     * @method generateDeleteBtn
+     * @return {Raphael.st} the generated button
+     *&#x2F;
+    generateDeleteBtn: function() {
+        var me = this;
+        var action = function() {
+            me.getNode().removeAction();
+        };
+        var path = &quot;M24.778,21.419 19.276,15.917 24.777,10.415 21.949,7.585 16.447,13.087 10.945,7.585 8.117,10.415 13.618,15.917 8.116,21.419 10.946,24.248 16.447,18.746 21.948,24.248z&quot;;
+        var attributes = PedigreeEditor.attributes.deleteBtnIcon;
+        var x = this.getX() + this.getWidth()&#x2F;40;
+        var y = this.getY() + this.getHeight()&#x2F;40;
+        return this.createButton(x, y, path, attributes, action, &quot;delete&quot;);
+    },
+
+    &#x2F;**
+     * Returns the gray box that appears when the node is hovered
+     *
+     * @method getBoxOnHover
+     * @return {Raphael.el} Raphael rectangle element
+     *&#x2F;
+    getBoxOnHover: function() {
+        return this._boxOnHover;
+    },
+
+    &#x2F;**
+     * Returns true box if the hoverbox is currently hovered
+     *
+     * @method isHovered
+     * @return {Boolean} Raphael rectangle element
+     *&#x2F;
+    isHovered: function() {
+        return this._isHovered;
+    },
+
+    &#x2F;**
+     * Sets the hovered property to isHovered.
+     * @method setHovered
+     * @param {Boolean} isHovered Set to true if the box is hovered
+     *&#x2F;
+    setHovered: function(isHovered) {
+        this._isHovered = isHovered;
+    },
+
+    &#x2F;**
+     * Returns the invisible mask layer in front of the hoverbox
+     *
+     * @method getHoverZoneMask
+     * @return {Raphael.el} Raphael rectangle
+     *&#x2F;
+    getHoverZoneMask: function() {
+        return this.getFrontElements()[0];
+    },
+
+    &#x2F;**
+     * Returns a Raphael set containing all hoverbox elements that are layered
+     * in front of the node graphics
+     *
+     * @method getFrontElements
+     * @return {Raphael.st} set of Raphael elements
+     *&#x2F;
+    getFrontElements: function() {
+        return this._frontElements;
+    },
+
+    &#x2F;**
+     * Returns a Raphael set containing all hoverbox elements that are layered
+     * behind of the node graphics
+     *
+     * @method getBackElements
+     * @return {Raphael.st} set of Raphael elements
+     *&#x2F;
+    getBackElements: function() {
+        return this._backElements;
+    },
+
+    &#x2F;**
+     * Creates a handle with a blue orb from the center of the node and places it behind the node icon
+     *
+     * @method generateHandle
+     * @param {String} type Should be &#x27;parent&#x27;, &#x27;child&#x27; or &#x27;partner&#x27;
+     * @param {Number} orbX The x coordinate of the orb
+     * @param {Number} orbY The y coordinate of the orb
+     * @return {Raphael.st} Raphael set of elements that make up the handle
+     *&#x2F;
+    generateHandle: function(type, orbX, orbY) {
+        var path = [[&quot;M&quot;, this.getNodeX(), this.getNodeY()],[&quot;L&quot;, orbX, orbY]],
+            connection = editor.getPaper().path(path).attr({&quot;stroke-width&quot;: 4, stroke: &quot;gray&quot;}),
+            orbRadius = PedigreeEditor.attributes.radius&#x2F;7,
+            orbHue = PedigreeEditor.attributes.orbHue,
+            orb = generateOrb(editor.getPaper(), orbX, orbY, orbRadius*1.1, orbHue).attr(&quot;cursor&quot;, &quot;pointer&quot;);
+&#x2F;&#x2F;            adoptionPath = [[&quot;M&quot;, orbX - orbRadius&#x2F;2, orbY + orbRadius*1.3],[&quot;L&quot;, (orbX - orbRadius * 1.3), orbY + orbRadius*1.3],[&quot;L&quot;, (orbX - orbRadius * 1.3), orbY - orbRadius*1.3],[&quot;L&quot;, (orbX - orbRadius &#x2F; 2), orbY - orbRadius*1.3],[&quot;M&quot;, orbX + orbRadius&#x2F;2, orbY + orbRadius*1.3],[&quot;L&quot;, (orbX + orbRadius * 1.3), orbY + orbRadius*1.3],[&quot;L&quot;, (orbX + orbRadius * 1.3), orbY - orbRadius*1.3],[&quot;L&quot;, (orbX + orbRadius &#x2F; 2), orbY - orbRadius*1.3]],
+&#x2F;&#x2F;            adoptionSymbol = editor.getPaper().path(adoptionPath).attr({&quot;stroke-width&quot;: 2, stroke: &quot;#484848&quot;, opacity: 1});
+            &#x2F;&#x2F;orb.push(adoptionSymbol);
+        var handle = editor.getPaper().set().push(connection, orb),
+            hasEnded = true,
+            hoverTypes = [&quot;Person&quot;],
+            me = this;
+        handle.type = type;
+        connection.oPath = path;
+
+        if(type == &#x27;parent&#x27;) {
+            hoverTypes.push(&quot;Partnership&quot;)
+        }
+
+        var start = function() {
+&#x2F;&#x2F;            if(!hasEnded) {
+&#x2F;&#x2F;                &#x2F;&#x2F;isDrag = true;
+&#x2F;&#x2F;                &#x2F;&#x2F;end();
+&#x2F;&#x2F;                return;
+&#x2F;&#x2F;            }
+            hasEnded = false;
+            &#x2F;&#x2F;document.observe(&#x27;mousedown&#x27;, catchRightClick);
+            me.disable();
+            me.getFrontElements().toFront();
+            orb.ox = orb[0].attr(&quot;cx&quot;);
+            orb.oy = orb[0].attr(&quot;cy&quot;);
+            connection.ox = connection.oPath[1][1];
+            connection.oy = connection.oPath[1][2];
+            handle.isDragged = false;
+            editor.getGraph().setCurrentDraggable(handle);
+            editor.getGraph().enterHoverMode(me.getNode(), hoverTypes);
+            me._activeHandles++;
+        };
+        var move = function(dx, dy) {
+            dx = dx&#x2F;editor.getWorkspace().zoomCoefficient;
+            dy = dy&#x2F;editor.getWorkspace().zoomCoefficient;
+            orb.attr(&quot;cx&quot;, orb.ox + dx);
+            orb.attr(&quot;cy&quot;, orb.oy + dy);
+            connection.oPath[1][1] = connection.ox + dx;
+            connection.oPath[1][2] = connection.oy + dy;
+            connection.attr(&quot;path&quot;, connection.oPath);
+            if(dx &gt; 1 || dx &lt; 1 || dy &gt; 1 || dy &lt; -1 ) {
+                handle.isDragged = true;
+            }
+        };
+        var end = function() {
+&#x2F;&#x2F;            if(hasEnded) {
+&#x2F;&#x2F;                return;
+&#x2F;&#x2F;            }
+            &#x2F;&#x2F;document.stopObserving(&#x27;mousedown&#x27;, catchRightClick);
+            editor.getGraph().exitHoverMode();
+            if(handle.isDragged){
+                orb.animate({&quot;cx&quot;: orb.ox, &quot;cy&quot;: orb.oy}, + handle.isDragged * 1000, &quot;elastic&quot;,
+                    function() {
+                        me._activeHandles--;
+                        if(me._activeHandles == 0) {
+                            me.enable();
+                            me.animateHideHoverZone();
+                            hasEnded = true;
+                            handle.isDragged = false;
+                        }
+                    });
+            }
+            else {
+                me._activeHandles--;
+                if(me._activeHandles == 0) {
+                    me.enable();
+                    hasEnded = true;
+                }
+            }
+            me.handleAction(handle.type, handle.isDragged);
+            connection.oPath[1][1] = connection.ox;
+            connection.oPath[1][2] = connection.oy;
+            connection.animate({&quot;path&quot;: connection.oPath},1000, &quot;elastic&quot;);
+        };
+
+        orb.drag(move, start, end);
+        orb.hover(function() {
+                orb[0].attr({fill: &quot;r(.5,.9)hsb(&quot; + (orbHue + .36) + &quot;, 1, .75)-hsb(&quot; + (orbHue + .36) + &quot;, .5, .25)&quot;, stroke: &quot;none&quot;});
+                &#x2F;&#x2F;orb[0].attr({fill: &quot;r(.5,.9)hsb(&quot; + orbHue +.7 + &quot;, 1, .75)-hsb(&quot; + orbHue + .7 + &quot;, .5, .25)&quot;})
+            },
+            function () {
+                orb[0].attr({fill: &quot;r(.5,.9)hsb(&quot; + orbHue + &quot;, 1, .75)-hsb(&quot; + orbHue + &quot;, .5, .25)&quot;})
+            });
+        this._orbs.push(orb);
+        this._connections.push(connection);
+
+        handle.getType = function() {
+            return type;
+        };
+        return handle;
+    },
+
+    &#x2F;**
+     * Hides the child handle
+     *
+     * @method hideChildHandle
+     *&#x2F;
+    hideChildHandle: function() {
+        this.getCurrentHandles().exclude(this._downHandle.hide());
+    },
+
+    &#x2F;**
+     * Unhides the child handle
+     *
+     * @method unhideChildHandle
+     *&#x2F;
+    unhideChildHandle: function() {
+        if(this.isHovered() || this.isMenuToggled()) {
+            this._downHandle.show();
+        }
+        (!this.getCurrentHandles().contains(this._downHandle)) &amp;&amp; this.getCurrentHandles().push(this._downHandle);
+    },
+
+    &#x2F;*
+     * Fades the hoverbox graphics in
+     *
+     * @method animateDrawHoverZone
+     *&#x2F;
+    animateDrawHoverZone: function() {
+        this.getNode().getGraphics().setSelected(true);
+        this.getBoxOnHover().stop().animate({opacity:0.7}, 300);
+        this.getButtons().forEach(function(button) {
+            button.icon.stop().animate({opacity:1}, 300);
+        });
+        this.getCurrentHandles().show();
+    },
+
+    &#x2F;**
+     * Fades the hoverbox graphics out
+     *
+     * @method animateHideHoverZone
+     *&#x2F;
+    animateHideHoverZone: function() {
+        if(!this.isHovered()) {
+            this.getNode().getGraphics().setSelected(false);
+            this.getBoxOnHover().stop().animate({opacity:0}, 200);
+            this.getButtons().forEach(function(button) {
+                button.icon.stop().animate({opacity:0}, 200);
+            });
+            this.getCurrentHandles().hide();
+        }
+    },
+
+    &#x2F;**
+     * Hides the hoverbox&#x27;s graphical elements
+     *
+     * @method hide
+     *&#x2F;
+    hide: function() {
+        this.getBoxOnHover().attr({opacity:0});
+        this.getButtons().forEach(function(button) {
+            button.icon.attr({opacity:0});
+        });
+        this.getHandles().hide();
+    },
+
+    &#x2F;**
+     * Stops the hoverbox from responding to mouseovers
+     *
+     * @method disable
+     *&#x2F;
+    disable: function() {
+        this.getFrontElements().unhover(this.animateDrawHoverZone, this.animateHideHoverZone);
+    },
+
+    &#x2F;**
+     * Attaches onMouseOver behavior to the hoverbox
+     *
+     * @method enable
+     *&#x2F;
+    enable: function() {
+        this.getFrontElements().hover(this.animateDrawHoverZone, this.animateHideHoverZone);
+    },
+
+    &#x2F;**
+     * Deletes the hoverbox
+     *
+     * @method remove
+     *&#x2F;
+    remove: function() {
+        this.disable();
+        this.getBackElements().remove();
+        this.getFrontElements().remove();
+    },
+
+    &#x2F;**
+     * Updates the hoverbox behavior after a widget (like the menu) is closed
+     *
+     * @method onWidgetHide
+     *&#x2F;
+    onWidgetHide: function() {
+        this._isMenuToggled = false;
+        !this.isHovered() &amp;&amp; this.animateHideHoverZone();
+        this._activeHandles == 0 &amp;&amp; this.enable();
+    }
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

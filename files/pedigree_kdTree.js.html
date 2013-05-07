@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>pedigree&#x2F;kdTree.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/AbstractHoverbox.html">AbstractHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNode.html">AbstractNode</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNodeVisuals.html">AbstractNodeVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPerson.html">AbstractPerson</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPersonVisuals.html">AbstractPersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/ActionStack.html">ActionStack</a></li>
+            
+                <li><a href="..&#x2F;classes/ClassName.html">ClassName</a></li>
+            
+                <li><a href="..&#x2F;classes/Graph.html">Graph</a></li>
+            
+                <li><a href="..&#x2F;classes/GroupHoverbox.html">GroupHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/Legend.html">Legend</a></li>
+            
+                <li><a href="..&#x2F;classes/NodeMenu.html">NodeMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/NodetypeSelectionBubble.html">NodetypeSelectionBubble</a></li>
+            
+                <li><a href="..&#x2F;classes/Partnership.html">Partnership</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipHoverbox.html">PartnershipHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipVisuals.html">PartnershipVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PedigreeEditor.html">PedigreeEditor</a></li>
+            
+                <li><a href="..&#x2F;classes/Person.html">Person</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroup.html">PersonGroup</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroupVisuals.html">PersonGroupVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonHoverbox.html">PersonHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonVisuals.html">PersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolder.html">PlaceHolder</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolderVisuals.html">PlaceHolderVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/Pregnancy.html">Pregnancy</a></li>
+            
+                <li><a href="..&#x2F;classes/PregnancyVisuals.html">PregnancyVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadEngine.html">SaveLoadEngine</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadIndicator.html">SaveLoadIndicator</a></li>
+            
+                <li><a href="..&#x2F;classes/Workspace.html">Workspace</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: pedigree&#x2F;kdTree.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * Position tree. This stuff is black magic - be careful how you use it
+ *&#x2F;
+function kdTree(points, _metric, _dimensions) {
+  
+  var metric = _metric || function(a, b) {
+        var dx = a.x - b.x;
+        var dy = a.y - b.y;
+        return Math.sqrt(dx*dx + dy*dy);
+  }
+  var dimensions = _dimensions || [&#x27;x&#x27;, &#x27;y&#x27;];
+
+  function Node(obj, d, parent) {
+    this.obj = obj;
+    this.left = null;
+    this.right = null;
+    this.parent = parent;
+    this.dimension = d;
+  }
+
+  var self = this;
+  this.root = buildTree(points, 0, null);
+
+  function buildTree(points, depth, parent) {
+    var dim = depth % dimensions.length;
+    if(points.length == 0) return null;
+    if(points.length == 1) return new Node(points[0], dim, parent);
+
+    points.sort(function(a,b){ return a[dimensions[dim]] - b[dimensions[dim]]; });
+
+    var median = Math.floor(points.length&#x2F;2);
+    var node = new Node(points[median], dim, parent);
+    node.left = buildTree(points.slice(0,median), depth+1, node);
+    node.right = buildTree(points.slice(median+1), depth+1, node);
+    return node;
+  }
+
+  this.insert = function(point) {
+    var insertPosition = innerSearch(self.root, null);
+
+    if(insertPosition == null) {
+      self.root = new Node(point, 0, null);
+      return;
+    }
+
+    var newNode = new Node(point, (insertPosition.dimension+1)%dimensions.length, insertPosition);
+    var dimension = dimensions[insertPosition.dimension];
+    if(point[dimension] &lt; insertPosition.obj[dimension]) {
+      insertPosition.left = newNode;
+    } else {
+      insertPosition.right = newNode;
+    }
+
+    function innerSearch(node, parent) {
+      if(node == null) return parent;
+
+      var dimension = dimensions[node.dimension];
+      if(point[dimension] &lt; node.obj[dimension]) {
+        return innerSearch(node.left, node);
+      } else {
+        return innerSearch(node.right, node);
+      }
+    }
+  }
+
+  this.remove = function(point) {
+    var node = nodeSearch(self.root);
+    if(node == null) return;
+
+    removeNode(node);
+    function nodeSearch(node) {
+      if(node == null) return null;
+      if(node.obj === point) return node;
+
+      var dimension = dimensions[node.dimension];
+      if(point[dimension] &lt; node.obj[dimension]) {
+        return nodeSearch(node.left, node);
+      } else {
+        return nodeSearch(node.right, node);
+      }
+    }
+
+    function removeNode(node) {
+      if(node.left == null &amp;&amp; node.right == null) {
+        if(node.parent == null) {
+          self.root = null;
+          return;
+        }
+        var pDimension = dimensions[node.parent.dimension];
+        if(node.obj[pDimension] &lt; node.parent.obj[pDimension]) {
+          node.parent.left = null;
+        } else {
+          node.parent.right = null;
+        }
+        return;
+      }
+
+      if(node.left != null) {
+        var nextNode = findMax(node.left, node.dimension);
+      } else {
+        var nextNode = findMin(node.right, node.dimension);
+      }
+      var nextObj = nextNode.obj;
+      removeNode(nextNode);
+      node.obj = nextObj;
+
+      function findMax(node, dim) {
+        if(node == null) return null;
+
+        var dimension = dimensions[dim];
+        if(node.dimension == dim) {
+          if(node.right != null) return findMax(node.right, dim);
+          return node;
+        }
+
+        var own = node.obj[dimension]
+        var left = findMax(node.left, dim);
+        var right = findMax(node.right, dim);
+        var max = node;
+        if(left != null &amp;&amp; left.obj[dimension] &gt; own) max = left;
+        if(right != null &amp;&amp; right.obj[dimension] &gt; max.obj[dimension]) max = right;
+        return max;
+      }
+
+      function findMin(node, dim) {
+        if(node == null) return null;
+
+        var dimension = dimensions[dim];
+        if(node.dimension == dim) {
+          if(node.left != null) return findMin(node.left, dim);
+          return node;
+        }
+
+        var own = node.obj[dimension]
+        var left = findMin(node.left, dim);
+        var right = findMin(node.right, dim);
+        var min = node;
+        if(left != null &amp;&amp; left.obj[dimension] &lt; own) min = left;
+        if(right != null &amp;&amp; right.obj[dimension] &lt; min.obj[dimension]) min = right;
+        return min;
+      }
+    }
+  }
+
+  this.nearest = function(point, maxNodes, maxDistance, _dimension) {
+    bestNodes = new BinaryHeap(function(e){ return -e[1]; });
+    if(maxDistance) {
+      for(var i=0; i&lt;maxNodes; i++) {
+        bestNodes.push([null, maxDistance]);
+      }
+    }
+    nearestSearch(self.root);
+
+    function nearestSearch(node) {
+      var bestChild;
+      var dimension = dimensions[node.dimension];
+      var ownDistance = metric(point, node.obj);
+
+      var linearPoint = {};
+      for(var i=0; i&lt;dimensions.length; i++) {
+        if(i == node.dimension) {
+          linearPoint[dimensions[i]] = point[dimensions[i]];
+        } else {
+          linearPoint[dimensions[i]] = node.obj[dimensions[i]];
+        }
+      }
+      var linearDistance = metric(linearPoint, node.obj);
+
+      if(node.right == null &amp;&amp; node.left == null) {
+        if(bestNodes.size() &lt; maxNodes || ownDistance &lt; bestNodes.peek()[1]) {
+          saveNode(node, ownDistance);
+        }
+        return;
+      }
+
+      if(node.right == null) {
+        bestChild = node.left;
+      } else if(node.left == null) {
+        bestChild = node.right;
+      } else {
+        if(point[dimension] &lt; node.obj[dimension]) {
+          bestChild = node.left;
+        } else {
+          bestChild = node.right;
+        }
+      }
+
+      nearestSearch(bestChild);
+
+      if(bestNodes.size() &lt; maxNodes || ownDistance &lt; bestNodes.peek()[1]) {
+        saveNode(node, ownDistance);
+      }
+
+      if(bestNodes.size() &lt; maxNodes || Math.abs(linearDistance) &lt; bestNodes.peek()[1]) {
+        var otherChild;
+        if(bestChild == node.left) {
+          otherChild = node.right;
+        } else {
+          otherChild = node.left;
+        }
+        if(otherChild != null) nearestSearch(otherChild);
+      }
+
+      function saveNode(node, distance) {
+        if (_dimension) {
+           var d = dimensions.indexOf(_dimension);
+           for(var i = 0; i &lt; dimensions.length; i++) {
+             if (i == d &amp;&amp; node.obj[dimensions[i]] != point[dimensions[i]]) {
+               return;
+             }
+           }
+        }
+        bestNodes.push([node, distance]);
+        if(bestNodes.size() &gt; maxNodes) {
+          bestNodes.pop();
+        }
+      }
+    }
+
+    var result = [];
+    for(var i=0; i&lt;maxNodes; i++) {
+      if(bestNodes.content[i][0]) {
+        result.push([bestNodes.content[i][0].obj, bestNodes.content[i][1]]);
+      }
+    }
+    return result;
+  }
+
+  this.balanceFactor = function() {
+    return height(self.root)&#x2F;(Math.log(count(self.root))&#x2F;Math.log(2));
+
+    function height(node) {
+      if(node == null) return 0;
+      return Math.max(height(node.left), height(node.right)) + 1;
+    }
+
+    function count(node) {
+      if(node == null) return 0;
+      return count(node.left) + count(node.right) + 1;
+    }
+  }
+
+  &#x2F;&#x2F; Binary heap implementation from:
+  &#x2F;&#x2F; http:&#x2F;&#x2F;eloquentjavascript.net&#x2F;appendix2.html
+  function BinaryHeap(scoreFunction){
+    this.content = [];
+    this.scoreFunction = scoreFunction;
+  }
+
+  BinaryHeap.prototype = {
+    push: function(element) {
+      this.content.push(element);
+      this.bubbleUp(this.content.length - 1);
+    },
+
+    pop: function() {
+      var result = this.content[0];
+      var end = this.content.pop();
+      if (this.content.length &gt; 0) {
+        this.content[0] = end;
+        this.sinkDown(0);
+      }
+      return result;
+    },
+
+    peek: function() {
+      return this.content[0];
+    },
+
+    remove: function(node) {
+      var len = this.content.length;
+      for (var i = 0; i &lt; len; i++) {
+        if (this.content[i] == node) {
+          var end = this.content.pop();
+          if (i != len - 1) {
+            this.content[i] = end;
+            if (this.scoreFunction(end) &lt; this.scoreFunction(node))
+              this.bubbleUp(i);
+            else
+              this.sinkDown(i);
+          }
+          return;
+        }
+      }
+      throw new Error(&quot;Node not found.&quot;);
+    },
+
+    size: function() {
+      return this.content.length;
+    },
+
+    bubbleUp: function(n) {
+      var element = this.content[n];
+      while (n &gt; 0) {
+        var parentN = Math.floor((n + 1) &#x2F; 2) - 1,
+        parent = this.content[parentN];
+        if (this.scoreFunction(element) &lt; this.scoreFunction(parent)) {
+          this.content[parentN] = element;
+          this.content[n] = parent;
+          n = parentN;
+        }
+        else {
+          break;
+        }
+      }
+    },
+
+    sinkDown: function(n) {
+      var length = this.content.length,
+      element = this.content[n],
+      elemScore = this.scoreFunction(element);
+
+      while(true) {
+        var child2N = (n + 1) * 2, child1N = child2N - 1;
+        var swap = null;
+        if (child1N &lt; length) {
+          var child1 = this.content[child1N],
+          child1Score = this.scoreFunction(child1);
+          if (child1Score &lt; elemScore)
+            swap = child1N;
+        }
+        if (child2N &lt; length) {
+          var child2 = this.content[child2N],
+          child2Score = this.scoreFunction(child2);
+          if (child2Score &lt; (swap == null ? elemScore : child1Score))
+            swap = child2N;
+        }
+
+        if (swap != null) {
+          this.content[n] = this.content[swap];
+          this.content[swap] = element;
+          n = swap;
+        }
+        else {
+          break;
+        }
+      }
+    }
+  };
+
+}
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

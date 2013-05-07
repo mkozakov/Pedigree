@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>pedigree&#x2F;nodeIndex.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/AbstractHoverbox.html">AbstractHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNode.html">AbstractNode</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNodeVisuals.html">AbstractNodeVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPerson.html">AbstractPerson</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPersonVisuals.html">AbstractPersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/ActionStack.html">ActionStack</a></li>
+            
+                <li><a href="..&#x2F;classes/ClassName.html">ClassName</a></li>
+            
+                <li><a href="..&#x2F;classes/Graph.html">Graph</a></li>
+            
+                <li><a href="..&#x2F;classes/GroupHoverbox.html">GroupHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/Legend.html">Legend</a></li>
+            
+                <li><a href="..&#x2F;classes/NodeMenu.html">NodeMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/NodetypeSelectionBubble.html">NodetypeSelectionBubble</a></li>
+            
+                <li><a href="..&#x2F;classes/Partnership.html">Partnership</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipHoverbox.html">PartnershipHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipVisuals.html">PartnershipVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PedigreeEditor.html">PedigreeEditor</a></li>
+            
+                <li><a href="..&#x2F;classes/Person.html">Person</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroup.html">PersonGroup</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroupVisuals.html">PersonGroupVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonHoverbox.html">PersonHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonVisuals.html">PersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolder.html">PlaceHolder</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolderVisuals.html">PlaceHolderVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/Pregnancy.html">Pregnancy</a></li>
+            
+                <li><a href="..&#x2F;classes/PregnancyVisuals.html">PregnancyVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadEngine.html">SaveLoadEngine</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadIndicator.html">SaveLoadIndicator</a></li>
+            
+                <li><a href="..&#x2F;classes/Workspace.html">Workspace</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: pedigree&#x2F;nodeIndex.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+var TmpIndex = Class.create({
+  idToOriginalPos : {},
+  originalPosToId : {},
+  initialize : function() {},
+  insert : function(node) {
+    this.idToOriginalPos[node.getID()] = {x : node.getX(), y : node.getY()};
+    this.originalPosToId[node.getX()+ &quot;,&quot; + node.getY()] = node;
+  },
+  get : function(node) {
+    return this.idToOriginalPos[node.getID()];
+  },
+  getAtPos : function(x, y) {
+    return this.originalPosToId[x + &#x27;,&#x27; + y];
+  },
+  remove : function(node) {
+    var pos = this.idToOriginalPos[node.getID()];
+    if (pos) {
+      delete this.idToOriginalPos[node.getID()];
+      delete this.originalPosToId[pos.x + &quot;,&quot; + pos.y];
+    }
+  },
+  keys : function() {
+    return Object.keys(this.idToOriginalPos);
+  },
+  poss : function() {
+    return Object.keys(this.originalPosToId);
+  },
+  clear : function() {
+    var _this = this;
+    var keys = this.keys();
+    keys.each(function(key){
+      delete _this.idToOriginalPos[key];
+    });
+    keys = this.poss();
+    keys.each(function(key){
+      delete _this.originalPosToId[key];
+    });
+  }
+});
+
+var NodeIndex = Class.create({
+  &#x2F;** The grid unit. Nodes will be placed only at horizontal and vertical distances indicated here. *&#x2F; 
+  gridUnit : {
+    x: 100,
+    y: 200
+  },
+  &#x2F;**
+   * Initialize the node index
+   * 
+   * @param nodes optional set of nodes to insert in the index upon its creation
+   *&#x2F;
+  initialize : function(nodes) {
+    var _this = this;
+    this.nodes = {};
+    this.positionTree = new kdTree([]);
+    this.position2Node = {};
+    this.xIndex = {};
+    this.yIndex = {};
+    this._addNode = this._addNode.bind(this);
+    nodes &amp;&amp; nodes.each(this._addNode);
+    this.tmpIndex = new TmpIndex();
+
+      document.observe(&#x27;pedigree:child:added&#x27;, function(event){
+          if (event &amp;&amp; event.memo &amp;&amp; event.memo.node) {
+              _this._childAdded(event.memo.node, event.memo.sourceNode);
+          }
+      });
+      document.observe(&#x27;pedigree:partner:added&#x27;, function(event){
+          if (event &amp;&amp; event.memo &amp;&amp; event.memo.node) {
+              _this._partnerAdded(event.memo.node, event.memo.sourceNode);
+          }
+      });
+      document.observe(&#x27;pedigree:parents:added&#x27;, function(event){
+          if (event &amp;&amp; event.memo &amp;&amp; event.memo.node) {
+              _this._parentsAdded(event.memo.node, event.memo.sourceNode);
+          }
+      });
+      document.observe(&#x27;pedigree:partnership:added&#x27;, function(event){
+          if (event &amp;&amp; event.memo &amp;&amp; event.memo.node) {
+              _this._partnershipAdded(event.memo.node, event.memo.sourceNode);
+          }
+      });
+      document.observe(&#x27;pedigree:node:upgraded&#x27;, function(event){
+          if (event &amp;&amp; event.memo &amp;&amp; event.memo.node) {
+              _this._nodeUpgraded(event.memo.node, event.memo.sourceNode);
+          }
+      });
+  },
+
+  &#x2F;**
+   * [Internal method] return the closest position in the grid for a 2D point
+   * 
+   * @param point an object with two mandatory numeric fields, x and y
+   * @return an object with two numeric fields, x and y, the point in the grid that is closest to the inpput
+   *&#x2F; 
+  _snapToGrid : function(point) {
+      return {x: Math.round(point.x &#x2F; this.gridUnit.x) * this.gridUnit.x, y: Math.round(point.y &#x2F; this.gridUnit.y) * this.gridUnit.y};
+  },
+  
+  &#x2F;**
+   * Find the best position to insert one or more new neighbors for an existing node
+   * 
+   * @param relativePosition an object with one field, which can be either &#x27;above&#x27;, &#x27;below&#x27;, &#x27;side&#x27;, or &#x27;join&#x27;, whose value indicated the id of a node
+   * @param identifiers an array of new ids for which positions must be found
+   * 
+   * @return an object where each field is one of the ids given as input, and the value is the point where that node should be placed
+   *&#x2F;
+  findPosition : function (relativePosition, identifiers) {
+    var result = {};
+    var _this = this;
+    if (relativePosition.above) {
+      &#x2F;&#x2F; Finding positions for parents...
+      var id = relativePosition.above;
+      var node = this.nodes[id];
+      var i = 0, total = identifiers.length;
+      identifiers.each(function(item) {
+        result[item] = { x: node.getX() + (2 * i - total + 1) * _this.gridUnit.x, y: node.getY() - _this.gridUnit.y}
+        ++i;
+      });
+    } else if (relativePosition.below) {
+      &#x2F;&#x2F; Finding positions for children...
+      var id = relativePosition.below;
+      var node = this.nodes[id];
+      var total = identifiers.length;
+      var crtSize = this._findLowerNeighborGroupsSize(node);
+      var crtLimits = this._findLowerNeighborGroupsLimits(node);
+      var newSize = crtSize + total * 2 * this.gridUnit.x;
+      var start, i = 1;
+      if (crtLimits.high - node.getX() &gt; node.getX() - crtLimits.low) {
+        start = node.getX() - newSize &#x2F; 2 ;
+      } else {
+        start = node.getX() - newSize &#x2F; 2 + crtSize;
+      }
+      identifiers.each(function(item) {
+        result[item] = { x: start + (2 * i) * _this.gridUnit.x, y: node.getY() + _this.gridUnit.y}
+        ++i;
+      });
+    } else if (relativePosition.join) {
+       &#x2F;&#x2F; Finding positions for partnerships...
+       &#x2F;&#x2F; expecting to join 2 nodes
+       var node1 = this.nodes[relativePosition.join[0]],
+           node2 = this.nodes[relativePosition.join[1]];
+           &#x2F;&#x2F; TODO
+       result.y = Math.max(node1.getY(), node2.getY());
+       var middleX = (node1.getX() + node2.getX()) &#x2F; 2;
+       var nearestNode = node1.getY() != node2.getY() ? (node1.getY() == result.y ? node1 : node2) : (node1.getSideNeighbors().length &gt; node2.getSideNeighbors().length ? node2 : node1);
+       result.x = nearestNode.getX() + this.gridUnit.x * (middleX &lt; nearestNode.getX() ? -1 : 1);
+    } else if (relativePosition.side) {
+       &#x2F;&#x2F; Finding positions for partners...
+       var id = relativePosition.side;
+       var node = this.nodes[id];
+       var neighbors = node.getSideNeighbors();
+       var found = false, dx = 2 * this.gridUnit.x;
+       while (!found) {
+        var rightNode = this.getNodeNear(node.getX() + dx, node.getY());
+        if (!rightNode) {
+          found = true;
+        } else {
+          var leftNode = this.getNodeNear(node.getX() - dx, node.getY());
+          if (!leftNode) {
+            dx = -dx;
+            found = true;
+          } else {
+            if (!node.isPartnerOf(rightNode)) {
+              found = true;
+            } else if (!node.isPartnerOf(leftNode)) {
+              dx = -dx;
+              found = true;
+            } else {
+              dx += 2 * this.gridUnit.x;
+            }
+          }
+        }
+      }
+      result.y = node.getY();
+      result.x = node.getX() + dx;
+    }
+    return result;
+  },
+  &#x2F;**
+   * Registers a new node in the index
+   * 
+   * @param node the node to register
+   * @param source the node that &quot;generated&quot; the node to add
+   *&#x2F;
+  _addNode : function(node,fullAdd) {
+    &#x2F;*var neighbors = node.getNeighbors();
+    if (neighbors.length &gt; 0) {
+      var n = neighbors[0];
+      if (n.getY() &lt; node.getY()) {
+        &#x2F;&#x2F; adding a child;
+        &#x2F;&#x2F; shift siblings and left nodes to the left, others to the right;
+      } else if (n.getY() &lt; node.getY()) {
+        &#x2F;&#x2F; adding parents
+        
+      } else {
+        
+      }*&#x2F;
+    
+    this.nodes[node.getID()] = node;
+    if (fullAdd) {
+      var position = this._snapToGrid({x: node.getX(), y: node.getY()});
+      &#x2F;&#x2F;this._clearPositionFor(node, -1);
+      this._insertInDimensionIndex(&#x27;x&#x27;, node);
+      this._insertInDimensionIndex(&#x27;y&#x27;, node);
+      this.positionTree.insert(position);
+      this.position2Node[position.x + &#x27;,&#x27; + position.y] = node;
+    }
+  },
+  &#x2F;**
+   * [Internal method] inserts a node in one of the dimension indexes, xIndex or yIndex.
+   *
+   * @param dimension expects &#x27;x&#x27; or &#x27;y&#x27;
+   * @param node the node to insert 
+   *&#x2F; 
+  _insertInDimensionIndex : function (dimension, node) {
+    var index = dimension + &quot;Index&quot;;
+    var accessorName = &quot;get&quot; + dimension.toUpperCase();
+    if (typeof(this[index]) == &quot;undefined&quot; ||  typeof(node[accessorName]) != &quot;function&quot;) {
+      return;
+    }
+    var key = node[accessorName]();
+    if (!this[index][key]) {
+      this[index][key] = [];
+    }
+    this[index][key].push(node);
+  },
+  &#x2F;**
+   * [Internal method] Retrieves all the nodes on a certain line or column of the grid 
+   * 
+   * @param dimension expects &#x27;x&#x27; or &#x27;y&#x27;
+   * @param value the value for the given dimension
+   * @return an array of nodes
+   *&#x2F;
+  _getNodesAt : function(dimension, value) {
+    var index = dimension + &quot;Index&quot;;
+    return this[index] &amp;&amp; this[index][value] || [];
+  },
+  &#x2F;**
+   * Update the index after having performed node moves
+   *&#x2F;
+  _findNodeInTmpIndex :  function(x, y) {
+    var node = this.tmpIndex.getAtPos(x, y);
+    if (node &amp;&amp; x == node.getX() &amp;&amp; y == node.getY()) {
+      return node;
+    }
+    node = this.getNodeNear(x, y);
+    var pos = node &amp;&amp; this.tmpIndex.get(node);
+    if (!pos || pos.x == node.getX() &amp;&amp; pos.y == node.getY()) {
+      return node;
+    }
+    return false;
+  },
+  _updateTmpPositions : function() {
+    var ids = this.tmpIndex.keys();
+    var _this = this;
+    ids.each(function(item) {
+      var node = _this.getNode(item);
+      var position = _this._snapToGrid(_this.tmpIndex.get(node));
+      if (_this.position2Node[position.x + &#x27;,&#x27; + position.y] == node) {
+        _this.positionTree.remove(position);
+        delete _this.position2Node[position.x + &#x27;,&#x27; + position.y];
+        _this.xIndex[node.getX()] &amp;&amp; (_this.xIndex[node.getX()] = _this.xIndex[node.getX()].without(node));
+        _this.yIndex[node.getY()] &amp;&amp; (_this.yIndex[node.getY()] = _this.yIndex[node.getY()].without(node));
+      }
+      
+      var position = _this._snapToGrid({x: node.getX(), y: node.getY()});
+      _this.positionTree.insert(position);
+      _this.position2Node[position.x + &#x27;,&#x27; + position.y] = node;
+      _this._insertInDimensionIndex(&#x27;x&#x27;, node);
+      _this._insertInDimensionIndex(&#x27;y&#x27;, node);
+      
+      _this.tmpIndex.remove(node);
+    });
+  },
+  _nodeUpgraded : function(node, original) {
+    this.remove(original);
+    this._addNode(node);
+  },
+  &#x2F;**
+   * [Internal method] Updates the index after adding a new node as another node&#x27;s child.
+   * 
+   * @param node the added node
+   *&#x2F;
+  _childAdded : function(node, _parent) {
+    this.tmpIndex.clear();
+    this._addNode(node, true);
+    if (node.getUpperNeighbors().length &gt; 0) {
+      var parent = node.getUpperNeighbors()[0];
+      var siblings = parent.getLowerNeighbors().without(node);
+      var _this = this;
+      var ignore = {};
+      ignore[parent.getID()] = true;
+      ignore[node.getID()] = true;
+      var direction = node.getX() &lt; parent.getX() ? 1 : -1;
+      siblings.each(function(item) {
+        _this._subgraphShift(item, direction * _this.gridUnit.x, ignore);
+      });
+      var limits = this._findLowerNeighborGroupsLimits(node);
+      this._rowShift(node, limits, this.gridUnit.x, ignore);
+      this._updateTmpPositions();
+    }
+  },
+  &#x2F;**
+   * [Internal method] Updates the index after adding a new node as another node&#x27;s partner.
+   * 
+   * @param node the added node
+   *&#x2F;
+  _partnerAdded : function(node, partner) {
+     this.tmpIndex.clear();
+     if (node.getSideNeighbors().length &gt; 0) {
+      var side = node.getSideNeighbors()[0];
+      var _this = this;
+      var ignore = {};
+      ignore[side.getID()] = true;
+      ignore[node.getID()] = true;
+      partner &amp;&amp; (ignore[partner.getID()] = true);
+      if (partner &amp;&amp; partner.getUpperNeighbors().length &gt; 0) {
+        var parent = partner.getUpperNeighbors()[0];
+        ignore[parent.getID()] = true;
+      }
+      if (partner &amp;&amp; partner.getSideNeighbors().length &gt; 0) {
+        var sides = partner.getSideNeighbors();
+        sides.each(function(item) {
+          ignore[item.getID()] = true;
+          item.getSideNeighbors().each(function(item2) {
+            ignore[item2.getID()] = true;
+          });
+        });
+        var parent = partner.getUpperNeighbors()[0];
+        parent &amp;&amp; (ignore[parent.getID()] = true);
+      }
+      var limits = this._findHorizontalGroupLimits(node);
+      this._rowShift(node, limits, 2 * this.gridUnit.x, ignore);
+      this._updateTmpPositions();
+      this._addNode(node, true);
+      side &amp;&amp; this._addNode(side, true);
+    }
+  },
+  &#x2F;**
+   * [Internal method] Updates the index after adding a nodes as another node&#x27;s parents.
+   * 
+   * @param node the added partnerships node
+   *&#x2F;
+  _parentsAdded : function(node, child) {
+    this.tmpIndex.clear();
+    var neighbors = node.getSideNeighbors();
+    if (neighbors.length &gt; 0) {
+      var _this = this;
+      var ignore = {};
+      neighbors.each(function (item) {
+        ignore[item.getID()] = true;
+      });
+      ignore[node.getID()] = true;
+      if (child) {
+        ignore[child.getID()] = true;
+        var sides = child.getSideNeighbors();
+        sides.each(function(side) {
+          var partners = side.getSideNeighbors().without(child);
+          partners.each(function(partner) {
+            var hasSiblings = false;
+            var parent = partner.getUpperNeighbors().length &amp;&amp; partner.getUpperNeighbors()[0];
+            if (parent) {
+              var siblings = parent.getLowerNeighbors().without(partner);
+              siblings.each(function(sib) {
+                ignore[sib.getID] = true;
+                hasSiblings = true;
+              });
+            }
+            if (hasSiblings) {
+              ignore[partner.getID()] = true;
+              ignore[side.getID()] = true;
+            }
+          });
+        });
+      }
+      
+      var limits = this._findHorizontalGroupLimits(node);
+      limits.low -= this.gridUnit.x;
+      limits.high += this.gridUnit.x;
+      
+      var originalIgnore = Object.clone(ignore);
+      
+      while (this._rowShift(node, limits, this.gridUnit.x, ignore)){
+        ignore = Object.clone(originalIgnore);
+      }
+  
+      this._updateTmpPositions();
+      this._addNode(node, true);
+      neighbors.each(function (item) {
+        _this._addNode(item, true);
+      });
+    }
+  },
+  _partnershipAdded : function() {
+    &#x2F;&#x2F; TODO
+  },
+  &#x2F;**
+   * [Internal method] Updates the positions of all the nodes in a row when a node in that row was added or removed.
+   * 
+   * @param node the modified node
+   * @param length the distance to shift with
+   * @param ignore a map of nodes which should not be moved or traversed
+   *&#x2F;
+  _rowShift : function(node, limits, length, ignore) {
+    var row = this._getNodesAt(&#x27;y&#x27;, node.getY());
+    var _this = this;
+    var mid = (limits.low + limits.high)&#x2F;2;
+    var shifted = false;
+    row.each(function (item) {
+      if (item.getX() &gt;= limits.low &amp;&amp; item.getX() &lt; mid) {
+        shifted = true;
+        _this._subgraphShift(item, -length, ignore);
+      } else if (item.getX() &lt;= limits.high &amp;&amp; item.getX() &gt;= mid) {
+        shifted = true;
+        _this._subgraphShift(item, length, ignore);
+      }
+    });
+    return shifted;
+  },
+  &#x2F;**
+   * [Internal method] Updates the positions of all the nodes related to a recently moved node
+   * 
+   * @param node the modified node
+   * @param length the distance to shift with
+   * @param ignore a map of nodes which should not be moved or traversed
+   *&#x2F;
+  _subgraphShift : function(node, dx, ignore) {
+    if (ignore[node.getID()]) {
+      return false;
+    }
+    ignore[node.getID()] = true;
+    var newDx = dx;
+    if (node.getType() == &quot;partnership&quot;) {
+      var isBlocked = true;
+      var sides = node.getSideNeighbors();
+      if (sides.length == 2) {
+        node.getSideNeighbors().each( function(item) {
+          if (!ignore[item.getID()]) {
+            isBlocked = false;
+          }
+        });
+        if (isBlocked &amp;&amp;  sides[0].getY() == sides[1].getY() &amp;&amp; node.getX() != (sides[0].getY() + sides[1].getY()) &#x2F; 2) {
+          var min = Math.min(sides[0].getX(), sides[1].getX());
+          var max = Math.max(sides[0].getX(), sides[1].getX());
+          var y = sides[0].getY();
+
+          var canMove = true;
+          var found = false;
+          for (var x = min + this.gridUnit.x; x &lt; max; x += this.gridUnit.x) {
+            found = this._findNodeInTmpIndex(x, y);
+            if (found &amp;&amp; found != node) {
+              break;
+            } else {
+              found = false;
+            }
+          }
+          if (!found) {
+            var midX = min + Math.round((max - min) &#x2F; (2 * this.gridUnit.x)) * this.gridUnit.x;
+            newDx = midX - node.getX();
+          }
+        }
+      }
+    }
+    if (newDx == 0) {
+      return false;
+    } else {
+      dx = newDx;
+    }
+    this.relativeMove(node, dx, 0);
+    var _this = this;
+    var neighbors = node.getNeighbors();
+    neighbors.each(function(item) {
+      _this._subgraphShift(item, dx, ignore);
+    });
+    return true;
+  },
+  &#x2F;**
+   * [Internal method] Updates the vertical ordering of nodes whenever a higher node is becomes the child of a lower one.
+   * 
+   * @param upperNode the parent node
+   * @param lowerNode the child node
+   *&#x2F;
+  _rowConsistencyFix : function(upperNode, lowerNode) {
+    if (upperNode.getY() &gt;= lowerNode.getY()) {
+    &#x2F;&#x2F; TODO
+      
+    }
+  },
+  &#x2F;**
+   * Remove a node from the index
+   * 
+   * @param node the removed node
+   * @return node the removed node
+   *&#x2F;
+  remove : function (node) {
+    var node = this._getActualNode(node);
+    if (node) {
+      var position = this._snapToGrid({x: node.getX(), y: node.getY()});
+      this.positionTree.remove(position);
+      delete this.position2Node[position.x + &#x27;,&#x27; + position.y];
+      delete this.nodes[node.getID()];
+      this.xIndex[node.getX()] &amp;&amp; (this.xIndex[node.getX()] = this.xIndex[node.getX()].without(node));
+      this.yIndex[node.getY()] &amp;&amp; (this.yIndex[node.getY()] = this.yIndex[node.getY()].without(node));
+    }
+    return node;
+  },
+  &#x2F;**
+   * Move a node to a diferent position
+   * 
+   * @param node the node to move
+   * @param x the new horizontal coordinate
+   * @param y the new vertical coordinate
+   * @return true if the move was successful, false otherwise
+   *&#x2F;
+  move : function(node, x, y) {
+    this.tmpIndex.insert(node);
+    node.setPos(x, y);
+    &#x2F;*var node = this.remove(node) || node;
+    if (node) {
+      node.setPos(x, y);
+      this._addNode(node);
+    }*&#x2F;
+    return !!node;
+  },
+  &#x2F;**
+   * Move a node to a different position, indicated by relative coordinates
+   * 
+   * @param node the node to move
+   * @param dx the horizontal distance to the new position
+   * @param dy the vertical distance to the new position
+   * @return true if the move was successful, false otherwise
+   *&#x2F;
+  relativeMove : function(node, dx, dy) {
+    this.move(node, node.getX() + dx, node.getY() + dy);
+  },
+  &#x2F;**
+   * [Internal method] Retrieves the indexed node matching the input
+   * 
+   * @param node the node to search in the index
+   * @return the matching node from the index
+   *&#x2F;
+  _getActualNode : function(node) {
+    var id;
+    if (typeof(node.getID == &#x27;function&#x27;)) {
+      id = node.getID();
+    } else {
+      id = node;
+    }
+    return this.nodes[id];
+  },
+  &#x2F;**
+   * Retrieves the node indexed for a given id
+   * 
+   * @param id
+   * @return node indexed for id or undefined
+   *&#x2F;
+  getNode : function(id) {
+    return this.nodes[id];
+  },
+   &#x2F;**
+   * Retrieves the node indexed for a given position
+   * 
+   * @param x
+   * @param y
+   * @return node indexed for the position or undefined
+   *&#x2F;
+  getNodeAt : function(x, y) {
+    return this.position2Node[x + &#x27;,&#x27; + y];
+  },
+  &#x2F;**
+   * Retrieves the node in the grid point closest to the input coordinates
+   * 
+   * @param x
+   * @param y
+   * @return node indexed for the position or undefined
+   *&#x2F;
+  getNodeNear : function(x, y) {
+    var position = this._snapToGrid({x: x, y: y});
+    return this.position2Node[position.x + &#x27;,&#x27; + position.y];
+  },
+  &#x2F;**
+   * Checks if an id is registered in the index
+   *&#x2F;
+  exists : function(id) {
+    return !!this.nodes[id];
+  },
+  
+  &#x2F;**
+   * [Internal method] Find the leftmost and rightmost x coordinate of nodes horizontally connected to a given node
+   * 
+   * @param node the node for which the group is measured
+   * @param _visited optional map of already visited nodes, which should be ignored
+   * @param _limits optional object {high: number, low: number} containg the limits computed so far
+   * @return an object {high: number, low: number} containing the computed limits
+   *&#x2F;
+  _findHorizontalGroupLimits : function (node, _visited, _limits) {
+    var visited = _visited || {};
+    if (!node || visited[node.getID()]) {
+      return _limits;
+    }
+    var limits = {};
+    if (_limits)  {
+      limits.low  = Math.min(_limits.low,  node.getX());
+      limits.high = Math.max(_limits.high, node.getX());
+    } else {
+      limits = _limits || {low : node.getX(), high : node.getX()}
+    }
+    visited[node.getID()] = true;
+    var _this = this;
+    node.getSideNeighbors().each(function (item) {
+      if (item.getY() == node.getY() &amp;&amp; !visited[item.getID]) {
+        limits = _this._findHorizontalGroupLimits(item, visited, limits);
+      }
+    });
+    return limits;
+  },
+  
+  &#x2F;**
+   * [Internal method] Find the distance between leftmost and rightmost x coordinate of nodes horizontally connected to a given node
+   * 
+   * @param node the node for which the group is measured
+   * @return a number representing the distance between leftmost and rightmost x coordinate of the group
+   *&#x2F;
+  _findHorizontalGroupSize :  function (node) {
+    var limits = this._findHorizontalGroupLimits(node);
+    return limits.high - limits.low;
+  },
+   &#x2F;**
+   * [Internal method] Find the leftmost and rightmost x coordinate of the lower neighbors of a node
+   * 
+   * @param node the node for which the group is measured
+   * @return an object {high: number, low: number} containing the computed limits
+   *&#x2F;
+  _findLowerNeighborGroupsLimits : function(node) {
+    var list = node.getLowerNeighbors();
+    if (list.length == 0) {
+      return {low: node.getX(), high: node.getX()};
+    }
+    var start =  this._findHorizontalGroupLimits(list[0]).low;
+    var end = this._findHorizontalGroupLimits(list[list.length - 1]).high;
+    return {low: start, high: end};
+  },
+  
+  &#x2F;**
+   * [Internal method] Find the distance between leftmost and rightmost x coordinate of the lower neighbors of a node
+   * 
+   * @param node the node for which the group is measured
+   * @return a number representing the distance between leftmost and rightmost x coordinate of the group
+   *&#x2F;
+  _findLowerNeighborGroupsSize : function(node) {
+    var list = node.getLowerNeighbors();
+    if (list.length == 0) {
+      return -2*this.gridUnit.x;
+    }
+    var start =  list[0].getX();
+    var end = this._findHorizontalGroupLimits(list[list.length - 1]).high;
+    return end - start;
+  }
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

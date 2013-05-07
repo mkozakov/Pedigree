@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>pedigree&#x2F;graph.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/AbstractHoverbox.html">AbstractHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNode.html">AbstractNode</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNodeVisuals.html">AbstractNodeVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPerson.html">AbstractPerson</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPersonVisuals.html">AbstractPersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/ActionStack.html">ActionStack</a></li>
+            
+                <li><a href="..&#x2F;classes/ClassName.html">ClassName</a></li>
+            
+                <li><a href="..&#x2F;classes/Graph.html">Graph</a></li>
+            
+                <li><a href="..&#x2F;classes/GroupHoverbox.html">GroupHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/Legend.html">Legend</a></li>
+            
+                <li><a href="..&#x2F;classes/NodeMenu.html">NodeMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/NodetypeSelectionBubble.html">NodetypeSelectionBubble</a></li>
+            
+                <li><a href="..&#x2F;classes/Partnership.html">Partnership</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipHoverbox.html">PartnershipHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipVisuals.html">PartnershipVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PedigreeEditor.html">PedigreeEditor</a></li>
+            
+                <li><a href="..&#x2F;classes/Person.html">Person</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroup.html">PersonGroup</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroupVisuals.html">PersonGroupVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonHoverbox.html">PersonHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonVisuals.html">PersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolder.html">PlaceHolder</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolderVisuals.html">PlaceHolderVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/Pregnancy.html">Pregnancy</a></li>
+            
+                <li><a href="..&#x2F;classes/PregnancyVisuals.html">PregnancyVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadEngine.html">SaveLoadEngine</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadIndicator.html">SaveLoadIndicator</a></li>
+            
+                <li><a href="..&#x2F;classes/Workspace.html">Workspace</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: pedigree&#x2F;graph.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * Graph is responsible for the adding and removal of nodes. It is also responsible for
+ * node selection and interaction between nodes.
+ *
+ * @class Graph
+ * @constructor
+ *&#x2F;
+
+var Graph = Class.create({
+
+    initialize: function() {
+        this.hoverModeZones = editor.getPaper().set();
+        this._placeHolderNodes = [];
+        this._partnershipNodes = [];
+        this._pregnancyNodes = [];
+        this._personGroupNodes = [];
+        this._personNodes = [];
+        this._idCount = 1;
+        this._nodeMap = {};
+        this._currentHoveredNode = null;
+        this._currentDraggable = null;
+    },
+
+    &#x2F;**
+     * Returns a map node IDs to nodes
+     *
+     * @method getNodeMap
+     * @return {Object}
+     *
+     {
+        {nodeID} : {AbstractNode}
+     }
+     *&#x2F;
+    getNodeMap: function() {
+        return this._nodeMap;
+    },
+
+    &#x2F;**
+     * Returns the node that is currently selected
+     *
+     * @method getCurrentHoveredNode
+     * @return {AbstractNode}
+     *&#x2F;
+    getCurrentHoveredNode: function() {
+        return this._currentHoveredNode;
+    },
+
+    &#x2F;**
+     * Changes currentHoveredNode to the specified node.
+     *
+     * @method getCurrentHoveredNode
+     * @param {AbstractNode} node
+     *&#x2F;
+    setCurrentHoveredNode: function(node) {
+        this._currentHoveredNode = node;
+    },
+
+    &#x2F;**
+     * Returns the currently dragged element
+     *
+     * @method getCurrentDraggable
+     * @return Either a handle from a hoverbox, or a PlaceHolder
+     *&#x2F;
+    getCurrentDraggable: function() {
+        return this._currentDraggable;
+    },
+
+    &#x2F;**
+     * Returns the Object that is currently being dragged
+     *
+     * @method setCurrentDraggable
+     * @param draggable A handle or a PlaceHolder
+     *&#x2F;
+    setCurrentDraggable: function(draggable) {
+        this._currentDraggable = draggable;
+    },
+
+    &#x2F;**
+     * Generates an id for a node
+     *
+     * @method generateID
+     * @return {Number} A unique id
+     *&#x2F;
+    generateID: function() {
+        return this._idCount++;
+    },
+
+    &#x2F;**
+     * Returns the highest generated id in this graph
+     *
+     * @method getIdCount
+     * @return {Number}
+     *&#x2F;
+    getIdCount: function() {
+        return this._idCount
+    },
+
+    &#x2F;**
+     * Sets the highest generated id to maxID
+     *
+     * @method setIdCount
+     * @param maxID
+     *&#x2F;
+    setIdCount: function(maxID) {
+        this._idCount = maxID;
+    },
+
+    &#x2F;**
+     * Returns the Proband node
+     *
+     * @method getProband
+     * @return {Person}
+     *&#x2F;
+    getProband: function() {
+        return this.getNodeMap()[1];
+    },
+
+    &#x2F;**
+     * Returns a list containing all the nodes in the graph
+     *
+     * @method getAllNodes
+     * @return {Array} A list containing all nodes. The last element in the proband.
+     *&#x2F;
+    getAllNodes: function() {
+        var pregs = this.getPregnancyNodes(),
+            partnerships = this.getPartnershipNodes(),
+            placeHolders = this.getPlaceHolderNodes(),
+            persons = this.getPersonNodes(),
+            personGroups = this.getPersonGroupNodes();
+
+        return pregs.concat(partnerships, placeHolders, personGroups, persons.reverse());
+    },
+
+    &#x2F;**
+     * Deletes all nodes except the proband.
+     *
+     * @method clearGraph
+     * @param {Boolean} removeProband If True, the proband is deleted as well.
+     *&#x2F;
+    clearGraph: function(removeProband) {
+        var nodes = this.getAllNodes();
+        var length = removeProband ? nodes.length : nodes.length - 1;
+        for(var i = 0 ; i&lt; length ; i++) {
+            nodes[i] &amp;&amp; nodes[i].remove(false);
+        }
+    },
+
+    &#x2F;**
+     * Removes all nodes except the proband and adds this action to the action stack.
+     *
+     * @method clearGraphAction
+     *&#x2F;
+    clearGraphAction: function() {
+        var lastAction = editor.getActionStack().peek();
+        if(!lastAction || lastAction.property != &quot;clearGraph&quot;) {
+            var saveData = editor.getSaveLoadEngine().serialize();
+            this.clearGraph(false);
+            var undo = function() {
+                editor.getSaveLoadEngine().load(saveData);
+            };
+            var redo = function() {
+                editor.getGraph().clearGraph(false);
+            };
+            editor.getActionStack().push({undo: undo, redo:redo, property: &quot;clearGraph&quot;});
+        }
+    },
+
+    &#x2F;**
+     * Creates a Partnership and adds it to index of nodes.
+     *
+     * @method addPartnership
+     * @param {Number} x The x coordinate for the node
+     * @param {Number} y The y coordinate for the node
+     * @param {AbstractNode} node1 The first node in the partnership
+     * @param {AbstractNode} node2 The second node in the partnership
+     * @param {Number} [id] The id of the node
+     * @return {Partnership}
+     *&#x2F;
+    addPartnership : function(x, y, node1, node2, id) {
+        var partnership = new Partnership(x, y, node1, node2, id);
+        this.getNodeMap()[partnership.getID()] = partnership;
+        editor.getNodeIndex()._addNode(partnership, true);
+        this._partnershipNodes.push(partnership);
+        return partnership;
+    },
+
+    &#x2F;**
+     * Removes partnership from index of nodes
+     *
+     * @method removePartnership
+     * @param partnership
+     *&#x2F;
+    removePartnership: function(partnership) {
+        delete this.getNodeMap()[partnership.getID()];
+        this._partnershipNodes = this._partnershipNodes.without(partnership);
+    },
+
+    &#x2F;**
+     * Returns list containing all the pregnancy nodes in the graph
+     *
+     * @method getPregnancyNodes
+     * @return {Array}
+     *&#x2F;
+    getPregnancyNodes: function() {
+        return this._pregnancyNodes;
+    },
+
+    &#x2F;**
+     * Returns list containing all the Person nodes in the graph
+     *
+     * @method getPersonNodes
+     * @return {Array}
+     *&#x2F;
+    getPersonNodes: function() {
+        return this._personNodes;
+    },
+
+    &#x2F;**
+     * Returns list containing all the PlaceHolder nodes in the graph
+     *
+     * @method getPlaceHolderNodes
+     * @return {Array}
+     *&#x2F;
+    getPlaceHolderNodes: function() {
+        return this._placeHolderNodes;
+    },
+
+    &#x2F;**
+     * Returns list containing all the Partnership nodes in the graph
+     *
+     * @method getPartnershipNodes
+     * @return {Array}
+     *&#x2F;
+    getPartnershipNodes: function() {
+        return this._partnershipNodes;
+    },
+
+    &#x2F;**
+     * Returns list containing all the PersonGroup nodes in the graph
+     *
+     * @method getPersonGroupNodes
+     * @return {Array}
+     *&#x2F;
+    getPersonGroupNodes: function() {
+        return this._personGroupNodes;
+    },
+
+    &#x2F;**
+     * Creates a Person in the graph and returns it
+     *
+     * @method addPerson
+     * @param {Number} x The x coordinate for the node
+     * @param {Number} y The y coordinate for the node
+     * @param {String} gender Can be &quot;M&quot;, &quot;F&quot;, or &quot;U&quot;
+     * @param {Number} [id] The id of the node
+     * @return {Person}
+     *&#x2F;
+    addPerson: function(x, y, gender, id) {
+        var isProband = this.getPersonNodes().length == 0;
+        if(!isProband) {
+        }
+        var node = new Person(x, y, gender, id, isProband);
+        this.getPersonNodes().push(node);
+        this.getNodeMap()[node.getID()] = node;
+        editor.getNodeIndex()._addNode(node, true);
+        return node;
+    },
+
+    removePerson: function(person) {
+        delete this.getNodeMap()[person.getID()];
+        this._personNodes = this._personNodes.without(person);
+    },
+
+    &#x2F;**
+     * Creates a PlaceHolder in the graph and returns it
+     *
+     * @method addPlaceHolder
+     * @param {Number} x The x coordinate for the node
+     * @param {Number} y The y coordinate for the node
+     * @param {String} gender Can be &quot;M&quot;, &quot;F&quot;, or &quot;U&quot;
+     * @param {Number} [id] The id of the node
+     * @return {PlaceHolder}
+     *&#x2F;
+    addPlaceHolder: function(x, y, gender, id) {
+        var node = new PlaceHolder(x, y, gender, id);
+        this.getPlaceHolderNodes().push(node);
+        this.getNodeMap()[node.getID()] = node;
+        editor.getNodeIndex()._addNode(node, true);
+        return node;
+    },
+
+    &#x2F;**
+     * Removes given PlaceHolder node from node index (Does not delete the node visuals).
+     *
+     * @method removePlaceHolder
+     * @param {PlaceHolder} placeholder
+     *&#x2F;
+    removePlaceHolder: function(placeholder) {
+        delete this.getNodeMap()[placeholder.getID()];
+        this._placeHolderNodes = this._placeHolderNodes.without(placeholder);
+    },
+
+    &#x2F;**
+     * Creates a PersonGroup in the graph and returns it
+     *
+     * @method addPersonGroup
+     * @param {Number} x The x coordinate for the node
+     * @param {Number} y The y coordinate for the node
+     * @param {String} gender Can be &quot;M&quot;, &quot;F&quot;, or &quot;U&quot;
+     * @param {Number} [id] The id of the node
+     * @return {PersonGroup}
+     *&#x2F;
+    addPersonGroup: function(x, y, gender, id) {
+        var node = new PersonGroup(x, y, gender, id);
+        this.getPersonGroupNodes().push(node);
+        this.getNodeMap()[node.getID()] = node;
+        editor.getNodeIndex()._addNode(node, true);
+        return node;
+    },
+
+    &#x2F;**
+     * Removes given PersonGroup node from node index (Does not delete the node visuals).
+     *
+     * @method removePersonGroup
+     * @param {PersonGroup} groupNode
+     *&#x2F;
+    removePersonGroup: function(groupNode) {
+        delete this.getNodeMap()[groupNode.getID()];
+        this._personGroupNodes = this._personGroupNodes.without(groupNode);
+    },
+
+    &#x2F;**
+     * Creates a Pregnancy node in the graph and returns it
+     *
+     * @method addPregnancy
+     * @param {Number} x The x coordinate for the node
+     * @param {Number} y The y coordinate for the node
+     * @param {Partnership} partnership The Partnership that has this pregnancy
+     * @param {Number} [id] The id of the node
+     * @return {Pregnancy}
+     *&#x2F;
+    addPregnancy: function(x, y, partnership, id) {
+        var node = new Pregnancy(x, y, partnership, id);
+        this.getPregnancyNodes().push(node);
+        this.getNodeMap()[node.getID()] = node;
+        editor.getNodeIndex()._addNode(node, true);
+        return node;
+    },
+
+    &#x2F;**
+     * Removes given Pregnancy node from node index (Does not delete the node visuals).
+     *
+     * @method removePregnancy
+     * @param {Pregnancy} pregnancy
+     *&#x2F;
+    removePregnancy: function(pregnancy) {
+        delete this.getNodeMap()[pregnancy.getID()];
+        this._pregnancyNodes = this._pregnancyNodes.without(pregnancy);
+    },
+
+    &#x2F;**
+     * Enters hover-mode state, which is when a handle or a PlaceHolder is being dragged around the screen
+     *
+     * @method enterHoverMode
+     * @param sourceNode The node whose handle is being dragged, or the placeholder that is being dragged
+     * @param {Array} hoverTypes An array of strings containing the types of nodes that &quot;react&quot; to the sourceNode being
+     * dragged on top of them.
+     *&#x2F;
+    enterHoverMode: function(sourceNode, hoverTypes) {
+        if(this.getCurrentDraggable().getType() == &quot;parent&quot;) {
+            this.getPartnershipNodes().each(function(partnershipBubble) {
+                partnershipBubble.getGraphics().grow();
+            })
+        }
+        var me = this,
+            color,
+            hoverNodes = [];
+        hoverTypes.each(function(type) {
+            hoverNodes = hoverNodes.concat(me[&quot;get&quot; + type + &quot;Nodes&quot;]())
+        });
+        hoverNodes.without(sourceNode).each(function(node) {
+            var hoverModeZone = node.getGraphics().getHoverBox().getHoverZoneMask().clone().toFront();
+            hoverModeZone.attr(&quot;cursor&quot;, &quot;pointer&quot;);
+            hoverModeZone.hover(
+                function() {
+                    me._currentHoveredNode = node;
+                    node.getGraphics().getHoverBox().setHovered(true);
+                    node.getGraphics().getHoverBox().getBoxOnHover().attr(PedigreeEditor.attributes.boxOnHover);
+
+                    if(me.getCurrentDraggable().getType() == &#x27;PlaceHolder&#x27; &amp;&amp; me.getCurrentDraggable().canMergeWith(node)) {
+                        me.getCurrentDraggable().validHoveredNode = node;
+                        color = &quot;green&quot;;
+                    }
+                    else if(me.getCurrentDraggable().getType() == &quot;partner&quot; &amp;&amp; sourceNode.canPartnerWith(node)) {
+                        node.validPartnerSelected = true;
+                        color = &quot;green&quot;;
+                    }
+                    else if(me.getCurrentDraggable().getType() == &quot;child&quot; &amp;&amp; sourceNode.canBeParentOf(node)) {
+                        node.validChildSelected = true;
+                        color = &quot;green&quot;;
+                    }
+                    else if(me.getCurrentDraggable().getType() == &quot;parent&quot; &amp;&amp; node.canBeParentOf(sourceNode)) {
+                        if(node.getType() == &#x27;Person&#x27;) {
+                            node.validParentSelected = true;
+                        }
+                        else {
+                            node.validParentsSelected = true;
+                        }
+                        color = &quot;green&quot;;
+                    }
+                    else {
+                        color = &quot;red&quot;;
+                    }
+                    node.getGraphics().getHoverBox().getBoxOnHover().attr(&quot;fill&quot;, color);
+                },
+                function() {
+                    me.getCurrentDraggable() &amp;&amp; (me.getCurrentDraggable().validHoveredNode = null);
+                    node.getGraphics().getHoverBox().setHovered(false);
+                    node.getGraphics().getHoverBox().getBoxOnHover().attr(PedigreeEditor.attributes.boxOnHover).attr(&#x27;opacity&#x27;, 0);
+                    me._currentHoveredNode = null;
+                    node.validPartnerSelected = node.validChildSelected =  node.validParentSelected = node.validParentsSelected = false;
+                });
+            me.hoverModeZones.push(hoverModeZone);
+        });
+    },
+
+    &#x2F;**
+     * Exits hover-mode state, which is when a handle or a PlaceHolder is being dragged around the screen
+     *
+     * @method exitHoverMode
+     *&#x2F;
+    exitHoverMode: function() {
+        this.hoverModeZones.remove();
+        this.getPartnershipNodes().each(function(partnership) {
+            partnership.getGraphics().area &amp;&amp; partnership.getGraphics().area.remove();
+        });
+    }
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>pedigree&#x2F;nodeMenu.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/AbstractHoverbox.html">AbstractHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNode.html">AbstractNode</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNodeVisuals.html">AbstractNodeVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPerson.html">AbstractPerson</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPersonVisuals.html">AbstractPersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/ActionStack.html">ActionStack</a></li>
+            
+                <li><a href="..&#x2F;classes/ClassName.html">ClassName</a></li>
+            
+                <li><a href="..&#x2F;classes/Graph.html">Graph</a></li>
+            
+                <li><a href="..&#x2F;classes/GroupHoverbox.html">GroupHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/Legend.html">Legend</a></li>
+            
+                <li><a href="..&#x2F;classes/NodeMenu.html">NodeMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/NodetypeSelectionBubble.html">NodetypeSelectionBubble</a></li>
+            
+                <li><a href="..&#x2F;classes/Partnership.html">Partnership</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipHoverbox.html">PartnershipHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipVisuals.html">PartnershipVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PedigreeEditor.html">PedigreeEditor</a></li>
+            
+                <li><a href="..&#x2F;classes/Person.html">Person</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroup.html">PersonGroup</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroupVisuals.html">PersonGroupVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonHoverbox.html">PersonHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonVisuals.html">PersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolder.html">PlaceHolder</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolderVisuals.html">PlaceHolderVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/Pregnancy.html">Pregnancy</a></li>
+            
+                <li><a href="..&#x2F;classes/PregnancyVisuals.html">PregnancyVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadEngine.html">SaveLoadEngine</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadIndicator.html">SaveLoadIndicator</a></li>
+            
+                <li><a href="..&#x2F;classes/Workspace.html">Workspace</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: pedigree&#x2F;nodeMenu.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * NodeMenu is a UI Element containing options for AbstractNode elements
+ *
+ * @class NodeMenu
+ * @constructor
+ * @param {Array} data Contains objects corresponding to different menu items
+ *
+ {
+ [
+    {
+        &#x27;name&#x27; : the name of the menu item,
+        &#x27;label&#x27; : the text label above this menu option,
+        &#x27;type&#x27; : the type of form input. (eg. &#x27;radio&#x27;, &#x27;date-picker&#x27;, &#x27;text&#x27;, &#x27;disease-picker&#x27;, &#x27;select&#x27;),
+        &#x27;values&#x27; : [
+                    {&#x27;actual&#x27; : actual value of the option, &#x27;displayed&#x27; : the way the option will be seen in the menu} ...
+                    ]
+    }, ...
+ ]
+ }
+ *&#x2F;
+NodeMenu = Class.create({
+    initialize : function(data) {
+        this.canvas = editor.getWorkspace().canvas || $(&#x27;body&#x27;);
+        this.menuBox = new Element(&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;menu-box&#x27;});
+
+        this.closeButton = new Element(&#x27;span&#x27;, {&#x27;class&#x27; : &#x27;close-button&#x27;}).update(&#x27;×&#x27;);
+        this.menuBox.insert({&#x27;top&#x27;: this.closeButton});
+        this.closeButton.observe(&#x27;click&#x27;, this.hide.bindAsEventListener(this));
+
+        this.form = new Element(&#x27;form&#x27;, {&#x27;method&#x27; : &#x27;get&#x27;, &#x27;action&#x27; : &#x27;&#x27;});
+        this.menuBox.insert({&#x27;bottom&#x27; : this.form});
+
+        this.fieldMap = {};
+        &#x2F;&#x2F; Generate fields
+        var _this = this;
+        data.each(function(d) {
+            if (typeof (_this._generateField[d.type]) == &#x27;function&#x27;) {
+                _this.form.insert(_this._generateField[d.type].call(_this, d));
+            }
+        });
+
+        &#x2F;&#x2F; Insert in document
+        this.hide();
+        editor.getWorkspace().getWorkArea().insert(this.menuBox);
+
+        &#x2F;&#x2F; Attach pickers
+        &#x2F;&#x2F; date
+        var crtYear = new Date().getFullYear();
+        window.dateTimePicker = new XWiki.widgets.DateTimePicker({
+           year_range: [crtYear - 99, crtYear + 1],
+           after_navigate : function(date) {
+             this._selector.updateSelectedDate({day: date.getDate(), month: date.getMonth(), year : date.getYear() + 1900}, false);
+           }
+        });
+        &#x2F;&#x2F; disease
+        this.form.select(&#x27;input.suggest-omim&#x27;).each(function(item) {
+            if (!item.hasClassName(&#x27;initialized&#x27;)) {
+                &#x2F;&#x2F; Create the Suggest.
+                item._suggest = new MS.widgets.Suggest(item, {
+                    script: &quot;$xwiki.getURL(&#x27;PhenoTips.OmimService&#x27;, &#x27;get&#x27;)?outputSyntax=plain&amp;&quot;,
+                    varname: &quot;q&quot;,
+                    noresults: &quot;No matching terms&quot;,
+                    json: true,
+                    resultsParameter : &quot;rows&quot;,
+                    resultId : &quot;id&quot;,
+                    resultValue : &quot;name&quot;,
+                    resultInfo : {},
+                    enableHierarchy: false,
+                    fadeOnClear : false,
+                    timeout : 30000,
+                    parentContainer : $(&#x27;body&#x27;)
+                });
+                if (item.hasClassName(&#x27;multi&#x27;) &amp;&amp; typeof(MS.widgets.SuggestPicker) != &quot;undefined&quot;) {
+                    item._suggestPicker = new MS.widgets.SuggestPicker(item, item._suggest, {
+                        &#x27;showKey&#x27; : false,
+                        &#x27;showTooltip&#x27; : false,
+                        &#x27;showDeleteTool&#x27; : true,
+                        &#x27;enableSort&#x27; : false,
+                        &#x27;showClearTool&#x27; : true,
+                        &#x27;inputType&#x27;: &#x27;hidden&#x27;,
+                        &#x27;listInsertionElt&#x27; : &#x27;input&#x27;,
+                        &#x27;listInsertionPosition&#x27; : &#x27;after&#x27;,
+                        &#x27;acceptFreeText&#x27; : true
+                    });
+                }
+                item.addClassName(&#x27;initialized&#x27;);
+            }
+        });
+        &#x2F;&#x2F; Update disorder colors
+        this._updateDisorderColor = function(id, color) {
+          this.menuBox.select(&#x27;.field-disorders li input[value=&#x27; + id + &#x27;]&#x27;).each(function(item) {
+             var colorBubble = item.up(&#x27;li&#x27;).down(&#x27;.disorder-color&#x27;);
+             if (!colorBubble) {
+               colorBubble = new Element(&#x27;span&#x27;, {&#x27;class&#x27; : &#x27;disorder-color&#x27;});
+               item.up(&#x27;li&#x27;).insert({top : colorBubble});
+             }
+             colorBubble.setStyle({background : color});
+          });
+        }.bind(this);
+        document.observe(&#x27;disorder:color&#x27;, function(event) {
+           if (!event.memo || !event.memo.id || !event.memo.color) {
+             return;
+           }
+           _this._updateDisorderColor(event.memo.id, event.memo.color);
+        });
+        this._setFieldValue[&#x27;disease-picker&#x27;].bind(this);
+    },
+
+    _generateEmptyField : function (data) {
+        var result = new Element(&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;field-box field-&#x27; + data.name});
+        var label = new Element(&#x27;label&#x27;, {&#x27;class&#x27; : &#x27;field-name&#x27;}).update(data.label);
+        result.inputsContainer = new Element(&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;field-inputs&#x27;});
+        result.insert(label).insert(result.inputsContainer);
+        this.fieldMap[data.name] = {
+            &#x27;type&#x27; : data.type,
+            &#x27;element&#x27; : result,
+            &#x27;default&#x27; : data[&quot;default&quot;] || &#x27;&#x27;,
+            &#x27;crtValue&#x27; : data[&quot;default&quot;] || &#x27;&#x27;,
+            &#x27;function&#x27; : data[&#x27;function&#x27;],
+            &#x27;inactive&#x27; : false
+        };
+        return result;
+    },
+
+    _attachFieldEventListeners : function (field, eventNames, values) {
+      var _this = this;
+      eventNames.each(function(eventName) {
+        field.observe(eventName, function(event) {
+          var target = _this.targetNode;
+          _this.fieldMap[field.name].crtValue = field._getValue &amp;&amp; field._getValue()[0];
+          var method = _this.fieldMap[field.name][&#x27;function&#x27;];
+          if (target &amp;&amp; typeof(target[method]) == &#x27;function&#x27;) {
+            target[method].apply(target, field._getValue &amp;&amp; field._getValue());
+          }
+          field.fire(&#x27;pedigree:change&#x27;);
+        });
+      });
+    },
+
+    _attachDependencyBehavior : function(field, data) {
+        if (data.dependency) {
+            var dependency = data.dependency.split(&#x27; &#x27;, 3);
+            var element = this.fieldMap[dependency[0]].element;
+            dependency[0] = this.form[dependency[0]];
+            element.inputsContainer.insert(field.up());
+            this.fieldMap[field.name].element = element;
+            this._updatedDependency(field, dependency);
+            dependency[0].observe(&#x27;pedigree:change&#x27;, function() {
+                this._updatedDependency(field, dependency);
+                field.value = &#x27;&#x27;;
+            }.bindAsEventListener(this));
+        }
+    },
+
+    _updatedDependency : function (field, dependency) {
+        switch (dependency[1]) {
+            case &#x27;!=&#x27;:
+                field.disabled =  (dependency[0].value == dependency[2]);
+                break;
+            default:
+                field.disabled =  (dependency[0].value == dependency[2]);
+                break;
+        }
+    },
+
+    _generateField : {
+        &#x27;radio&#x27; : function (data) {
+            var result = this._generateEmptyField(data);
+            var values = new Element(&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;field-values&#x27;});
+            result.inputsContainer.insert(values);
+            var _this = this;
+            var _generateRadioButton = function(v) {
+                var radioLabel = new Element(&#x27;label&#x27;, {&#x27;class&#x27; : data.name + &#x27;_&#x27; + v.actual}).update(v.displayed);
+                var radioButton = new Element(&#x27;input&#x27;, {type: &#x27;radio&#x27;, name: data.name, value: v.actual});
+                radioLabel.insert({&#x27;top&#x27;: radioButton});
+                radioButton._getValue = function() { return [this.value]; }.bind(radioButton);
+                values.insert(radioLabel);
+                _this._attachFieldEventListeners(radioButton, [&#x27;click&#x27;]);
+                _this._attachDependencyBehavior(radioButton, data);
+            };
+            data.values.each(_generateRadioButton);
+            
+            return result;
+        },
+        &#x27;checkbox&#x27; : function (data) {
+            var result = this._generateEmptyField(data);
+            var checkbox = new Element(&#x27;input&#x27;, {type: &#x27;checkbox&#x27;, name: data.name, value: &#x27;1&#x27;});
+            result.down(&#x27;label&#x27;).insert({&#x27;top&#x27;: checkbox});
+            checkbox._getValue = function() { return [this.checked];}.bind(checkbox);
+            this._attachFieldEventListeners(checkbox, [&#x27;click&#x27;]);
+            return result;
+        },
+
+        &#x27;text&#x27; : function (data) {
+            var result = this._generateEmptyField(data);
+            var text = new Element(&#x27;input&#x27;, {type: &#x27;text&#x27;, name: data.name});
+            if (data.tip) {
+                text.placeholder = data.tip;
+            }
+            result.inputsContainer.insert(text);
+            text.wrap(&#x27;span&#x27;);
+            text._getValue = function() { return [this.value]; }.bind(text);
+            this._attachFieldEventListeners(text, [&#x27;keypress&#x27;, &#x27;keyup&#x27;], [true]);
+            this._attachDependencyBehavior(text, data);
+            return result;
+        },
+
+        &#x27;date-picker&#x27; : function (data) {
+            var result = this._generateEmptyField(data);
+            var datePicker = new Element(&#x27;input&#x27;, {type: &#x27;text&#x27;, &#x27;class&#x27;: &#x27;xwiki-date&#x27;, name: data.name, &#x27;title&#x27;: data.format, alt : &#x27;&#x27; });
+            result.insert(datePicker);
+            datePicker._getValue = function() { return [this.alt &amp;&amp; Date.parseISO_8601(this.alt)]; }.bind(datePicker);
+            this._attachFieldEventListeners(datePicker, [&#x27;xwiki:date:changed&#x27;]);
+            return result;
+        },
+        &#x27;disease-picker&#x27; : function (data) {
+            var result = this._generateEmptyField(data);
+            var diseasePicker = new Element(&#x27;input&#x27;, {type: &#x27;text&#x27;, &#x27;class&#x27;: &#x27;suggest multi suggest-omim&#x27;, name: data.name});
+            result.insert(diseasePicker);
+            diseasePicker._getValue = function() {
+              var results = [];
+              var container = this.up(&#x27;.field-box&#x27;);
+              if (container) {
+                container.select(&#x27;input[type=hidden][name=&#x27; + data.name + &#x27;]&#x27;).each(function(item){
+                  results.push(new Disorder(item.value, item.next(&#x27;.value&#x27;) &amp;&amp; item.next(&#x27;.value&#x27;).firstChild.nodeValue || item.value));
+                });
+              }
+              return [results];
+            }.bind(diseasePicker);
+            &#x2F;&#x2F; Forward the &#x27;custom:selection:changed&#x27; to the input
+            var _this = this;
+            document.observe(&#x27;custom:selection:changed&#x27;, function(event) {
+              if (event.memo &amp;&amp; event.memo.trigger &amp;&amp; event.findElement() != event.memo.trigger &amp;&amp; !event.memo.trigger._silent) {
+                 Event.fire(event.memo.trigger, &#x27;custom:selection:changed&#x27;);
+                _this.reposition();
+              }
+            });
+            this._attachFieldEventListeners(diseasePicker, [&#x27;custom:selection:changed&#x27;]);
+            return result;
+        },
+        &#x27;select&#x27; : function (data) {
+            var result = this._generateEmptyField(data);
+            var select = new Element(&#x27;select&#x27;, {&#x27;name&#x27; : data.name});
+            result.inputsContainer.insert(select);
+            select.wrap(&#x27;span&#x27;);
+            var _generateSelectOption = function(v) {
+              var option = new Element(&#x27;option&#x27;, {&#x27;value&#x27; : v.actual}).update(v.displayed);
+              select.insert(option);
+            };
+            if(data.nullValue) {
+                _generateSelectOption({&#x27;actual&#x27; : &#x27;&#x27;, displayed : &#x27;-&#x27;});
+            }
+            if (data.values) {
+                data.values.each(_generateSelectOption);
+            } else if (data.range) {
+                $A($R(data.range.start, data.range.end)).each(function(i) {_generateSelectOption({&#x27;actual&#x27;: i, &#x27;displayed&#x27; : i + &#x27; &#x27; + data.range.item[+(i!=1)]})});
+            }
+            select._getValue = function() { return [(this.selectedIndex &gt;= 0) &amp;&amp; this.options[this.selectedIndex].value || &#x27;&#x27;]; }.bind(select);
+            this._attachFieldEventListeners(select, [&#x27;change&#x27;]);
+            return result;
+        },
+        &#x27;hidden&#x27; : function (data) {
+            var result = this._generateEmptyField(data);
+            result.addClassName(&#x27;hidden&#x27;);
+            var input = new Element(&#x27;input&#x27;, {type: &#x27;hidden&#x27;, name: data.name, value: &#x27;&#x27;});
+            result.update(input);
+            return result;
+        }
+    },
+
+    isActive : function() {
+      return !!this.targetNode;
+    },
+    hide : function() {
+      if (this.isActive()) {
+          if (this.targetNode) {
+              this.targetNode.onWidgetHide();
+              delete this.targetNode;
+          }
+        this.menuBox.hide();
+        this._clearCrtData();
+        this.menuBox.style.height = &#x27;&#x27;;
+        this.menuBox.style.overflow = &#x27;&#x27;;
+        delete this._x; delete this._y;
+      }
+    },
+    _clearCrtData : function () {
+        var _this = this;
+        Object.keys(this.fieldMap).each(function (name) {
+            _this.fieldMap[name].crtValue = _this.fieldMap[name][&quot;default&quot;];
+            _this._setFieldValue[_this.fieldMap[name].type].call(_this, _this.fieldMap[name].element, _this.fieldMap[name].crtValue);
+            _this.fieldMap[name].inactive = false;
+        });
+    },
+    reposition : function() {
+      if (typeof(this._x) == &#x27;undefined&#x27;) {
+        return;
+      }
+      this.menuBox.style.height = &#x27;&#x27;;
+      this.menuBox.style.overflow = &#x27;&#x27;;
+      this.menuBox.style.left = this._x + &#x27;px&#x27;;
+      &#x2F;&#x2F; Make sure the menu fits inside the screen
+      if (this.canvas &amp;&amp; this.menuBox.getHeight() &gt;= this.canvas.getHeight()) {
+        this.menuBox.style.top = 0;
+        this.menuBox.style.height = this.canvas.getHeight() + &#x27;px&#x27;;
+        this.menuBox.style.overflow = &#x27;auto&#x27;;
+      } else if (this.canvas.getHeight() &lt; this._y + this.menuBox.getHeight()) {
+        var diff = this._y + this.menuBox.getHeight() - this.canvas.getHeight();
+        this.menuBox.style.top = (this._y - diff) + &#x27;px&#x27;;
+      } else {
+        this.menuBox.style.top = this._y + &#x27;px&#x27;;
+      }
+    },
+    show : function(node, x, y) {
+        this.targetNode = node;
+        this._setCrtData(node.getSummary());
+        this.menuBox.show();
+        this._x = x; this._y = y;
+        this.reposition();
+    },
+
+    update : function (node, data) {
+        if (this.targetNode === node) {
+           this._setCrtData(data);
+        }
+        this.reposition();
+    },
+
+    _setCrtData : function (data) {
+        var _this = this;
+        Object.keys(this.fieldMap).each(function (name) {
+            _this.fieldMap[name].crtValue = data &amp;&amp; data[name] &amp;&amp; typeof(data[name].value) != &quot;undefined&quot; ? data[name].value : _this.fieldMap[name].crtValue || _this.fieldMap[name][&quot;default&quot;];
+            _this.fieldMap[name].inactive = (data &amp;&amp; data[name] &amp;&amp; (typeof(data[name].inactive) == &#x27;boolean&#x27; || typeof(data[name].inactive) == &#x27;object&#x27;)) ? data[name].inactive : _this.fieldMap[name].inactive;
+            _this.fieldMap[name].disabled = (data &amp;&amp; data[name] &amp;&amp; (typeof(data[name].disabled) == &#x27;boolean&#x27; || typeof(data[name].disabled) == &#x27;object&#x27;)) ? data[name].disabled : _this.fieldMap[name].disabled;
+            _this._setFieldValue[_this.fieldMap[name].type].call(_this, _this.fieldMap[name].element, _this.fieldMap[name].crtValue);
+            _this._setFieldInactive[_this.fieldMap[name].type].call(_this, _this.fieldMap[name].element, _this.fieldMap[name].inactive);
+            _this._setFieldDisabled[_this.fieldMap[name].type].call(_this, _this.fieldMap[name].element, _this.fieldMap[name].disabled);
+            &#x2F;&#x2F;_this._updatedDependency(_this.fieldMap[name].element, _this.fieldMap[name].element);
+        });
+    },
+    _setFieldValue : {
+        &#x27;radio&#x27; : function (container, value) {
+            var target = container.down(&#x27;input[type=radio][value=&#x27; + value + &#x27;]&#x27;);
+            if (target) {
+                target.checked = true;
+            }
+        },
+        &#x27;checkbox&#x27; : function (container, value) {
+          var checkbox = container.down(&#x27;input[type=checkbox]&#x27;);
+          if (checkbox) {
+           checkbox.checked = value;
+          }
+        },
+        &#x27;text&#x27; : function (container, value) {
+            var target = container.down(&#x27;input[type=text]&#x27;);
+            if (target) {
+                target.value = value;
+            }
+        },
+        &#x27;date-picker&#x27; : function (container, value) {
+            var target = container.down(&#x27;input[type=text].xwiki-date&#x27;);
+            if (target) {
+                target.value = value &amp;&amp; value.toFormattedString({&#x27;format_mask&#x27; : target.title}) || &#x27;&#x27;;
+                target.alt = value &amp;&amp; value.toISO8601() || &#x27;&#x27;;
+                Event.fire(target, &#x27;xwiki:date:changed&#x27;);
+            }
+        },
+        &#x27;disease-picker&#x27; : function (container, values) {
+            var _this = this;
+            var target = container.down(&#x27;input[type=text].suggest-omim&#x27;);
+            if (target &amp;&amp; target._suggestPicker) {
+                target._silent = true;
+                target._suggestPicker.clearAcceptedList();
+                if (values) {
+                    values.each(function(v) {
+                        target._suggestPicker.addItem(v.id, v.value, &#x27;&#x27;);
+                        _this._updateDisorderColor(v.id, editor.getLegend().getDisorderColor(v.id));
+                    })
+                }
+                target._silent = false;
+            }
+        },
+        &#x27;select&#x27; : function (container, value) {
+            var target = container.down(&#x27;select option[value=&#x27; + value + &#x27;]&#x27;);
+            if (target) {
+                target.selected = &#x27;selected&#x27;;
+            }
+        },
+        &#x27;hidden&#x27; : function (container, value) {
+            var target = container.down(&#x27;input[type=hidden]&#x27;);
+            if (target) {
+                target.value = value;
+            }
+        }
+    },
+    _toggleFieldVisibility : function(container, doHide) {
+        if (doHide) {
+          container.addClassName(&#x27;hidden&#x27;);
+        } else {
+          container.removeClassName(&#x27;hidden&#x27;);
+        }
+    },
+    _setFieldInactive : {
+        &#x27;radio&#x27; : function (container, inactive) {
+            if (inactive === true) {
+              container.addClassName(&#x27;hidden&#x27;);
+            } else {
+              container.removeClassName(&#x27;hidden&#x27;);
+              var hasInactiveList = inactive &amp;&amp; (typeof(inactive.indexOf) == &#x27;function&#x27;);
+              container.select(&#x27;input[type=radio]&#x27;).each(function(item) {
+                  item.disabled = hasInactiveList &amp;&amp; (inactive.indexOf(item.value) &gt;= 0);
+              });
+            }
+        },
+        &#x27;checkbox&#x27; : function (container, inactive) {
+            this._toggleFieldVisibility(container, inactive);
+        },
+        &#x27;text&#x27; : function (container, inactive) {
+            this._toggleFieldVisibility(container, inactive);
+        },
+        &#x27;date-picker&#x27; : function (container, inactive) {
+            this._toggleFieldVisibility(container, inactive);
+        },
+        &#x27;disease-picker&#x27; : function (container, inactive) {
+            this._toggleFieldVisibility(container, inactive);
+        },
+        &#x27;select&#x27; : function (container, inactive) {
+            this._toggleFieldVisibility(container, inactive);
+        },
+        &#x27;hidden&#x27; : function (container, inactive) {
+            this._toggleFieldVisibility(container, inactive);
+        }
+    },
+
+    _setFieldDisabled : {
+        &#x27;radio&#x27; : function (container, inactive) {
+            &#x2F;&#x2F; FIXME: Not implemented
+        },
+        &#x27;checkbox&#x27; : function (container, inactive) {
+            &#x2F;&#x2F; FIXME: Not implemented
+        },
+        &#x27;text&#x27; : function (container, disabled) {
+            var target = container.down(&#x27;input[type=text]&#x27;);
+            if (target) {
+                target.disabled = disabled;
+            }
+        },
+        &#x27;date-picker&#x27; : function (container, inactive) {
+            &#x2F;&#x2F; FIXME: Not implemented
+        },
+        &#x27;disease-picker&#x27; : function (container, inactive) {
+            &#x2F;&#x2F; FIXME: Not implemented
+        },
+        &#x27;select&#x27; : function (container, inactive) {
+            &#x2F;&#x2F; FIXME: Not implemented
+        },
+        &#x27;hidden&#x27; : function (container, inactive) {
+            &#x2F;&#x2F; FIXME: Not implemented
+        }
+    }
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

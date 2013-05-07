@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>pedigree&#x2F;workspace.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/AbstractHoverbox.html">AbstractHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNode.html">AbstractNode</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNodeVisuals.html">AbstractNodeVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPerson.html">AbstractPerson</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPersonVisuals.html">AbstractPersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/ActionStack.html">ActionStack</a></li>
+            
+                <li><a href="..&#x2F;classes/ClassName.html">ClassName</a></li>
+            
+                <li><a href="..&#x2F;classes/Graph.html">Graph</a></li>
+            
+                <li><a href="..&#x2F;classes/GroupHoverbox.html">GroupHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/Legend.html">Legend</a></li>
+            
+                <li><a href="..&#x2F;classes/NodeMenu.html">NodeMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/NodetypeSelectionBubble.html">NodetypeSelectionBubble</a></li>
+            
+                <li><a href="..&#x2F;classes/Partnership.html">Partnership</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipHoverbox.html">PartnershipHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipVisuals.html">PartnershipVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PedigreeEditor.html">PedigreeEditor</a></li>
+            
+                <li><a href="..&#x2F;classes/Person.html">Person</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroup.html">PersonGroup</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroupVisuals.html">PersonGroupVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonHoverbox.html">PersonHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonVisuals.html">PersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolder.html">PlaceHolder</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolderVisuals.html">PlaceHolderVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/Pregnancy.html">Pregnancy</a></li>
+            
+                <li><a href="..&#x2F;classes/PregnancyVisuals.html">PregnancyVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadEngine.html">SaveLoadEngine</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadIndicator.html">SaveLoadIndicator</a></li>
+            
+                <li><a href="..&#x2F;classes/Workspace.html">Workspace</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: pedigree&#x2F;workspace.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * Workspace contains the Raphael canvas, the zoom&#x2F;pan controls and the menu bar
+ * on the top. The class includes functions for managing the Raphael paper object and coordinate transformation methods
+ * for taking pan and zoom levels into account.
+ *
+ * @class Workspace
+ * @constructor
+ *&#x2F;
+
+var Workspace = Class.create({
+
+    initialize: function() {
+        var me = this;
+        this.canvas = new Element(&#x27;div&#x27;, {&#x27;id&#x27; : &#x27;canvas&#x27;});
+        this.workArea = new Element(&#x27;div&#x27;, {&#x27;id&#x27; : &#x27;work-area&#x27;}).update(this.canvas);
+        $(&#x27;body&#x27;).update(this.workArea);
+        var screenDimensions = document.viewport.getDimensions();
+        this.width = screenDimensions.width;
+        this.height = screenDimensions.height - this.canvas.cumulativeOffset().top - 4;
+        this._paper = Raphael(&quot;canvas&quot;,this.width, this.height);
+        this.viewBoxX = 0;
+        this.viewBoxY = 0;
+        this.zoomCoefficient = 1;
+        this.background = this.getPaper().rect(0,0, this.width, this.height).attr({fill: &#x27;blue&#x27;, stroke: &#x27;none&#x27;, opacity: 0}).toBack();
+        this.background.node.setAttribute(&quot;class&quot;, &quot;panning-background&quot;);
+
+        this.adjustSizeToScreen = this.adjustSizeToScreen.bind(this);
+        Event.observe (window, &#x27;resize&#x27;, me.adjustSizeToScreen);
+        this.generateTopMenu();
+        this.generateViewControls();
+
+        &#x2F;&#x2F;Initialize pan by dragging
+        var start = function() {
+            me.background.ox = me.background.attr(&quot;x&quot;);
+            me.background.oy = me.background.attr(&quot;y&quot;);
+            me.background.attr({cursor: &#x27;url(https:&#x2F;&#x2F;mail.google.com&#x2F;mail&#x2F;images&#x2F;2&#x2F;closedhand.cur)&#x27;});
+        };
+        var move = function(dx, dy) {
+            var  deltax = me.viewBoxX - dx&#x2F;me.zoomCoefficient;
+            var deltay = me.viewBoxY - dy&#x2F;me.zoomCoefficient;
+
+            me.background.attr({x: me.background.ox - dx&#x2F;me.zoomCoefficient, y: me.background.oy - dy&#x2F;me.zoomCoefficient});
+            me.getPaper().setViewBox(deltax, deltay, me.width&#x2F;me.zoomCoefficient, me.height&#x2F;me.zoomCoefficient);
+            me.background.ox = deltax;
+            me.background.oy = deltay;
+            me.background.attr({x: me.background.ox, y: me.background.oy });
+        };
+        var end = function() {
+            me.viewBoxX = me.background.ox;
+            me.viewBoxY = me.background.oy;
+            me.background.attr({cursor: &#x27;default&#x27;});
+        };
+        me.background.drag(move, start, end);
+    },
+
+    &#x2F;**
+     * Returns the Raphael paper object.
+     *
+     * @method getPaper
+     * @return {Object} Raphael Paper element
+     *&#x2F;
+    getPaper: function() {
+        return this._paper;
+    },
+
+    &#x2F;**
+     * Returns the div element containing everything except the top menu bar
+     *
+     * @method getWorkArea
+     * @return {HTMLElement}
+     *&#x2F;
+    getWorkArea: function() {
+        return this.workArea;
+    },
+
+    &#x2F;**
+     * Returns width of the work area
+     *
+     * @method getWidth
+     * @return {Number}
+     *&#x2F;
+    getWidth: function() {
+        return this.width;
+    },
+
+    &#x2F;**
+     * Returns height of the work area
+     *
+     * @method getHeight
+     * @return {Number}
+     *&#x2F;
+    getHeight: function() {
+        return this.height;
+    },
+
+    &#x2F;**
+     * Adjusts the canvas viewbox to the given zoom coefficient
+     *
+     * @method zoom
+     * @param {Number} zoomCoefficient The zooming ratio
+     *&#x2F;
+    zoom: function(zoomCoefficient) {
+        zoomCoefficient += .6;
+        var newWidth = this.width&#x2F;zoomCoefficient;
+        var newHeight = this.height&#x2F;zoomCoefficient;
+        this.viewBoxX = this.viewBoxX + (this.width&#x2F;this.zoomCoefficient - newWidth)&#x2F;2;
+        this.viewBoxY = this.viewBoxY + (this.height&#x2F;this.zoomCoefficient - newHeight)&#x2F;2;
+        this.getPaper().setViewBox(this.viewBoxX, this.viewBoxY, newWidth, newHeight);
+        this.zoomCoefficient = zoomCoefficient;
+        this.background.attr({x: this.viewBoxX, y: this.viewBoxY, width: newWidth, height: newHeight});
+    },
+
+    &#x2F;**
+     * Creates the menu on the top
+     *
+     * @method generateTopMenu
+     *&#x2F;
+    generateTopMenu: function() {
+        var menu = new Element(&#x27;div&#x27;, {&#x27;id&#x27; : &#x27;editor-menu&#x27;});
+        this.getWorkArea().insert({before : menu});
+        var submenus = [{
+            name : &#x27;internal&#x27;,
+            items: [
+                { key : &#x27;undo&#x27;,   label : &#x27;Undo&#x27;},
+                { key : &#x27;redo&#x27;,   label : &#x27;Redo&#x27;},
+                { key : &#x27;layout&#x27;, label : &#x27;Adjust layout&#x27;},
+                { key : &#x27;clear&#x27;,  label : &#x27;Clear all&#x27;}
+            ]
+        }, {
+            name : &#x27;external&#x27;,
+            items: [
+                { key : &#x27;save&#x27;, label : &#x27;Save&#x27;},
+                { key : &#x27;reaload&#x27;, label : &#x27;Reload&#x27;},
+                { key : &#x27;templates&#x27;, label : &#x27;Templates&#x27;},
+                { key : &#x27;print&#x27;,  label : &#x27;Printable version&#x27;},
+                { key : &#x27;close&#x27;,  label : &#x27;Close&#x27;}
+            ]
+        }];
+        var _createSubmenu = function(data) {
+            var submenu = new Element(&#x27;div&#x27;, {&#x27;class&#x27; : data.name + &#x27;-actions action-group&#x27;});
+            menu.insert(submenu);
+            data.items.each(function (item) {
+                submenu.insert(_createMenuItem(item));
+            });
+        };
+        var _createMenuItem = function(data) {
+            var mi = new Element(&#x27;span&#x27;, {&#x27;id&#x27; : &#x27;action-&#x27; + data.key, &#x27;class&#x27; : &#x27;menu-item &#x27; + data.key}).update(data.label);
+            if (data.callback &amp;&amp; typeof(this[data.callback]) == &#x27;function&#x27;) {
+                mi.observe(&#x27;click&#x27;, function() {
+                    this[data.callback]();
+                });
+            }
+            return mi;
+        };
+        submenus.each(_createSubmenu);
+    },
+
+    &#x2F;**
+     * Creates the controls for panning and zooming
+     *
+     * @method generateViewControls
+     *&#x2F;
+    generateViewControls : function() {
+        var _this = this;
+        this.__controls = new Element(&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;view-controls&#x27;});
+        &#x2F;&#x2F; Pan controls
+        this.__pan = new Element(&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;view-controls-pan&#x27;, title : &#x27;Pan&#x27;});
+        this.__controls.insert(this.__pan);
+        [&#x27;up&#x27;, &#x27;right&#x27;, &#x27;down&#x27;, &#x27;left&#x27;].each(function (direction) {
+            _this.__pan[direction] = new Element(&#x27;span&#x27;, {&#x27;class&#x27; : &#x27;view-control-pan pan-&#x27; + direction, &#x27;title&#x27; : &#x27;Pan &#x27; + direction});
+            _this.__pan.insert(_this.__pan[direction]);
+            _this.__pan[direction].observe(&#x27;click&#x27;, function(event) {
+                if(direction == &#x27;up&#x27;) {
+                    _this.panTo(_this.viewBoxX, _this.viewBoxY - 400);
+                }
+                else if(direction == &#x27;down&#x27;) {
+                    _this.panTo(_this.viewBoxX, _this.viewBoxY + 400);
+                }
+                else if(direction == &#x27;left&#x27;) {
+                    _this.panTo(_this.viewBoxX - 400, _this.viewBoxY);
+                }
+                else {
+                    _this.panTo(_this.viewBoxX + 400, _this.viewBoxY);
+                }
+            })
+        });
+        &#x2F;&#x2F; Zoom controls
+        var trackLength = 200;
+        this.__zoom = new Element(&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;view-controls-zoom&#x27;, title : &#x27;Zoom&#x27;});
+        this.__controls.insert(this.__zoom);
+        this.__zoom.track = new Element(&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;zoom-track&#x27;});
+        this.__zoom.handle = new Element(&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;zoom-handle&#x27;, title : &#x27;Drag to zoom&#x27;});
+        this.__zoom[&#x27;in&#x27;] = new Element(&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;zoom-button zoom-in&#x27;, title : &#x27;Zoom in&#x27;});
+        this.__zoom.out = new Element(&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;zoom-button zoom-out&#x27;, title : &#x27;Zoom out&#x27;});
+        this.__zoom.label = new Element(&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;zoom-crt-value&#x27;});
+        this.__zoom.insert(this.__zoom[&#x27;in&#x27;]);
+        this.__zoom.insert(this.__zoom.track);
+        this.__zoom.track.insert(this.__zoom.handle);
+        this.__zoom.track.style.height = trackLength + &#x27;px&#x27;;
+        this.__zoom.insert(this.__zoom.out);
+        this.__zoom.insert(this.__zoom.label);
+        &#x2F;&#x2F; Scriptaculous slider
+        &#x2F;&#x2F; see also http:&#x2F;&#x2F;madrobby.github.com&#x2F;scriptaculous&#x2F;slider&#x2F;
+        this.__zoom.__crtValue = 0;
+        this.zoomSlider = new Control.Slider(this.__zoom.handle, this.__zoom.track, {
+            axis:&#x27;vertical&#x27;,
+            minimum: 60,
+            maximum: trackLength + 60,
+            increment : trackLength &#x2F; 100,
+            alignY: 6,
+            onSlide : function (value) {
+                &#x2F;&#x2F; Called whenever the Slider is moved by dragging.
+                &#x2F;&#x2F; The called function gets the slider value (or array if slider has multiple handles) as its parameter.
+                _this.__zoom.__crtValue = 1 - value;
+                var zoomValue = (_this.__zoom.__crtValue  * 2);
+                _this.zoom(zoomValue);
+            },
+            onChange : function (value) {
+                &#x2F;&#x2F; Called whenever the Slider has finished moving or has had its value changed via the setSlider Value function.
+                &#x2F;&#x2F; The called function gets the slider value (or array if slider has multiple handles) as its parameter.
+
+                _this.__zoom.__crtValue = 1 - value;
+                var zoomValue = (_this.__zoom.__crtValue  * 2);
+                _this.zoom(zoomValue)
+            }
+        });
+        this.zoomSlider.setValue(.70); &#x2F;&#x2F; TODO : set initial value
+        this.__zoom[&#x27;in&#x27;].observe(&#x27;click&#x27;, function(event) {
+            _this.zoomSlider.setValue(1 - (_this.__zoom.__crtValue + .2))
+        });
+        this.__zoom.out.observe(&#x27;click&#x27;, function(event) {
+            _this.zoomSlider.setValue(1 - (_this.__zoom.__crtValue - .2))
+        });
+        &#x2F;&#x2F; Insert all controls in the document
+        this.getWorkArea().insert(this.__controls);
+    },
+
+    &#x2F;**
+     * Converts the coordinates relative to the Raphael canvas to coordinates relative to the canvas div
+     * and returns them
+     *
+     * @method canvasToDiv
+     * @param {Number} canvasX The x coordinate relative to the Raphael canvas (ie with pan&#x2F;zoom transformations)
+     * @param {Number} canvasY The y coordinate relative to the Raphael canvas (ie with pan&#x2F;zoom transformations)
+     * @return {{x: number, y: number}} Object with coordinates
+     *&#x2F;
+    canvasToDiv: function(canvasX,canvasY) {
+        return {
+            x: this.zoomCoefficient * (canvasX - this.viewBoxX),
+            y: this.zoomCoefficient * (canvasY - this.viewBoxY)
+        }
+    },
+
+    &#x2F;**
+     * Converts the coordinates relative to the canvas div to coordinates relative to the Raphael canvas
+     * by applying zoom&#x2F;pan transformations and returns them.
+     *
+     * @method divToCanvas
+     * @param {Number} divX The x coordinate relative to the canvas
+     * @param {Number} divY The y coordinate relative to the canvas
+     * @return {{x: number, y: number}} Object with coordinates
+     *&#x2F;
+    divToCanvas: function(divX,divY) {
+        return {
+            x: divX&#x2F;this.zoomCoefficient + this.viewBoxX,
+            y: divY&#x2F;this.zoomCoefficient + this.viewBoxY
+        }
+    },
+
+    &#x2F;**
+     * Converts the coordinates relative to the browser viewport to coordinates relative to the canvas div,
+     * and returns them.
+     *
+     * @method viewportToDiv
+     * @param {Number} absX The x coordinate relative to the viewport
+     * @param {Number} absY The y coordinate relative to the viewport
+     * @return {{x: number, y: number}} Object with coordinates
+     *&#x2F;
+    viewportToDiv : function (absX, absY) {
+        return {
+            x : + absX - this.canvas.cumulativeOffset().left,
+            y : absY - this.canvas.cumulativeOffset().top
+        };
+    },
+
+    &#x2F;**
+     * Animates a transformation of the viewbox to the given coordinate
+     *
+     * @method panTo
+     * @param {Number} x The x coordinate relative to the Raphael canvas
+     * @param {Number} y The y coordinate relative to the Raphael canvas
+     *&#x2F;
+    panTo: function(x, y) {
+        var me = this,
+            oX = this.viewBoxX,
+            oY = this.viewBoxY,
+            xDisplacement = x - oX,
+            yDisplacement = y - oY,
+            numSeconds = .5,
+            fps = 50,
+            xStep = xDisplacement&#x2F;(fps*numSeconds),
+            yStep = yDisplacement&#x2F;(fps*numSeconds);
+        var progress = 0;
+
+        (function draw() {
+            setTimeout(function() {
+                if(progress++ &lt; fps * numSeconds) {
+                    me.viewBoxX += xStep;
+                    me.viewBoxY += yStep;
+                    me.getPaper().setViewBox(me.viewBoxX, me.viewBoxY, me.width&#x2F;me.zoomCoefficient, me.height&#x2F;me.zoomCoefficient);
+                    draw();
+                }
+            }, 1000 &#x2F; fps);
+        })();
+    },
+
+    &#x2F;**
+     * Adjusts the canvas size to the current viewport dimensions.
+     *
+     * @method adjustSizeToScreen
+     *&#x2F;
+    adjustSizeToScreen : function() {
+        var screenDimensions = document.viewport.getDimensions();
+        this.width = screenDimensions.width;
+        this.height = screenDimensions.height - this.canvas.cumulativeOffset().top - 4;
+        this.getPaper().setSize(this.width, this.height);
+        this.getPaper().setViewBox(this.viewBoxX, this.viewBoxY, this.width&#x2F;this.zoomCoefficient, this.height&#x2F;this.zoomCoefficient);
+        this.background &amp;&amp; this.background.attr({&quot;width&quot;: this.width, &quot;height&quot;: this.height});
+        if (editor.getNodeMenu()) {
+            editor.getNodeMenu().reposition();
+        }
+    },
+
+    &#x2F;**
+     * Pans the canvas to put the node with the given id at the center.
+     *
+     * @method adjustSizeToScreen
+     * @param {Number} nodeID The id of the node
+     *&#x2F;
+    centerAroundNode: function(nodeID) {
+        var node = editor.getGraph().getNodeMap()[nodeID];
+        if(node) {
+            var x = node.getX(),
+                y = node.getY();
+            var xOffset = this.getWidth()&#x2F;this.zoomCoefficient;
+            var yOffset = this.getHeight()&#x2F;this.zoomCoefficient;
+            this.panTo(x - xOffset&#x2F;2, y - yOffset&#x2F;2);
+        }
+    },
+
+    &#x2F;**
+     * Centers the canvas around the proband and resets the zoom to the original value.
+     *
+     * @method resetZoomPan
+     *&#x2F;
+    resetZoomPan: function() {
+        this.centerAroundNode(1);
+        this.zoom(1.2000000000000002-.6);
+    }
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

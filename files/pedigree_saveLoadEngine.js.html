@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>pedigree&#x2F;saveLoadEngine.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/AbstractHoverbox.html">AbstractHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNode.html">AbstractNode</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNodeVisuals.html">AbstractNodeVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPerson.html">AbstractPerson</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPersonVisuals.html">AbstractPersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/ActionStack.html">ActionStack</a></li>
+            
+                <li><a href="..&#x2F;classes/ClassName.html">ClassName</a></li>
+            
+                <li><a href="..&#x2F;classes/Graph.html">Graph</a></li>
+            
+                <li><a href="..&#x2F;classes/GroupHoverbox.html">GroupHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/Legend.html">Legend</a></li>
+            
+                <li><a href="..&#x2F;classes/NodeMenu.html">NodeMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/NodetypeSelectionBubble.html">NodetypeSelectionBubble</a></li>
+            
+                <li><a href="..&#x2F;classes/Partnership.html">Partnership</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipHoverbox.html">PartnershipHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipVisuals.html">PartnershipVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PedigreeEditor.html">PedigreeEditor</a></li>
+            
+                <li><a href="..&#x2F;classes/Person.html">Person</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroup.html">PersonGroup</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroupVisuals.html">PersonGroupVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonHoverbox.html">PersonHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonVisuals.html">PersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolder.html">PlaceHolder</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolderVisuals.html">PlaceHolderVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/Pregnancy.html">Pregnancy</a></li>
+            
+                <li><a href="..&#x2F;classes/PregnancyVisuals.html">PregnancyVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadEngine.html">SaveLoadEngine</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadIndicator.html">SaveLoadIndicator</a></li>
+            
+                <li><a href="..&#x2F;classes/Workspace.html">Workspace</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: pedigree&#x2F;saveLoadEngine.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * SaveLoadEngine is responsible for automatic and manual save and load operations.
+ *
+ * @class SaveLoadEngine
+ * @constructor
+ *&#x2F;
+
+var SaveLoadEngine = Class.create( {
+
+    initialize: function() {
+        this.probandDataLoaded = false;
+        this.graphLoaded = false;
+        var me = this;
+        this._timerID = null;
+        this._saveInProgress = false;
+        document.observe(&quot;pedigree:actionEvent&quot;, function(event) {
+            if(typeof me._timerID != &quot;number&quot;) {
+                me._timerID = function() {
+                    me._timerID = null;
+                    me.serialize();
+                }.delay(30);
+            }
+        });
+        new Ajax.Request(XWiki.currentDocument.getRestURL(&#x27;objects&#x2F;PhenoTips.PatientClass&#x2F;0&#x27;), {
+            method: &quot;GET&quot;,
+            onSuccess: this.onProbandDataReady.bind(this)
+        });
+    },
+
+    resetTimerID: function() {
+        this._timerID = null;
+    },
+
+    &#x2F;**
+     * Saves the state of the graph
+     *
+     * @return Serialization data for the entire graph
+     *&#x2F;
+    serialize: function() {
+        var me = this;
+        if (this._saveInProgress) {
+            &#x2F;&#x2F; Don&#x27;t send parallel save requests
+            return null;
+        }
+        this.resetTimerID();
+        var nodes = {
+            placeHolders : [],
+            partnerships: [],
+            pregnancies: [],
+            personGroups: [],
+            persons: []
+        };
+
+        editor.getGraph().getPlaceHolderNodes().forEach(function(placeHolder) {
+            nodes.placeHolders.push(placeHolder.getInfo());
+        });
+        editor.getGraph().getPartnershipNodes().forEach(function(partnership) {
+            nodes.partnerships.push(partnership.getInfo());
+        });
+        editor.getGraph().getPregnancyNodes().forEach(function(pregnancy) {
+            nodes.pregnancies.push(pregnancy.getInfo());
+        });
+        editor.getGraph().getPersonGroupNodes().forEach(function(personGroup) {
+            nodes.personGroups.push(personGroup.getInfo());
+        });
+        editor.getGraph().getPersonNodes().forEach(function(person) {
+            var personInfo = person.getInfo();
+            if(personInfo.id == 1)
+                nodes.proband = personInfo;
+            else
+                nodes.persons.push(personInfo);
+        });
+
+        var image = $(&#x27;canvas&#x27;);
+        var background = image.getElementsByClassName(&#x27;panning-background&#x27;)[0];
+        var backgroundPosition = background.nextSibling;
+        var backgroundParent =  background.parentNode;
+        backgroundParent.removeChild(background);
+        var bbox = image.down().getBBox();
+        var savingNotification = new XWiki.widgets.Notification(&quot;Saving&quot;, &quot;inprogress&quot;);
+        new Ajax.Request(XWiki.currentDocument.getRestURL(&#x27;objects&#x2F;PhenoTips.PedigreeClass&#x2F;0&#x27;, &#x27;method=PUT&#x27;), {
+            method: &#x27;POST&#x27;,
+            onCreate: function() {
+                me._saveInProgress = true;
+            },
+            onComplete: function() {
+                me._saveInProgress = false;
+            },
+            onSuccess: function() {savingNotification.replace(new XWiki.widgets.Notification(&quot;Successfuly saved&quot;));},
+            parameters: {&quot;property#data&quot;: JSON.stringify(nodes), &quot;property#image&quot;: image.innerHTML.replace(&#x2F;viewBox=&quot;.*?&quot;&#x2F;, &quot;viewBox=\&quot;&quot; + bbox.x + &quot; &quot; + bbox.y + &quot; &quot; + bbox.width + &quot; &quot; + bbox.height + &quot; \&quot;width=\&quot;500\&quot; height=\&quot;500\&quot;&quot;)}
+        });
+        backgroundParent.insertBefore(background, backgroundPosition);
+        return nodes;
+    },
+
+    load: function(graphObj) {
+        var successfulLoad = false;
+        if(graphObj) {
+            document.fire(&quot;pedigree:load:start&quot;);
+            (function() {
+                if(this.isValidGraphObject(graphObj)) {
+                    var maxID = editor.getGraph().getIdCount();
+                    editor.getGraph().clearGraph(true);
+                    var probandX = editor.getWorkspace().getWidth()&#x2F;2;
+                    var probandY = editor.getWorkspace().getHeight()&#x2F;2;
+                    var xOffset = probandX - graphObj.proband.x;
+                    var yOffset = probandY - graphObj.proband.y;
+                    var people = graphObj.persons;
+                    people.unshift(graphObj.proband);
+                    people = people.concat(graphObj.placeHolders, graphObj.personGroups);
+                    people.forEach(function(info) {
+                        info.x = info.x + xOffset;
+                        info.y = info.y + yOffset;
+                        var newPerson = editor.getGraph()[&quot;add&quot; + info.type](info.x, info.y, info.gender, info.id);
+                        if(info.id &gt;= maxID) {
+                            maxID = info.id;
+                            editor.getGraph().setIdCount(maxID + 1);
+                        }
+                        newPerson.loadInfo(info);
+                    });
+                    graphObj.partnerships.forEach(function(info) {
+                        info.x = info.x + xOffset;
+                        info.y = info.y + yOffset;
+                        var partner1 = editor.getGraph().getNodeMap()[info.partner1ID],
+                            partner2 = editor.getGraph().getNodeMap()[info.partner2ID];
+                        if(info.id &gt;= maxID) {
+                            maxID = info.id;
+                            editor.getGraph().setIdCount(maxID + 1);
+                        }
+                        if(partner1 &amp;&amp; partner2)
+                            editor.getGraph().addPartnership(info.x, info.y, partner1, partner2, info.id);
+                    });
+                    graphObj.pregnancies.forEach(function(info) {
+                        info.x = info.x + xOffset;
+                        info.y = info.y + yOffset;
+                        var partnership = editor.getGraph().getNodeMap()[info.partnershipID];
+                        if(partnership) {
+                            var preg = editor.getGraph().addPregnancy(info.x, info.y, partnership, info.id);
+                            if(info.id &gt;= maxID) {
+                                maxID = info.id;
+                                editor.getGraph().setIdCount(maxID + 1);
+                            }
+                            preg.loadInfo(info);
+                        }
+                    });
+                    if (this.probandDataLoaded) {
+                        this.updateProbandData();
+                    }
+                    this.serialize();
+                    document.fire(&quot;pedigree:load:finish&quot;);
+                    successfulLoad = true;
+                }
+            }).bind(this).delay();
+        } else {
+            new Ajax.Request(XWiki.currentDocument.getRestURL(&#x27;objects&#x2F;PhenoTips.PedigreeClass&#x2F;0&#x2F;&#x27;), {
+                method: &#x27;GET&#x27;,
+                onCreate: function() {
+                    document.fire(&quot;pedigree:load:start&quot;);
+                },
+                onSuccess: function (response) {
+                    var tempNode = document.createElement(&#x27;div&#x27;);
+                    tempNode.innerHTML = response.responseXML.documentElement.querySelector(&quot;property[name=&#x27;data&#x27;] &gt; value&quot;).textContent.replace(&#x2F;&amp;amp;&#x2F;, &#x27;&amp;&#x27;);
+                    if (tempNode.textContent.trim()) {
+                        successfulLoad = this.load(JSON.parse(tempNode.textContent));
+                    } else {
+                        new TemplateSelector(true);
+                    }
+                }.bind(this)
+            })
+        }
+        return successfulLoad;
+    },
+
+    loadTemplateAction: function(graphObj) {
+        var saveBeforeAction = this.serialize();
+        if(this.load(graphObj)) {
+            var undo = function() {
+                editor.getSaveLoadEngine().load(saveBeforeAction);
+            };
+            var redo = function() {
+                editor.getSaveLoadEngine().load(graphObj);
+            };
+            editor.getActionStack().push({undo: undo, redo: redo, property: &quot;loadTemplate&quot;});
+        }
+    },
+
+    isValidGraphObject: function(graphObj) {
+        var missingProperty = !graphObj.proband
+            || (Object.prototype.toString.call(graphObj.persons) != &#x27;[object Array]&#x27;)
+            || (Object.prototype.toString.call(graphObj.personGroups) != &#x27;[object Array]&#x27;)
+            || (Object.prototype.toString.call(graphObj.pregnancies) != &#x27;[object Array]&#x27;)
+            || (Object.prototype.toString.call(graphObj.partnerships) != &#x27;[object Array]&#x27;)
+            || (Object.prototype.toString.call(graphObj.placeHolders) != &#x27;[object Array]&#x27;);
+        if(missingProperty)
+            return false;
+        var validBasics = function(node) {
+            return (node.id &amp;&amp; node.type &amp;&amp; node.x &amp;&amp; node.y)
+        };
+        var people = graphObj.persons.concat(graphObj.proband, graphObj.personGroups, graphObj.placeHolders);
+        var foundProband;
+        for (var i = 0; i &lt; people.length; i++) {
+            if(!validBasics(people[i]) || !people[i].gender)
+                return false;
+            if(people[i].id == 1) {
+                foundProband = true;
+            }
+        }
+        if(!foundProband)
+            return false;
+        for (i = 0; i &lt; graphObj.partnerships.length; i++) {
+            if(!validBasics(graphObj.partnerships[i]) || !graphObj.partnerships[i].partner1ID
+                || !graphObj.partnerships[i].partner2ID) {
+                return false;
+            }
+        }
+        for (i = 0; i &lt; graphObj.pregnancies.length; i++) {
+            if(!validBasics(graphObj.pregnancies[i]) || !graphObj.pregnancies[i].partnershipID ||
+                (Object.prototype.toString.call(graphObj.pregnancies[i].childrenIDs) != &#x27;[object Array]&#x27;)) {
+                return false;
+            }
+        }
+        return true;
+    },
+
+    onProbandDataReady : function(response) {
+        this.probandData = {};
+        var data = response.responseXML.documentElement;
+        this.probandData.firstName = this.unescapeRestData(data.querySelector(&quot;property[name=&#x27;first_name&#x27;] &gt; value&quot;));
+        this.probandData.lastName = this.unescapeRestData(data.querySelector(&quot;property[name=&#x27;last_name&#x27;] &gt; value&quot;));
+        this.probandDataLoaded = true;
+        if (this.graphLoaded) {
+            this.updateProbandData();
+        }
+    },
+
+    updateProbandData : function() {
+        editor.getGraph().getProband().setFirstName(this.probandData.firstName);
+        editor.getGraph().getProband().setLastName(this.probandData.lastName);
+    },
+
+    unescapeRestData: function(dataNode) {
+        var tempNode = document.createElement(&#x27;div&#x27;);
+        tempNode.innerHTML = dataNode.textContent.replace(&#x2F;&amp;amp;&#x2F;, &#x27;&amp;&#x27;);
+        return tempNode.textContent;
+    }
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

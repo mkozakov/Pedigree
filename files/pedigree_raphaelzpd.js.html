@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>pedigree&#x2F;raphaelzpd.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/AbstractHoverbox.html">AbstractHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNode.html">AbstractNode</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNodeVisuals.html">AbstractNodeVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPerson.html">AbstractPerson</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPersonVisuals.html">AbstractPersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/ActionStack.html">ActionStack</a></li>
+            
+                <li><a href="..&#x2F;classes/ClassName.html">ClassName</a></li>
+            
+                <li><a href="..&#x2F;classes/Graph.html">Graph</a></li>
+            
+                <li><a href="..&#x2F;classes/GroupHoverbox.html">GroupHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/Legend.html">Legend</a></li>
+            
+                <li><a href="..&#x2F;classes/NodeMenu.html">NodeMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/NodetypeSelectionBubble.html">NodetypeSelectionBubble</a></li>
+            
+                <li><a href="..&#x2F;classes/Partnership.html">Partnership</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipHoverbox.html">PartnershipHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipVisuals.html">PartnershipVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PedigreeEditor.html">PedigreeEditor</a></li>
+            
+                <li><a href="..&#x2F;classes/Person.html">Person</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroup.html">PersonGroup</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroupVisuals.html">PersonGroupVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonHoverbox.html">PersonHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonVisuals.html">PersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolder.html">PlaceHolder</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolderVisuals.html">PlaceHolderVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/Pregnancy.html">Pregnancy</a></li>
+            
+                <li><a href="..&#x2F;classes/PregnancyVisuals.html">PregnancyVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadEngine.html">SaveLoadEngine</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadIndicator.html">SaveLoadIndicator</a></li>
+            
+                <li><a href="..&#x2F;classes/Workspace.html">Workspace</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: pedigree&#x2F;raphaelzpd.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ *  Raphaël-ZPD: A zoom&#x2F;pan&#x2F;drag plugin for Raphaël.
+ * ==================================================
+ *
+ * This code is licensed under the following BSD license:
+ * 
+ * Copyright 2010 Gabriel Zabusek &lt;gabriel.zabusek@gmail.com&gt; (Interface and feature extensions and modifications). All rights reserved.
+ * Copyright 2010 Daniel Assange &lt;somnidea@lemma.org&gt; (Raphaël integration and extensions). All rights reserved.
+ * Copyright 2009-2010 Andrea Leofreddi &lt;a.leofreddi@itcharm.com&gt; (original author). All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, are
+ * permitted provided that the following conditions are met:
+ * 
+ *    1. Redistributions of source code must retain the above copyright notice, this list of
+ *       conditions and the following disclaimer.
+ * 
+ *    2. Redistributions in binary form must reproduce the above copyright notice, this list
+ *       of conditions and the following disclaimer in the documentation and&#x2F;or other materials
+ *       provided with the distribution.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY Andrea Leofreddi &#x60;&#x60;AS IS&#x27;&#x27; AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Andrea Leofreddi OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * 
+ * The views and conclusions contained in the software and documentation are those of the
+ * authors and should not be interpreted as representing official policies, either expressed
+ * or implied, of Andrea Leofreddi.
+ *&#x2F;
+
+var raphaelZPDId = 0;
+
+RaphaelZPD = function(raphaelPaper, o) {
+    function supportsSVG() {
+        return document.implementation.hasFeature(&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SVG11&#x2F;feature#BasicStructure&quot;, &quot;1.1&quot;);
+    }
+
+    if (!supportsSVG()) {
+        return null;
+    }
+
+    var me = this;
+
+	me.initialized = false;
+	me.opts = { 
+		zoom: true, pan: true, drag: true, &#x2F;&#x2F; Enable&#x2F;disable core functionalities.
+		zoomThreshold: [-10,10] &#x2F;&#x2F; Zoom [out, in] boundaries. E.g [-100, 10].
+	};
+
+    me.id   = ++raphaelZPDId;
+    me.root = raphaelPaper.canvas;
+
+    me.gelem = document.createElementNS(&#x27;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&#x27;, &#x27;g&#x27;);
+	me.gelem.id = &#x27;viewport&#x27;+me.id;
+	me.root.appendChild(me.gelem);
+
+	function overrideElements(paper) {
+		var elementTypes = [&#x27;circle&#x27;, &#x27;rect&#x27;, &#x27;ellipse&#x27;, &#x27;image&#x27;, &#x27;text&#x27;, &#x27;path&#x27;];
+		for(var i = 0; i &lt; elementTypes.length; i++) {
+		  overrideElementFunc(paper, elementTypes[i]);
+		}
+	}
+
+	function overrideElementFunc(paper, elementType) {    
+		paper[elementType] = function(oldFunc) {
+		  return function() {
+			var element = oldFunc.apply(paper, arguments);
+			element.gelem = me.gelem;
+			me.gelem.appendChild(element.node);
+			return element;
+		  };
+		}(paper[elementType]);
+	}
+
+	overrideElements(raphaelPaper);
+
+	function transformEvent(evt) {
+		if (typeof evt.clientX != &quot;number&quot;) return evt;
+
+		svgDoc = evt.target.ownerDocument;
+
+		var g = svgDoc.getElementById(&quot;viewport&quot;+me.id);
+
+		var p = me.getEventPoint(evt);
+
+		p = p.matrixTransform(g.getCTM().inverse());
+
+		evt.zoomedX = p.x;
+		evt.zoomedY = p.y;
+
+		return evt;
+	}
+
+	var events = [&#x27;click&#x27;, &#x27;dblclick&#x27;, &#x27;mousemove&#x27;, &#x27;mouseup&#x27;, &#x27;touchstart&#x27;, &#x27;touchmove&#x27;, &#x27;touchend&#x27;, &#x27;orientationchange&#x27;, &#x27;touchcancel&#x27;, &#x27;gesturestart&#x27;, &#x27;gesturechange&#x27;, &#x27;gestureend&#x27;];
+
+	events.forEach(function(eventName) {
+		var oldFunc = Raphael.el[eventName];
+		Raphael.el[eventName] = function(fn, scope) {
+			if (fn === undefined) return;
+			var wrap = function(evt) {
+				return fn.apply(this, [transformEvent(evt)]);
+			};
+			return oldFunc.apply(this, [wrap, scope]);
+		}
+	});
+	
+	&#x2F;&#x2F;raphaelPaper.canvas = me.gelem;
+
+    me.state = &#x27;none&#x27;; 
+    me.stateTarget = null;
+    me.stateOrigin = null;
+    me.stateTf = null;
+    me.zoomCurrent = 0;
+
+    if (o) {
+		for (key in o) {
+			if (me.opts[key] !== undefined) {
+				me.opts[key] = o[key];
+			}
+		}
+	}
+
+	&#x2F;**
+	 * Handler registration
+	 *&#x2F;
+	me.setupHandlers = function(root) {
+		me.root.onmousedown = me.handleMouseDown;
+		me.root.onmousemove = me.handleMouseMove;
+		me.root.onmouseup   = me.handleMouseUp;
+
+
+		&#x2F;&#x2F;me.root.onmouseout = me.handleMouseUp; &#x2F;&#x2F; Decomment me to stop the pan functionality when dragging out of the SVG element
+
+		if (navigator.userAgent.toLowerCase().indexOf(&#x27;webkit&#x27;) &gt;= 0)
+			me.root.addEventListener(&#x27;mousewheel&#x27;, me.handleMouseWheel, false); &#x2F;&#x2F; Chrome&#x2F;Safari
+		else
+			me.root.addEventListener(&#x27;DOMMouseScroll&#x27;, me.handleMouseWheel, false); &#x2F;&#x2F; Others
+	};
+
+	&#x2F;**
+	 * Instance an SVGPoint object with given event coordinates.
+	 *&#x2F;
+	me.getEventPoint = function(evt) {
+		var p = me.root.createSVGPoint();
+
+		p.x = evt.clientX;
+		p.y = evt.clientY;
+
+		return p;
+	};
+
+	&#x2F;**
+	 * Sets the current transform matrix of an element.
+	 *&#x2F;
+	me.setCTM = function(element, matrix) {
+		var s = &quot;matrix(&quot; + matrix.a + &quot;,&quot; + matrix.b + &quot;,&quot; + matrix.c + &quot;,&quot; + matrix.d + &quot;,&quot; + matrix.e + &quot;,&quot; + matrix.f + &quot;)&quot;;
+
+		element.setAttribute(&quot;transform&quot;, s);
+	};
+
+	&#x2F;**
+	 * Dumps a matrix to a string (useful for debug).
+	 *&#x2F;
+	me.dumpMatrix = function(matrix) {
+		var s = &quot;[ &quot; + matrix.a + &quot;, &quot; + matrix.c + &quot;, &quot; + matrix.e + &quot;\n  &quot; + matrix.b + &quot;, &quot; + matrix.d + &quot;, &quot; + matrix.f + &quot;\n  0, 0, 1 ]&quot;;
+
+		return s;
+	};
+
+	&#x2F;**
+	 * Sets attributes of an element.
+	 *&#x2F;
+	me.setAttributes = function(element, attributes) {
+		for (i in attributes)
+			element.setAttributeNS(null, i, attributes[i]);
+	};
+
+	&#x2F;**
+	 * Handle mouse move event.
+	 *&#x2F;
+	me.handleMouseWheel = function(evt) {
+		if (!me.opts.zoom) return;
+
+		if (evt.preventDefault)
+			evt.preventDefault();
+
+		evt.returnValue = false;
+
+		var svgDoc = evt.target.ownerDocument;
+
+		var delta;
+
+		if (evt.wheelDelta)
+			delta = evt.wheelDelta &#x2F; 3600; &#x2F;&#x2F; Chrome&#x2F;Safari
+		else
+			delta = evt.detail &#x2F; -90; &#x2F;&#x2F; Mozilla
+
+        if (delta &gt; 0) {
+            if (me.opts.zoomThreshold) 
+                if (me.opts.zoomThreshold[1] &lt;= me.zoomCurrent) return;
+            me.zoomCurrent++;
+        } else {
+            if (me.opts.zoomThreshold)
+                if (me.opts.zoomThreshold[0] &gt;= me.zoomCurrent) return;
+            me.zoomCurrent--;
+        }
+
+		var z = 1 + delta; &#x2F;&#x2F; Zoom factor: 0.9&#x2F;1.1
+
+		var g = svgDoc.getElementById(&quot;viewport&quot;+me.id);
+		
+		var p = me.getEventPoint(evt);
+
+		p = p.matrixTransform(g.getCTM().inverse());
+
+		&#x2F;&#x2F; Compute new scale matrix in current mouse position
+		var k = me.root.createSVGMatrix().translate(p.x, p.y).scale(z).translate(-p.x, -p.y);
+		me.setCTM(g, g.getCTM().multiply(k));
+
+		if (!me.stateTf)
+			me.stateTf = g.getCTM().inverse();
+
+		me.stateTf = me.stateTf.multiply(k.inverse());
+	};
+
+	&#x2F;**
+	 * Handle mouse move event.
+	 *&#x2F;
+	me.handleMouseMove = function(evt) {
+        if (!me.opts.zoom || !me.opts.pan) return;
+
+        if (evt.preventDefault)
+			evt.preventDefault();
+
+		evt.returnValue = false;
+
+		var svgDoc = evt.target.ownerDocument;
+
+		var g = svgDoc.getElementById(&quot;viewport&quot;+me.id);
+
+		if (me.state == &#x27;pan&#x27;) {
+			&#x2F;&#x2F; Pan mode
+			if (!me.opts.pan) return;
+
+			var p = me.getEventPoint(evt).matrixTransform(me.stateTf);
+
+			me.setCTM(g, me.stateTf.inverse().translate(p.x - me.stateOrigin.x, p.y - me.stateOrigin.y));
+		} else if (me.state == &#x27;move&#x27;) {
+			&#x2F;&#x2F; Move mode
+			if (!me.opts.drag) return;
+
+			var p = me.getEventPoint(evt).matrixTransform(g.getCTM().inverse());
+
+			me.setCTM(me.stateTarget, me.root.createSVGMatrix().translate(p.x - me.stateOrigin.x, p.y - me.stateOrigin.y).multiply(g.getCTM().inverse()).multiply(me.stateTarget.getCTM()));
+
+			me.stateOrigin = p;
+		}
+	};
+
+	&#x2F;**
+	 * Handle click event.
+	 *&#x2F;
+	me.handleMouseDown = function(evt) {
+        if (!me.opts.zoom || !me.opts.pan) return;
+
+        if (evt.preventDefault)
+			evt.preventDefault();
+		evt.returnValue = false;
+
+		var svgDoc = evt.target.ownerDocument;
+
+		var g = svgDoc.getElementById(&quot;viewport&quot;+me.id);
+
+		if (evt.target.tagName == &quot;svg&quot; || !me.opts.drag) {
+			&#x2F;&#x2F; Pan mode
+			if (!me.opts.pan) return;
+
+			me.state = &#x27;pan&#x27;;
+
+			me.stateTf = g.getCTM().inverse();
+
+			me.stateOrigin = me.getEventPoint(evt).matrixTransform(me.stateTf);
+		} else {
+			&#x2F;&#x2F; Move mode
+			if (!me.opts.drag || evt.target.draggable == false) return;
+
+			me.state = &#x27;move&#x27;;
+
+			me.stateTarget = evt.target;
+
+			me.stateTf = g.getCTM().inverse();
+
+			me.stateOrigin = me.getEventPoint(evt).matrixTransform(me.stateTf);
+		}
+	};
+
+	&#x2F;**
+	 * Handle mouse button release event.
+	 *&#x2F;
+	me.handleMouseUp = function(evt) {
+        if (!me.opts.zoom || !me.opts.pan) return;
+
+        if (evt.preventDefault)
+			evt.preventDefault();
+
+		evt.returnValue = false;
+
+		var svgDoc = evt.target.ownerDocument;
+
+		if ((me.state == &#x27;pan&#x27; &amp;&amp; me.opts.pan) || (me.state == &#x27;move&#x27; &amp;&amp; me.opts.drag)) {
+			&#x2F;&#x2F; Quit pan mode
+			me.state = &#x27;&#x27;;
+		}
+	};
+
+
+    &#x2F;&#x2F; end of constructor
+  	me.setupHandlers(me.root);
+	me.initialized = true;
+};
+
+Raphael.fn.ZPDPanTo = function(x, y) {
+	var me = this;
+
+	if (me.gelem.getCTM() == null) {
+		alert(&#x27;failed&#x27;);
+		return null;
+	}
+
+	var stateTf = me.gelem.getCTM().inverse();
+
+	var svg = document.getElementsByTagName(&quot;svg&quot;)[0];
+
+	if (!svg.createSVGPoint) alert(&quot;no svg&quot;);        
+
+	var p = svg.createSVGPoint();
+
+	p.x = x; 
+	p.y = y;
+
+	p = p.matrixTransform(stateTf);
+
+	var element = me.gelem;
+	var matrix = stateTf.inverse().translate(p.x, p.y);
+
+	var s = &quot;matrix(&quot; + matrix.a + &quot;,&quot; + matrix.b + &quot;,&quot; + matrix.c + &quot;,&quot; + matrix.d + &quot;,&quot; + matrix.e + &quot;,&quot; + matrix.f + &quot;)&quot;;
+
+	element.setAttribute(&quot;transform&quot;, s);
+
+	return me;   
+};
+
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

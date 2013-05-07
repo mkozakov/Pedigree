@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>pedigree&#x2F;abstractPerson.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/AbstractHoverbox.html">AbstractHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNode.html">AbstractNode</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNodeVisuals.html">AbstractNodeVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPerson.html">AbstractPerson</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPersonVisuals.html">AbstractPersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/ActionStack.html">ActionStack</a></li>
+            
+                <li><a href="..&#x2F;classes/ClassName.html">ClassName</a></li>
+            
+                <li><a href="..&#x2F;classes/Graph.html">Graph</a></li>
+            
+                <li><a href="..&#x2F;classes/GroupHoverbox.html">GroupHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/Legend.html">Legend</a></li>
+            
+                <li><a href="..&#x2F;classes/NodeMenu.html">NodeMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/NodetypeSelectionBubble.html">NodetypeSelectionBubble</a></li>
+            
+                <li><a href="..&#x2F;classes/Partnership.html">Partnership</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipHoverbox.html">PartnershipHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipVisuals.html">PartnershipVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PedigreeEditor.html">PedigreeEditor</a></li>
+            
+                <li><a href="..&#x2F;classes/Person.html">Person</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroup.html">PersonGroup</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroupVisuals.html">PersonGroupVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonHoverbox.html">PersonHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonVisuals.html">PersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolder.html">PlaceHolder</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolderVisuals.html">PlaceHolderVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/Pregnancy.html">Pregnancy</a></li>
+            
+                <li><a href="..&#x2F;classes/PregnancyVisuals.html">PregnancyVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadEngine.html">SaveLoadEngine</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadIndicator.html">SaveLoadIndicator</a></li>
+            
+                <li><a href="..&#x2F;classes/Workspace.html">Workspace</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: pedigree&#x2F;abstractPerson.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+
+&#x2F;**
+ * A general superclass for Person nodes on the Pedigree graph. Contains information about related nodes
+ * and some properties specific for people. Creates an instance of AbstractPersonVisuals on initialization
+ *
+ * @class AbstractPerson
+ * @extends AbstractNode
+ * @constructor
+ * @param {Number} x The x coordinate on the canvas
+ * @param {Number} y The y coordinate on the canvas
+ * @param {String} gender Can be &quot;M&quot;, &quot;F&quot;, or &quot;U&quot;
+ * @param {Number} [id] The id of the node
+ *&#x2F;
+
+var AbstractPerson = Class.create(AbstractNode, {
+
+    initialize: function($super, x, y, gender, id) {
+        this._partnershipNodes = [];
+        this._gender = this.parseGender(gender);
+        this._parentPregnancy = null;
+        this._isAdopted = false;
+        this._type = this._type ? this._type : &quot;AbstractPerson&quot;;
+        $super(x, y, id);
+      },
+
+    &#x2F;**
+     * Initializes the object responsible for creating graphics for this node
+     *
+     * @method _generateGraphics
+     * @param {Number} x The x coordinate on the canvas at which the node is centered
+     * @param {Number} y The y coordinate on the canvas at which the node is centered
+     * @return {AbstractPersonVisuals}
+     * @private
+     *&#x2F;
+    _generateGraphics: function(x, y) {
+        return new AbstractPersonVisuals(this, x, y);
+    },
+
+    &#x2F;**
+     * Returns the parents&#x27; Partnership node
+     *
+     * @method getParentPartnership
+     * @return {Null|Partnership} null if this person has no parents
+     *&#x2F;
+    getParentPartnership: function() {
+        var preg = this.getParentPregnancy();
+        if(preg) {
+            return preg.getPartnership();
+        }
+        return null;
+    },
+
+    &#x2F;**
+     * Returns the Pregnancy from which this node stems
+     *
+     * @method getParentPregnancy
+     * @return {Pregnancy}
+     *&#x2F;
+    getParentPregnancy: function() {
+        return this._parentPregnancy;
+    },
+
+    &#x2F;**
+     * Replaces the the parent Pregnancy associated with this node with the one passed in the parameter
+     *
+     * @method setParentPregnancy
+     * @param {Pregnancy} pregnancy A Pregnancy object that has this node listed as a child
+     *&#x2F;
+    setParentPregnancy: function(pregnancy) {
+        this._parentPregnancy = pregnancy;
+    },
+
+    &#x2F;**
+     * Returns an array containing the two parents of this node.
+     *
+     * @method getParents
+     * @return {Null|Array} in the form of [parent1, parent2]. Null if this person has no parents.
+     *&#x2F;
+    getParents: function() {
+        if(this.getParentPartnership()){
+            return [this.getParentPartnership().getPartners()[0], this.getParentPartnership().getPartners()[1]]
+        }
+        return null;
+    },
+
+    &#x2F;**
+     * Returns true if this node is a descendant of otherNode
+     *
+     * @method isDescendantOf
+     * @param otherNode {Person|PlaceHolder}
+     * @return {Boolean}
+     *&#x2F;
+    isDescendantOf: function(otherNode) {
+        if(otherNode.isParentOf(this)) {
+            return true;
+        }
+        else {
+            var found = false,
+                children = otherNode.getChildren(),
+                i = 0;
+            while((i &lt; children.length) &amp;&amp; !found) {
+                found = this.isDescendantOf(children[i]);
+                i++;
+            }
+            return found;
+        }
+    },
+
+    &#x2F;**
+     * Reads a string of input and converts it into the standard gender format of &quot;M&quot;,&quot;F&quot; or &quot;U&quot;.
+     * Defaults to &quot;U&quot; if string is not recognized
+     *
+     * @method parseGender
+     * @param {String} gender The string to be parsed
+     * @return {String} the gender in the standard form (&quot;M&quot;, &quot;F&quot;, or &quot;U&quot;)
+     *&#x2F;
+    parseGender: function(gender) {
+        return (gender == &#x27;M&#x27; || gender == &#x27;F&#x27;)?gender:&#x27;U&#x27;;
+    },
+
+    &#x2F;**
+     * Returns &quot;U&quot;, &quot;F&quot; or &quot;M&quot; depending on the gender of this node
+     *
+     * @method getGender
+     * @return {String}
+     *&#x2F;
+    getGender: function() {
+        return this._gender;
+    },
+
+    &#x2F;**
+     * Collects gender information from twins and partners of this person
+     *
+     * @method getTwinPartnerGenders
+     * @return {Object} in the form of {nodeID1 : gender1, nodeID2: gender2, ...}
+     *&#x2F;
+    getTwinPartnerGenders: function(visited) {
+        visited = visited ? visited : {};
+        if(!visited[this.getID()]) {
+            visited[this.getID()] = this.getGender();
+            var pp = this.getParentPregnancy();
+            pp &amp;&amp; (visited[pp.getID()] = pp.getGender());
+            this.getPartners().each(function(partner) {
+                visited = partner.getTwinPartnerGenders(visited);
+            });
+        }
+        return visited;
+    },
+
+    &#x2F;**
+     * Updates the gender of this node and updates the
+     * graphics. Updates gender of all partners and twins if it is unknown.
+     * Returns an array of nodes visited during the partner&#x2F;twin traversal.
+     *
+     * @method setGender
+     * @param {String} gender Should be &quot;U&quot;, &quot;F&quot;, or &quot;M&quot; depending on the gender
+     * @param {Array} [visitedNodes] An array of nodes that were visited during the traversal up until
+     *  this node. OMIT this parameter. It is used for internal functionality.
+     * @return {Array} list of twins and partners of this node
+     *&#x2F;
+    setGender: function(gender, visitedNodes) {
+        var visited = (visitedNodes instanceof Array) ? visitedNodes : [];
+        visited.push(this);
+        if(!this.getParentPregnancy()  || !this.getParentPregnancy().isGenderLocked()) {
+            if(this.getPartners().length == 0) {
+                this._gender = this.parseGender(gender);
+                this.getGraphics().setGenderSymbol();
+                this.getParentPregnancy() &amp;&amp; this.getParentPregnancy().setGender(gender);
+            }
+            else {
+                var me = this;
+                this._gender = this.parseGender(gender);
+                this.getGraphics().setGenderSymbol();
+                this.getPartners().each(function(partner) {
+                    if(visited.indexOf(partner) == -1) {
+                        visited = partner.setGender(me.getOppositeGender(), visited);
+                    }
+                });
+                this.getParentPregnancy() &amp;&amp; this.getParentPregnancy().setGender(gender);
+            }
+        }
+        return visited;
+    },
+
+    &#x2F;**
+     * Changes the gender of this node to gender, and updates the gender of all twins and partners
+     * if they are affected. Updates the action stack.
+     *
+     * @method setGenderAction
+     * @param {String} gender Should be &quot;M&quot;, &quot;F&quot;, or &quot;U&quot;
+     *&#x2F;
+    setGenderAction: function(gender) {
+        var prevGenders = this.getTwinPartnerGenders();
+        this.setGender(gender, []);
+        var newGenders = this.getTwinPartnerGenders();
+        editor.getActionStack().push({
+            undo: AbstractNode.setPropertyToListActionUndo,
+            redo: AbstractNode.setPropertyToListActionRedo,
+            oldValues: prevGenders,
+            newValues: newGenders,
+            property: &#x27;Gender&#x27;
+        });
+    },
+
+    &#x2F;**
+     * Changes the adoption status of this Person to isAdopted. Updates the graphics.
+     *
+     * @method setAdopted
+     * @param {Boolean} isAdopted Set to true if you want to mark the Person adopted
+     *&#x2F;
+    setAdopted: function(isAdopted) {
+        this._isAdopted = isAdopted;
+        &#x2F;&#x2F;TODO: implement adopted and social parents
+        if(isAdopted) {
+            this.getGraphics().drawAdoptedShape();
+            var twins = this.getTwins(&quot;PlaceHolder&quot;);
+            if(twins.length &gt; 0) {
+                twins.each(function(twin) {
+                    twin.remove();
+                })
+            }
+        }
+        else {
+            this.getGraphics().removeAdoptedShape();
+        }
+        var preg = this.getParentPregnancy();
+        preg &amp;&amp; preg.updateActive();
+    },
+
+    &#x2F;**
+     * Changes the adoption status of this Person to isAdopted. Updates the graphics. Updates the
+     * action stack.
+     *
+     * @method setAdoptedAction
+     * @param {Boolean} isAdopted Set to true if you want to mark the Person adopted
+     *&#x2F;
+    setAdoptedAction: function(isAdopted) {
+        var oldStatus = this.isAdopted();
+        if(oldStatus != isAdopted) {
+            var twin = this.getTwins(&quot;PlaceHolder&quot;)[0],
+                twinInfo = twin ? twin.getInfo() : null;
+            this.setAdopted(isAdopted);
+            var nodeID = this.getID();
+            var undo = function() {
+                var node = editor.getGraph().getNodeMap()[nodeID];
+                if(node) {
+                    node.setAdopted(oldStatus);
+                    if(twinInfo &amp;&amp; node.getParentPregnancy()) {
+                        var newPh = editor.getGraph().addPlaceHolder(twinInfo.x, twinInfo.y, twinInfo.gender, twinInfo.id);
+                        node.getParentPregnancy().addChild(newPh);
+                    }
+                }
+            };
+            var redo = function() {
+                var node = editor.getGraph().getNodeMap()[nodeID];
+                node &amp;&amp; node.setAdopted(isAdopted);
+            };
+            editor.getActionStack().push({undo: undo, redo: redo});
+        }
+    },
+
+    &#x2F;**
+     * Returns true if this Person is marked adopted
+     *
+     * @method isAdopted
+     * @return {Boolean}
+     *&#x2F;
+    isAdopted: function() {
+        return this._isAdopted;
+    },
+
+    &#x2F;**
+     * Returns true if this person has twin children
+     *
+     * @method hasTwins
+     * @return {Boolean}
+     *&#x2F;
+    hasTwins: function() {
+        var partnerships = this.getPartnerships();
+        for(var i = 0; i &lt; partnerships.length; i++) {
+            if(partnerships[i].hasTwins())
+                return true;
+        }
+        return false;
+    },
+
+    &#x2F;**
+     * Returns true if this person has non-adopted children
+     *
+     * @method hasNonAdoptedChildren
+     * @return {Boolean}
+     *&#x2F;
+    hasNonAdoptedChildren: function() {
+        var partnerships = this.getPartnerships();
+        for(var i = 0; i &lt; partnerships.length; i++) {
+            if(partnerships[i].hasNonAdoptedChildren())
+                return true;
+        }
+        return false;
+    },
+
+    &#x2F;**
+     * Returns an array of Partnership objects of this node
+     *
+     * @method getPartnerships
+     * @return {Array}
+     *&#x2F;
+    getPartnerships: function() {
+        return this._partnershipNodes;
+    },
+
+    &#x2F;**
+     * Returns the Partnership affiliated with partner
+     *
+     * @method getPartnership
+     * @param partner {AbstractPerson}
+     * @return {Null|Partnership} returns Null if this node has no Partnership with partner
+     *&#x2F;
+    getPartnership: function(partner) {
+        if(partner) {
+            var partnerships = this.getPartnerships();
+            for(var i = 0; i &lt; partnerships.length; i++) {
+                if(partnerships[i].getPartnerOf(this).getID() == partner.getID()) {
+                    return partnerships[i];
+                }
+            }
+        }
+        return null;
+    },
+
+    &#x2F;**
+     * Returns an array nodes that share a Partnership with this node
+     *
+     * @method getPartners
+     * @return {Array} in the form of [partner1, partner2, ...]
+     *&#x2F;
+    getPartners: function() {
+        var partners = [];
+        var me = this;
+        this.getPartnerships().each(function(partnership) {
+            var partner = partnership.getPartnerOf(me);
+            partner &amp;&amp; partners.push(partner);
+        });
+        return partners;
+    },
+
+    &#x2F;**
+     * Adds a new partnership to the list of partnerships of this node
+     *
+     * @method addPartnership
+     * @param {Partnership} partnership Should have this node as one of the partners
+     * @return {Null|Partnership} The added Partnership or null if it couldn&#x27;t be added
+     *&#x2F;
+    addPartnership: function(partnership) {
+       if(this.getPartners().indexOf(partnership.getPartnerOf(this)) == -1) {
+           this._partnershipNodes.push(partnership);
+           return partnership;
+       }
+       return null;
+    },
+
+    &#x2F;**
+     * Removes partnership from the list of partnerships
+     *
+     * @method removePartnership
+     * @param {Partnership} partnership Should have this node as one of the partners
+     *&#x2F;
+    removePartnership: function(partnership) {
+        if(partnership) {
+            var target = null;
+            this._partnershipNodes.each(function(p) {
+                if(p.getID() == partnership.getID())
+                    target = p;
+            });
+            if(target)
+                this._partnershipNodes = this._partnershipNodes.without(target);
+        }
+    },
+
+    &#x2F;**
+     * Creates a Partnership of two new Person nodes of opposite gender, and adds this node as a child of the
+     * partnership
+     *
+     * @method createParents
+     * @return {Null|Partnership} The resulting partnership between the two new parents or null if parents couldn&#x27;t
+     * be created
+     *&#x2F;
+    createParents: function() {
+        if(this.getParentPartnership() == null) {
+            var positions = editor.findPosition ({above : this.getID()}, [&#x27;mom&#x27;, &#x27;dad&#x27;]);
+            var mother = editor.getGraph().addPerson(positions[&#x27;mom&#x27;].x, positions[&#x27;mom&#x27;].y, &quot;F&quot;, false),
+                father = editor.getGraph().addPerson(positions[&#x27;dad&#x27;].x, positions[&#x27;dad&#x27;].y, &quot;M&quot;, false);
+
+            var joinPosition = editor.findPosition({join : [mother.getID(), father.getID()]});
+            var partnership = editor.getGraph().addPartnership(joinPosition.x, joinPosition.y, mother, father);
+            
+            &#x2F;&#x2F;document.fire(&#x27;pedigree:parents:added&#x27;, {&#x27;node&#x27; : partnership, &#x27;relatedNodes&#x27; : [mother, father], &#x27;sourceNode&#x27; : this});
+            return this.addParents(partnership);
+        }
+        return null;
+    },
+
+    &#x2F;**
+     * Sets parents to the partnership passed in the parameter, and adds this node to partnership&#x27;s list of children
+     *
+     * @method addParents
+     * @param partnership {Partnership}
+     * @return {Null|Partnership} the partnership that was added or null if it couldn&#x27;t be added
+     *&#x2F;
+    addParents: function(partnership) {
+        if(this.getParentPartnership() == null &amp;&amp; partnership.addChild(this)) {
+            return partnership;
+        }
+        return null
+    },
+
+    &#x2F;**
+     * Sets this node as a child of a new partnership between parent and a new placeholder.
+     *
+     * @method addParent
+     * @param parent {AbstractPerson}
+     * @return {Null|Partnership} resulting parent partnership. Null if &#x27;parent&#x27; can be a parent of this person
+     *&#x2F;
+    addParent: function(parent) {
+        if(parent.canBeParentOf(this)) {
+            var partnership = parent.createPartner(true, true);
+            partnership.addChild(this);
+            return partnership;
+        }
+        return null;
+    },
+
+    &#x2F;**
+     * Returns a string representing the opposite gender of this node (&quot;M&quot; or &quot;F&quot;). Returns &quot;U&quot;
+     * if the gender of this node is unknown
+     *
+     * @method getOppositeGender
+     * @return {String} &quot;M&quot;, &quot;F&quot; or &quot;U&quot; depending on the gender of this person
+     *&#x2F;
+    getOppositeGender : function() {
+        if (this.getGender() == &quot;U&quot;) {
+            return &quot;U&quot;;
+        }
+        else if(this.getGender() == &quot;M&quot;) {
+            return &quot;F&quot;;
+        }
+        else {
+            return &quot;M&quot;;
+        }
+    },
+
+    &#x2F;**
+     * Creates a new node and generates a Partnership with this node.
+     * Returns the Partnership.
+     *
+     * @method createPartner
+     * @param [isPlaceHolder=false] {Boolean} set to true if the new partner should be a PlaceHolder
+     * @param [noChild=false] {Boolean} set true to refrain from creating a placeholder child
+     * for the resulting partnership
+     * @return {Partnership} the resulting partnership
+     *&#x2F;
+    createPartner: function(isPlaceHolder, noChild) {
+        var pos = editor.findPosition({side: this.getID()}),
+            gen = this.getOppositeGender(),
+            partner = (isPlaceHolder) ? editor.getGraph().addPlaceHolder(pos.x, pos.y, gen) : editor.getGraph().addPerson(pos.x, pos.y, gen);
+        var result = this.addPartner(partner, noChild);
+        document.fire(&#x27;pedigree:partner:added&#x27;, {&#x27;node&#x27; : partner, &#x27;relatedNodes&#x27; : [result], &#x27;sourceNode&#x27; : this});
+        return result;
+    },
+
+    &#x2F;**
+     * Creates a new Partnership with partner.
+     * Does not duplicate a partnership if one already exists.
+     * Returns the new Partnership or the preexisting partnership
+     *
+     * @method addPartner
+     * @param partner {Person|PlaceHolder}
+     * @param [noChild=false] {Boolean} set true to refrain from creating a placeholder child
+     * for the resulting partnership
+     * @return {Null|Partnership} The added Partnership or null if partner could not be added
+     *&#x2F;
+    addPartner: function(partner, noChild) {
+        if(this.getPartners().indexOf(partner) != -1){
+            return this.getPartnership(partner);
+        }
+        else if(this.canPartnerWith(partner)) {
+            var joinPosition = editor.findPosition({join : [this.getID(), partner.getID()]});
+            var partnership = editor.getGraph().addPartnership(joinPosition.x, joinPosition.y, this, partner);
+
+            if(this.getGender() == &#x27;U&#x27; &amp;&amp; partner.getGender() != &#x27;U&#x27;) {
+                this.setGender(partner.getOppositeGender());
+            }
+            else if(this.getGender() != &#x27;U&#x27; &amp;&amp; partner.getGender() == &#x27;U&#x27;) {
+                partner.setGender(this.getOppositeGender());
+            }
+
+            if(partnership.getChildren().length == 0 &amp;&amp;
+                                            !noChild &amp;&amp;
+                                            !(this.getChildlessStatus &amp;&amp; this.getChildlessStatus()) &amp;&amp;
+                                            !(partner.getChildlessStatus &amp;&amp; partner.getChildlessStatus())) {
+                partnership.createChild(&quot;PlaceHolder&quot;, &quot;U&quot;, 1);
+            }
+            
+            document.fire(&#x27;pedigree:partnership:added&#x27;, {
+                &#x27;node&#x27; : partnership,
+                &#x27;relatedNodes&#x27; : [partner],
+                &#x27;sourceNode&#x27; : this
+            });
+            return partnership;
+        }
+        return null;
+    },
+
+    &#x2F;**
+     * Returns an array of nodes that are children from all of this node&#x27;s Partnerships.
+     *
+     * @method getChildren
+     * @param [type]* {String} can be &quot;Person&quot;, &quot;PersonGroup&quot; or &quot;PlaceHolder&quot;.
+     * @example
+     *
+     var myPerson = editor.addPerson(100,100, &quot;M&quot;, 20);
+     var child1 = editor.addPerson(200,200, &quot;M&quot;, 21);
+     var child2 = editor.addPlaceHolder(300,200, &quot;M&quot;, 22);
+     myPerson.addChild(child1);
+     myPerson.addChild(child2);
+
+     myPerson.getChildren(&quot;PlaceHolder&quot;, &quot;Person&quot;) &#x2F;&#x2F; -&gt; [child2, child1]
+     *&#x2F;
+    getChildren: function(type) {
+        var args = arguments;
+        var children = [];
+        this.getPartnerships().each(function(partnership) {
+            children = children.concat(partnership.getChildren.apply(partnership, args));
+        });
+        return children;
+    },
+
+    &#x2F;**
+     * Returns true if this person is a parent of non-placeholder children.
+     *
+     * @method hadChildren
+     * @return {Boolean}
+     *&#x2F;
+    hasChildren: function() {
+        return this.getChildren(&quot;Person&quot;).concat(this.getChildren(&quot;PersonGroup&quot;)).length &gt; 0;
+    },
+
+    &#x2F;**
+     * Creates node of type nodeType and gender nodeGender and a partnership with a new placeholder. Sets
+     * the child as a child of this partnership.
+     *
+     * @method createChild
+     * @param {String} nodeType The type for the new child. (eg. &quot;Person&quot;, &quot;PlaceHolder&quot;, &quot;PersonGroup&quot;)
+     * @param {String} nodeGender Can be &quot;M&quot;, &quot;F&quot; or &quot;U&quot;.
+     *&#x2F;
+    createChild: function(nodeType, nodeGender) {
+        return this.createPartner(true, true).createChild(nodeType, nodeGender);
+    },
+
+    &#x2F;**
+     * Creates a partnership with a new placeholder node and adds childNode to as a child of this partnership.
+     *
+     * @method addChild
+     * @param childNode {AbstractPerson}
+     * @return {Null|AbstractPerson} the child node or null in case of error
+     *&#x2F;
+    addChild: function(childNode) {
+        if(this.canBeParentOf(childNode)) {
+            var partnership = this.createPartner(true, true);
+            partnership.addChild(childNode);
+            return childNode;
+        }
+        return null;
+    },
+
+    &#x2F;**
+     * Returns all the nodes that come from the parent pregnancy.
+     *
+     * @method getTwins
+     * @param {String} type The type for the new child. (eg. &quot;Person&quot;, &quot;PlaceHolder&quot;, &quot;PersonGroup&quot;)
+     * @return {Array} List of AbstractPerson objects.
+     *&#x2F;
+    getTwins: function(type) {
+        return this.getParentPregnancy().getChildren(type).without(this);
+    },
+
+    &#x2F;**
+     * Returns true if this node is a parent of otherNode
+     *
+     * @method isParentOf
+     * @param otherNode {PlaceHolder|Person}
+     * @return {Boolean}
+     *&#x2F;
+    isParentOf: function(otherNode) {
+        return (this.getChildren().indexOf(otherNode) &gt; -1);
+    },
+
+    &#x2F;**
+     * Returns true if this node is an ancestor of otherNode
+     *
+     * @method isAncestorOf
+     * @param otherNode {Person|PlaceHolder}
+     * @return {Boolean}
+     *&#x2F;
+    isAncestorOf: function(otherNode) {
+        return otherNode.isDescendantOf(this);
+    },
+
+    &#x2F;**
+     * Returns true if this node is a partner of otherNode
+     *
+     * @method isPartnerOf
+     * @param otherNode {Person|PlaceHolder}
+     * @return {Boolean}
+     *&#x2F;
+    isPartnerOf: function(otherNode) {
+        if(otherNode) {
+            for(var i = 0; i &lt; this.getPartners().length; i++) {
+                if(this.getPartners()[i].getID() == otherNode.getID())
+                    return true;
+            }
+        }
+        return false;
+    },
+
+    &#x2F;**
+     * Returns true if this node can have a heterosexual Partnership with otherNode
+     *
+     * @method canPartnerWith
+     * @param otherNode {Person|PlaceHolder}
+     * @return {Boolean}
+     *&#x2F;
+    canPartnerWith: function(otherNode) {
+        var oppositeGender = (this.getOppositeGender() == otherNode.getGender() || this.getGender() == &quot;U&quot;
+                                                                                || otherNode.getGender() == &quot;U&quot;);
+        var numSteps = this.getStepsToNode(otherNode)[0];
+        var oddStepsAway = (numSteps == null || numSteps%2 == 1);
+        return oppositeGender &amp;&amp; oddStepsAway;
+    },
+
+    &#x2F;**
+     * Returns true if this node can be a parent of otherNode
+     *
+     * @method canBeParentOf
+     * @param otherNode {AbstractPerson}
+     * @return {Boolean}
+     *&#x2F;
+    canBeParentOf: function(otherNode) {
+        var isDescendant = this.isDescendantOf(otherNode);
+        return (this != otherNode) &amp;&amp;
+            otherNode.getParentPartnership() == null &amp;&amp;
+            this.getChildren().indexOf(otherNode) == -1 &amp;&amp;
+            !isDescendant;
+    },
+
+    &#x2F;**
+     * Breaks connections with all related nodes and removes this node from
+     * the record.
+     *
+     * @method remove
+     * @param [$super]
+     * @param [isRecursive=false] {Boolean} set to true to remove all nodes that will result in being unrelated to the proband
+     * @param [skipConfirmation=false] {Boolean} if true, no confirmation box will pop up
+     * @return {Object} in the form
+     *
+     {
+     confirmed: true&#x2F;false,
+     affected: {
+     PersonNodes : [Person1, Person2, ...],
+     PartnershipNodes : [Partnership1, Partnership2, ...],
+     PregnancyNodes : [Pregnancy1, Pregnancy2, ...],
+     PersonGroupNodes : [PersonGroup1, PersonGroup2, ...],
+     PlaceHolderNodes : [PlaceHolder1, PlaceHolder2, ...]
+     },
+     created: [PlaceHolder1, PlaceHolder2, ...]
+     }
+     *&#x2F;
+    remove: function($super, isRecursive, skipConfirmation) {
+        if(isRecursive) {
+            return $super(true, skipConfirmation)
+        }
+        else {
+            this.getPartnerships().each(function(partnership) {
+                partnership.remove(false);
+            });
+            var parentPregnancy = this.getParentPregnancy();
+            parentPregnancy &amp;&amp; parentPregnancy.removeChild(this);
+            this.getGraphics().remove();
+            return $super(isRecursive);
+        }
+    },
+
+    &#x2F;**
+     * Returns all of this node&#x27;s Partnerships
+     *
+     * @method getSideNeighbors
+     * @return {Array} in the form of [Partnership1, Partnership2, ...]
+     *&#x2F;
+    getSideNeighbors: function() {
+        return this.getPartnerships();
+    },
+
+    &#x2F;**
+     * Returns an array with the number of partnerships between this node and otherNode, and the nodes visited
+     * in the process of the traversal
+     *
+     * @method getStepsToNode
+     * @param {AbstractNode} otherNode The node whose distance (in partnerships) from this node you&#x27;re trying to calculate
+     * @param {Array} [visitedNodes] An array of nodes that were visited in the result of the traversal. This parameter is used
+     * internally so omit it when calling the function
+     *&#x2F;
+    getStepsToNode: function(otherNode, visitedNodes) {
+        var visited = (visitedNodes) ? visitedNodes : [];
+        visited.push(this);
+        if(this === otherNode) {
+            return [0, visited];
+        }
+        else {
+            var numSteps = null;
+            this.getPartners().each(function(partner) {
+                if(visited.indexOf(partner) == -1) {
+                    numSteps = partner.getStepsToNode(otherNode, visited)[0];
+                    if(numSteps != null) {
+                        numSteps = 1 + numSteps;
+                        throw $break;
+                    }
+                }
+            });
+            return [numSteps, visited];
+        }
+    },
+
+    &#x2F;**
+     * Returns the parent&#x27;s Partnership
+     *
+     * @method getUpperNeighbors
+     * @return {Array}
+     *&#x2F;
+    getUpperNeighbors: function() {
+        return this.getParentPregnancy() ? [this.getParentPregnancy()] : [];
+    },
+
+    &#x2F;**
+     * Returns an object containing all the information about this node.
+     *
+     * @method getInfo
+     * @return {Object} in the form
+     *
+     {
+     type: &#x2F;&#x2F; (type of the node),
+     x:  &#x2F;&#x2F; (x coordinate)
+     y:  &#x2F;&#x2F; (y coordinate)
+     id: &#x2F;&#x2F; id of the node
+     gender: &#x2F;&#x2F;gender of the node
+     }
+     *&#x2F;
+    getInfo: function($super) {
+        var info = $super();
+        info[&#x27;gender&#x27;] = this.getGender();
+        return info;
+    },
+
+    &#x2F;**
+     * Applies the properties found in info to this node.
+     *
+     * @method loadInfo
+     * @param [$super]
+     * @param info Object in the form
+     *
+     {
+     type: &#x2F;&#x2F; (type of the node),
+     x:  &#x2F;&#x2F; (x coordinate)
+     y:  &#x2F;&#x2F; (y coordinate)
+     id: &#x2F;&#x2F; id of the node
+     gender: &#x2F;&#x2F;gender of the node
+     }
+     * @return {Boolean} true if info was successfully loaded
+     *&#x2F;
+    loadInfo: function($super, info) {
+        if($super(info) &amp;&amp; info.gender) {
+            if(this.getGender() != info.gender)
+                this.setGender(info.gender, null);
+            return true;
+        }
+        return false;
+    }
+});
+
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

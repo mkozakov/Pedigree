@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>pedigree&#x2F;legend.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/AbstractHoverbox.html">AbstractHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNode.html">AbstractNode</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractNodeVisuals.html">AbstractNodeVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPerson.html">AbstractPerson</a></li>
+            
+                <li><a href="..&#x2F;classes/AbstractPersonVisuals.html">AbstractPersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/ActionStack.html">ActionStack</a></li>
+            
+                <li><a href="..&#x2F;classes/ClassName.html">ClassName</a></li>
+            
+                <li><a href="..&#x2F;classes/Graph.html">Graph</a></li>
+            
+                <li><a href="..&#x2F;classes/GroupHoverbox.html">GroupHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/Legend.html">Legend</a></li>
+            
+                <li><a href="..&#x2F;classes/NodeMenu.html">NodeMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/NodetypeSelectionBubble.html">NodetypeSelectionBubble</a></li>
+            
+                <li><a href="..&#x2F;classes/Partnership.html">Partnership</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipHoverbox.html">PartnershipHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PartnershipVisuals.html">PartnershipVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PedigreeEditor.html">PedigreeEditor</a></li>
+            
+                <li><a href="..&#x2F;classes/Person.html">Person</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroup.html">PersonGroup</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonGroupVisuals.html">PersonGroupVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonHoverbox.html">PersonHoverbox</a></li>
+            
+                <li><a href="..&#x2F;classes/PersonVisuals.html">PersonVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolder.html">PlaceHolder</a></li>
+            
+                <li><a href="..&#x2F;classes/PlaceHolderVisuals.html">PlaceHolderVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/Pregnancy.html">Pregnancy</a></li>
+            
+                <li><a href="..&#x2F;classes/PregnancyVisuals.html">PregnancyVisuals</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadEngine.html">SaveLoadEngine</a></li>
+            
+                <li><a href="..&#x2F;classes/SaveLoadIndicator.html">SaveLoadIndicator</a></li>
+            
+                <li><a href="..&#x2F;classes/Workspace.html">Workspace</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: pedigree&#x2F;legend.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * Class responsible for keeping track of disorders and their properties.
+ * This information is graphically displayed in a &#x27;Legend&#x27; box
+ *
+ * @class Legend
+ * @constructor
+ *&#x2F;
+
+var Legend = Class.create( {
+
+    initialize: function() {
+        this._disorderNames = {};
+        this._disorderColors = {};
+        this._affectedNodes = {};
+        this._evaluations = {};
+
+        this._legendBox = new Element(&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;legend-box&#x27;, id: &#x27;legend-box&#x27;});
+        editor.getWorkspace().getWorkArea().insert(this._legendBox);
+        this._legendBox.setOpacity(0);
+
+        var legendTitle= new Element(&#x27;h2&#x27;, {&#x27;class&#x27; : &#x27;legend-title&#x27;}).update(&#x27;Key&#x27;);
+        this._legendBox.insert(legendTitle);
+
+        this._disorderList = new Element(&#x27;ul&#x27;, {&#x27;class&#x27; : &#x27;disorder-list&#x27;});
+        this._legendBox.insert(this._disorderList);
+
+        Element.observe(this._legendBox, &#x27;mouseover&#x27;, function() {
+            $$(&#x27;.menu-box&#x27;).invoke(&#x27;setOpacity&#x27;, .5);
+        });
+        Element.observe(this._legendBox, &#x27;mouseout&#x27;, function() {
+            $$(&#x27;.menu-box&#x27;).invoke(&#x27;setOpacity&#x27;, 1);
+        });
+        Droppables.add(editor.getWorkspace().canvas, {accept: &#x27;disorder&#x27;, onDrop: this._onDropDisorder.bind(this)});
+    },
+
+    &#x2F;**
+     * Returns an object of disorder IDs mapped to their names.
+     *
+     * @method getDisorders
+     * @return {Object}
+     *&#x2F;
+    getDisorderNames: function() {
+        return this._disorderNames;
+    },
+
+    &#x2F;**
+     * Returns an object of disorder IDs mapped to a list of IDs of nodes who have this disorder
+     *
+     * @method getAffectedNodes
+     * @returns {Object}
+     *&#x2F;
+    getAffectedNodes: function() {
+        return this._affectedNodes
+    },
+
+    &#x2F;**
+     * Returns an object of evaluation ID&#x27;s mapped to the evaluation properties.
+     *
+     * @method getEvaluations
+     * @return {Object}
+     *&#x2F;
+    getEvaluations: function() {
+        return this._evaluations;
+    },
+
+    &#x2F;**
+     * Replaces the evaluation map with the map passed in the parameter, and updates
+     * the graphical &#x27;Legend&#x27; to represent the new information
+     *
+     * @method setEvaluations
+     * @param map Formatted as follows:
+     *
+     {
+        E1 : {conclusion: &#x27;+&#x27;, result: &#x27;(36n&#x2F;18n)&#x27;, numAEvaluations: 4},
+        ...
+     }
+     *&#x2F;
+    setEvaluations: function(map) {
+        this._evaluations = map;
+        &#x2F;&#x2F;TODO: this.buildLegend
+    },
+
+    &#x2F;**
+     * Registers an occurrence of a disorder. If disorder hasn&#x27;t been documented yet,
+     * designates a color for it.
+     *
+     * @method addCase
+     * @param {Number|String} disorderID ID for this disorder taken from the OMIM database
+     * @param {String} disorderName The name of the disorder
+     * @param {Number} nodeID ID of the Person who has this disorder
+     *&#x2F;
+    addCase: function(disorderID, disorderName, nodeID) {
+        if(Object.keys(this.getAffectedNodes()).length == 0) {
+            (new Effect.Opacity(&#x27;legend-box&#x27;, { from: 0, to:.9, duration: 0.5 }));
+        }
+        if(!this.containsDisorder(disorderID)) {
+            this.getAffectedNodes()[disorderID] = [nodeID];
+            var color = this.generateColor(disorderID);
+            this.getDisorderColors()[disorderID] = color;
+            document.fire(&#x27;disorder:color&#x27;, {&#x27;id&#x27; : disorderID, color: color});
+            this.getDisorderNames()[disorderID] = disorderName;
+            var listElement = this.generateDisorderElement(disorderID, disorderName, color);
+            this._disorderList.insert(listElement);
+        }
+        else if(this.getAffectedNodes()[disorderID].indexOf(nodeID) == -1) {
+            this.getAffectedNodes()[disorderID].push(nodeID);
+        }
+        this._displayCasesForDisorder(disorderID);
+    },
+
+    &#x2F;**
+     * Removes an occurrence of a disorder if there are any. Removes the disorder
+     * from the &#x27;Legend&#x27; box if this disorder is not registered in any individual.
+     *
+     * @param {Number|String} disorderID ID for this disorder taken from the OMIM database
+     * @param {Number} nodeID ID of the Person who has this disorder
+     *&#x2F;
+    removeCase: function(disorderID, nodeID) {
+        if (this.containsDisorder(disorderID)) {
+            this.getAffectedNodes()[disorderID] = this.getAffectedNodes()[disorderID].without(nodeID);
+            if(this.getAffectedNodes()[disorderID].length == 0) {
+                delete this.getAffectedNodes()[disorderID];
+                delete this.getDisorderNames()[disorderID];
+                delete this.getDisorderColors()[disorderID];
+                var removeFromLegend = function() {$(&#x27;disorder-&#x27; + disorderID).remove()};
+                if(Object.keys(this.getAffectedNodes()).length == 0) {
+                    new Effect.Opacity(&#x27;legend-box&#x27;, { from:.9, to:0, duration: 0.5, afterFinish: removeFromLegend});
+                }
+                else {
+                    removeFromLegend();
+                }
+            }
+            else
+                this._displayCasesForDisorder(disorderID);
+        }
+    },
+    
+    &#x2F;**
+     * Updates the displayed number of affected cases for for a disorder in the legend UI.
+     *
+     * @method __displayCasesForDisorder
+     * @param {String|Number} disorderID The identifier of the disorder to update
+     * @private
+     *&#x2F;
+    _displayCasesForDisorder : function(disorderID) {
+      var label = this._legendBox.down(&#x27;li#disorder-&#x27; + disorderID + &#x27; .disorder-cases&#x27;);
+      if (label) {
+        var cases = this.getAffectedNodes()[disorderID] ? this.getAffectedNodes()[disorderID].length : 0;
+        label.update(cases + &quot; case&quot; + ((cases - 1) &amp;&amp; &quot;s&quot; || &quot;&quot;));
+      }
+    },
+
+    &#x2F;**
+     * Returns True if the disorder with the given ID is registered in the Legend
+     *
+     * @method containsDisorder
+     * @param {String|Number} disorderID The id for the disorder, taken from the OMIM database
+     *&#x2F;
+    containsDisorder: function(disorderID) {
+        return !!this.getAffectedNodes()[disorderID];
+    },
+
+    &#x2F;**
+     * Retrieve the color associated to a specific disorder
+     *
+     * @method getDisorderColor
+     * @param {String|Number} disorderID The id for the disorder, taken from the OMIM database
+     * @return {String} CSS color value for that disorder
+     *&#x2F;
+    getDisorderColor: function(disorderID) {
+        return this._disorderColors[disorderID];
+    },
+
+    &#x2F;**
+     * Returns an object with disorder IDs mapped to CSS colors
+     *
+     * @method getDisorderColors
+     * @return {Object}
+     *&#x2F;
+    getDisorderColors: function() {
+        return this._disorderColors;
+    },
+
+    &#x2F;**
+     * Generate the element that will display information about the given disorder in the legend
+     *
+     * @method generateDisorderElement
+     * @param {String|Number} id The id for the disorder, taken from the OMIM database
+     * @param {String} name The human-readable disorder name
+     * @param {String} color CSS color associated with the disorder, displayed on affected nodes in the pedigree
+     * @return {HTMLLIElement} List element to be insert in the legend
+     *&#x2F;
+    generateDisorderElement: function(id, name, color) {
+        var item = new Element(&#x27;li&#x27;, {&#x27;class&#x27; : &#x27;disorder&#x27;, &#x27;id&#x27; : &#x27;disorder-&#x27; + id}).update(new Element(&#x27;span&#x27;, {&#x27;class&#x27; : &#x27;disorder-name&#x27;}).update(name));
+        var bubble = new Element(&#x27;span&#x27;, {&#x27;class&#x27; : &#x27;disorder-color&#x27;});
+        bubble.style.backgroundColor = color;
+        item.insert({&#x27;top&#x27; : bubble});
+        var countLabel = new Element(&#x27;span&#x27;, {&#x27;class&#x27; : &#x27;disorder-cases&#x27;});
+        var countLabelContainer = new Element(&#x27;span&#x27;, {&#x27;class&#x27; : &#x27;disorder-cases-container&#x27;}).insert(&quot;(&quot;).insert(countLabel).insert(&quot;)&quot;);
+        item.insert(&quot; &quot;).insert(countLabelContainer);
+        var me = this;
+        Element.observe(item, &#x27;mouseover&#x27;, function() {
+            &#x2F;&#x2F;item.setStyle({&#x27;text-decoration&#x27;:&#x27;underline&#x27;, &#x27;cursor&#x27; : &#x27;default&#x27;});
+            item.down(&#x27;.disorder-name&#x27;).setStyle({&#x27;background&#x27;: color, &#x27;cursor&#x27; : &#x27;default&#x27;});
+            me.getAffectedNodes()[id] &amp;&amp; me.getAffectedNodes()[id].forEach(function(nodeID) {
+                var node = editor.getNode(nodeID);
+                node &amp;&amp; node.getGraphics().highlight();
+            });
+        });
+        Element.observe(item, &#x27;mouseout&#x27;, function() {
+            &#x2F;&#x2F;item.setStyle({&#x27;text-decoration&#x27;:&#x27;none&#x27;});
+            item.down(&#x27;.disorder-name&#x27;).setStyle({&#x27;background&#x27;:&#x27;&#x27;, &#x27;cursor&#x27; : &#x27;default&#x27;});
+            me.getAffectedNodes()[id] &amp;&amp; me.getAffectedNodes()[id].forEach(function(nodeID) {
+                var node = editor.getNode(nodeID);
+                node &amp;&amp; node.getGraphics().unHighlight();
+            });
+        });
+        new Draggable(item, {
+          revert: true,
+          reverteffect: function(segment) {
+          &#x2F;&#x2F; Reset the in-line style.
+            segment.setStyle({
+              height: &#x27;&#x27;,
+              left: &#x27;&#x27;,
+              position: &#x27;&#x27;,
+              top: &#x27;&#x27;,
+              zIndex: &#x27;&#x27;,
+              width: &#x27;&#x27;
+            });
+          },
+          ghosting: true
+        });
+        return item;
+    },
+
+    &#x2F;**
+     * Callback for dragging a disorder from the legend onto-nodes
+     *
+     * @method _onDropDisorder
+     * @param {HTMLElement} [disorderLabel]
+     * @param {HTMLElement} [target]
+     * @param {Event} [event]
+     * @private
+     *&#x2F;
+    _onDropDisorder: function(disorderLabel, target, event) {
+        var divPos = editor.getWorkspace().viewportToDiv(event.pointerX(), event.pointerY());
+        var pos = editor.getWorkspace().divToCanvas(divPos.x,divPos.y);
+        var node = editor.getNodeIndex().getNodeNear(pos.x, pos.y);
+        console.log(&quot;Position x: &quot; + pos.x + &quot; position y: &quot; + pos.y);
+        if (node &amp;&amp; node.getType() == &#x27;Person&#x27;) {
+            var id = disorderLabel.id.substring( disorderLabel.id.indexOf(&#x27;-&#x27;) + 1);
+            var disName = disorderLabel.value = disorderLabel.down(&#x27;.disorder-name&#x27;).firstChild.nodeValue;
+            node.addDisorderAction(new Disorder(id, disName));
+        }
+    },
+
+    &#x2F;**
+     * Generates a CSS color. Has preference for 5 colors that can be distinguished in gray-scale.
+     *
+     * @method generateColor
+     * @return {String} CSS color
+     *&#x2F;
+    generateColor: function(disorderID) {
+        if(this.getDisorderColors()[disorderID]) {
+            return this.getDisorderColors()[disorderID];
+        }
+        var usedColors = Object.values(this.getDisorderColors()),
+            prefColors = [&quot;#FEE090&quot;, &#x27;#E0F3F8&#x27;, &#x27;#91BFDB&#x27;, &#x27;#4575B4&#x27;];
+        usedColors.each( function(color) {
+            prefColors = prefColors.without(color);
+        });
+        if(prefColors.length &gt; 0) {
+            return prefColors[0];
+        }
+        else {
+            var randomColor = Raphael.getColor();
+            while(randomColor == &quot;#ffffff&quot; || usedColors.indexOf(randomColor) != -1) {
+                randomColor = &quot;#&quot;+((1&lt;&lt;24)*Math.random()|0).toString(16);
+            }
+            return randomColor;
+        }
+    }
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>
