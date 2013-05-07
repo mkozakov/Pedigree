@@ -53,8 +53,6 @@
             
                 <li><a href="..&#x2F;classes/ActionStack.html">ActionStack</a></li>
             
-                <li><a href="..&#x2F;classes/ClassName.html">ClassName</a></li>
-            
                 <li><a href="..&#x2F;classes/Graph.html">Graph</a></li>
             
                 <li><a href="..&#x2F;classes/GroupHoverbox.html">GroupHoverbox</a></li>
@@ -94,6 +92,8 @@
                 <li><a href="..&#x2F;classes/SaveLoadEngine.html">SaveLoadEngine</a></li>
             
                 <li><a href="..&#x2F;classes/SaveLoadIndicator.html">SaveLoadIndicator</a></li>
+            
+                <li><a href="..&#x2F;classes/TemplateSelector.html">TemplateSelector</a></li>
             
                 <li><a href="..&#x2F;classes/Workspace.html">Workspace</a></li>
             
@@ -141,12 +141,11 @@
 <div class="file">
     <pre class="code prettyprint linenums">
 &#x2F;**
- * Class description
+ * The UI Element for browsing and selecting pre-defined Pedigree templates
  *
- * @class ClassName
+ * @class TemplateSelector
  * @constructor
- * @param {Number} x The x coordinate on the canvas
- * @param {Number} y The y coordinate on the canvas
+ * @param {Boolean} isStartupTemplateSelector Set to True if no pedigree has been loaded yet
  *&#x2F;
 
 var TemplateSelector = Class.create( {
@@ -156,19 +155,31 @@ var TemplateSelector = Class.create( {
         this.mainDiv = new Element(&#x27;div&#x27;, {&#x27;class&#x27;: &#x27;template-picture-container&#x27;});
         this.mainDiv.update(&quot;Loading list of templates...&quot;);
         var closeShortcut = isStartupTemplateSelector ? [] : [&#x27;Esc&#x27;];
-        this.dialog = new MS.widgets.ModalPopup(this.mainDiv, {close: {method : this.closeDialog.bind(this), keys : closeShortcut}}, {extraClassName: &quot;pedigree-template-chooser&quot;, title: &quot;Please select a pedigree template&quot;, displayCloseButton: !isStartupTemplateSelector});
+        this.dialog = new MS.widgets.ModalPopup(this.mainDiv, {close: {method : this.hide.bind(this), keys : closeShortcut}}, {extraClassName: &quot;pedigree-template-chooser&quot;, title: &quot;Please select a pedigree template&quot;, displayCloseButton: !isStartupTemplateSelector});
         isStartupTemplateSelector &amp;&amp; this.dialog.show();
         new Ajax.Request(new XWiki.Document(&#x27;WebHome&#x27;).getRestURL(&#x27;objects&#x2F;PhenoTips.PedigreeClass&#x2F;&#x27;), {
             method: &#x27;GET&#x27;,
-            onSuccess: this.onTemplateListAvailable.bind(this)
+            onSuccess: this._onTemplateListAvailable.bind(this)
         });
     },
 
+    &#x2F;**
+     * Returns True if this template selector is the one displayed on startup
+     *
+     * @method isStartupTemplateSelector
+     * @return {Boolean}
+     *&#x2F;
     isStartupTemplateSelector: function() {
         return this._isStartupTemplateSelector;
     },
 
-    onTemplateListAvailable: function(response) {
+    &#x2F;**
+     * Displays the templates once they have been downloaded
+     *
+     * @param response
+     * @private
+     *&#x2F;
+    _onTemplateListAvailable: function(response) {
         this.mainDiv.update();
         var objects = response.responseXML.documentElement.getElementsByTagName(&#x27;objectSummary&#x27;);
         for (var i = 0; i &lt; objects.length; ++i) {
@@ -177,24 +188,34 @@ var TemplateSelector = Class.create( {
             this.mainDiv.insert(pictureBox);
             new Ajax.Request(objects[i].querySelector(&quot;link[rel=&#x27;http:&#x2F;&#x2F;www.xwiki.org&#x2F;rel&#x2F;properties&#x27;]&quot;).getAttribute(&quot;href&quot;), {
                 method: &#x27;GET&#x27;,
-                onSuccess: this.onTemplateAvailable.bind(this, pictureBox)
+                onSuccess: this._onTemplateAvailable.bind(this, pictureBox)
             });
         }
     },
 
-    closeDialog: function() {
-        this.dialog.closeDialog();
-    },
-
-    onTemplateAvailable: function(pictureBox, response) {
+    &#x2F;**
+     * Creates a clickable template thumbnail once the information has been downloaded
+     *
+     * @param pictureBox
+     * @param response
+     * @private
+     *&#x2F;
+    _onTemplateAvailable: function(pictureBox, response) {
         pictureBox.innerHTML = response.responseXML.documentElement.querySelector(&quot;property[name=&#x27;data&#x27;] &gt; value&quot;).textContent.replace(&#x2F;&amp;amp;&#x2F;, &#x27;&amp;&#x27;);
         pictureBox.pedigreeData = JSON.parse(pictureBox.textContent);
         pictureBox.innerHTML = response.responseXML.documentElement.querySelector(&quot;property[name=&#x27;image&#x27;] &gt; value&quot;).textContent.replace(&#x2F;&amp;amp;&#x2F;, &#x27;&amp;&#x27;);
         pictureBox.innerHTML = pictureBox.textContent;
-        pictureBox.observe(&#x27;click&#x27;, this.onTemplateSelected.bindAsEventListener(this, pictureBox));
+        pictureBox.observe(&#x27;click&#x27;, this._onTemplateSelected.bindAsEventListener(this, pictureBox));
     },
 
-    onTemplateSelected: function(event, pictureBox) {
+    &#x2F;**
+     * Loads the template once it has been selected
+     *
+     * @param event
+     * @param pictureBox
+     * @private
+     *&#x2F;
+    _onTemplateSelected: function(event, pictureBox) {
         this.dialog.close();
         if(this.isStartupTemplateSelector()) {
             editor.getSaveLoadEngine().load(pictureBox.pedigreeData);
@@ -204,12 +225,22 @@ var TemplateSelector = Class.create( {
         }
     },
 
+    &#x2F;**
+     * Displays the template selector
+     *
+     * @method show
+     *&#x2F;
     show: function() {
         this.dialog.show();
     },
 
+    &#x2F;**
+     * Removes the the template selector
+     *
+     * @method hide
+     *&#x2F;
     hide: function() {
-        this.dialog.close();
+        this.dialog.closeDialog();
     }
 });
     </pre>

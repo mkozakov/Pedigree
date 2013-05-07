@@ -281,7 +281,7 @@
             "name": "pedigree/templateSelector.js",
             "modules": {},
             "classes": {
-                "ClassName": 1
+                "TemplateSelector": 1
             },
             "fors": {},
             "namespaces": {}
@@ -1038,9 +1038,9 @@
             "description": "SaveLoadIndicator is a window that notifies the user of loading and saving progress.",
             "is_constructor": 1
         },
-        "ClassName": {
-            "name": "ClassName",
-            "shortname": "ClassName",
+        "TemplateSelector": {
+            "name": "TemplateSelector",
+            "shortname": "TemplateSelector",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -1048,18 +1048,13 @@
             "extension_for": [],
             "file": "pedigree/templateSelector.js",
             "line": 1,
-            "description": "Class description",
+            "description": "The UI Element for browsing and selecting pre-defined Pedigree templates",
             "is_constructor": 1,
             "params": [
                 {
-                    "name": "x",
-                    "description": "The x coordinate on the canvas",
-                    "type": "Number"
-                },
-                {
-                    "name": "y",
-                    "description": "The y coordinate on the canvas",
-                    "type": "Number"
+                    "name": "isStartupTemplateSelector",
+                    "description": "Set to True if no pedigree has been loaded yet",
+                    "type": "Boolean"
                 }
             ]
         },
@@ -7918,6 +7913,84 @@
             "class": "SaveLoadIndicator"
         },
         {
+            "file": "pedigree/templateSelector.js",
+            "line": 24,
+            "description": "Returns True if this template selector is the one displayed on startup",
+            "itemtype": "method",
+            "name": "isStartupTemplateSelector",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "TemplateSelector"
+        },
+        {
+            "file": "pedigree/templateSelector.js",
+            "line": 34,
+            "description": "Displays the templates once they have been downloaded",
+            "params": [
+                {
+                    "name": "response",
+                    "description": ""
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "TemplateSelector"
+        },
+        {
+            "file": "pedigree/templateSelector.js",
+            "line": 54,
+            "description": "Creates a clickable template thumbnail once the information has been downloaded",
+            "params": [
+                {
+                    "name": "pictureBox",
+                    "description": ""
+                },
+                {
+                    "name": "response",
+                    "description": ""
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "TemplateSelector"
+        },
+        {
+            "file": "pedigree/templateSelector.js",
+            "line": 69,
+            "description": "Loads the template once it has been selected",
+            "params": [
+                {
+                    "name": "event",
+                    "description": ""
+                },
+                {
+                    "name": "pictureBox",
+                    "description": ""
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "TemplateSelector"
+        },
+        {
+            "file": "pedigree/templateSelector.js",
+            "line": 86,
+            "description": "Displays the template selector",
+            "itemtype": "method",
+            "name": "show",
+            "class": "TemplateSelector"
+        },
+        {
+            "file": "pedigree/templateSelector.js",
+            "line": 95,
+            "description": "Removes the the template selector",
+            "itemtype": "method",
+            "name": "hide",
+            "class": "TemplateSelector"
+        },
+        {
             "file": "pedigree/workspace.js",
             "line": 56,
             "description": "Returns the Raphael paper object.",
@@ -8344,6 +8417,18 @@
         {
             "message": "Missing item type\nSaves the state of the graph",
             "line": " pedigree/saveLoadEngine.js:34"
+        },
+        {
+            "message": "Missing item type\nDisplays the templates once they have been downloaded",
+            "line": " pedigree/templateSelector.js:34"
+        },
+        {
+            "message": "Missing item type\nCreates a clickable template thumbnail once the information has been downloaded",
+            "line": " pedigree/templateSelector.js:54"
+        },
+        {
+            "message": "Missing item type\nLoads the template once it has been selected",
+            "line": " pedigree/templateSelector.js:69"
         }
     ]
 }

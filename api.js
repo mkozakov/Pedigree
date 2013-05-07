@@ -7,7 +7,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "AbstractPerson",
         "AbstractPersonVisuals",
         "ActionStack",
-        "ClassName",
         "Graph",
         "GroupHoverbox",
         "Legend",
@@ -28,6 +27,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "PregnancyVisuals",
         "SaveLoadEngine",
         "SaveLoadIndicator",
+        "TemplateSelector",
         "Workspace"
     ],
     "modules": [],
